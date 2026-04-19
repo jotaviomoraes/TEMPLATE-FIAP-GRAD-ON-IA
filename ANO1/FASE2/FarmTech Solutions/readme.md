@@ -60,6 +60,8 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 link da aplicacao completa: https://wokwi.com/projects/461710056233454593
 
+video do funcionamento: https://youtu.be/bsc4FWN904Q
+
 
 ## 🗃 Histórico de lançamentos
 
