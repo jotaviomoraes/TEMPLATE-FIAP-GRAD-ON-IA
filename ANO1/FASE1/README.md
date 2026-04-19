@@ -10,7 +10,7 @@
 
 <br>
 
-# 🚀 FASE X — [Nome da Fase]
+# 🚀 FASE 1Play no seu Desenvolvimento como Dev
 ## 📚 Graduação ON em Inteligência Artificial
 
 ---
@@ -34,22 +34,12 @@ Esta documentação tem como objetivo demonstrar, de forma estruturada, o que fo
 
 ## 🎯 Objetivo da Fase
 
-> Descrever aqui o foco principal da fase.
-
-Exemplo:
-
+> Aprender habilidades basicas em python e R
 - Desenvolver base sólida em Machine Learning supervisionado  
 - Compreender fundamentos de Deep Learning  
 - Construir pipelines completos de dados  
 - Aplicar conceitos de IA em problemas reais  
 
----
-
-## 📖 Conteúdos Abordados
-
-- Conceito A
-- Conceito B
-- Conceito C
 
 ---
 
@@ -58,12 +48,11 @@ Exemplo:
 Durante esta fase, foram utilizadas as seguintes tecnologias:
 
 - Python
+- R
 - SQL
 - Pandas / NumPy
-- Scikit-Learn
-- ...
 
-*(Ajustar conforme a fase.)*
+
 
 ---
 
@@ -75,42 +64,11 @@ Durante esta fase, foram utilizadas as seguintes tecnologias:
 Breve explicação do problema e da solução proposta.
 
 **Tecnologias utilizadas:**  
-- Tecnologia A  
-- Tecnologia B  
+- Python 
+- R
+- Teachable Machine 
 
-**Principais aprendizados:**  
-- Aprendizado 1  
-- Aprendizado 2  
 
----
-
-### 📌 Projeto 2 — [Nome do Projeto]
-
-**Descrição:**  
-Breve explicação do projeto.
-
-**Tecnologias utilizadas:**  
-- Tecnologia A  
-- Tecnologia B  
-
-**Principais aprendizados:**  
-- Aprendizado 1  
-- Aprendizado 2  
-
----
-
-### 📌 Projeto 3 — [Nome do Projeto]
-
-**Descrição:**  
-Breve explicação do projeto.
-
-**Tecnologias utilizadas:**  
-- Tecnologia A  
-- Tecnologia B  
-
-**Principais aprendizados:**  
-- Aprendizado 1  
-- Aprendizado 2  
 
 ---
 
