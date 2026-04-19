@@ -1,0 +1,10 @@
+[
+    {
+        "id_talhao": 100,
+        "area_ha": 1.0,
+        "producao_estimada_ton": 100.0,
+        "metodo_colheita": "Manual",
+        "perda_estimada_ton": 5.0,
+        "prejuizo_estimado_eur": 150.0
+    }
+]
