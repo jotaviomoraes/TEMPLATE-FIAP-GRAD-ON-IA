@@ -53,7 +53,7 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 1. Acesse o [Wokwi.com](https://wokwi.com).
 2. Monte o circuito conforme a tabela de pinagem.
-3. Cole o código do arquivo `sketch.ino`. localizado na pasta 'src'
+3. Cole o código do arquivo `sketch.ino`. localizado na pasta 'FASE2/FarmTech Solutions/'
 4. Inicie a simulação.
 
    print do projeto da pasta /assets ![Circuito Wokwi](ESP32.png)
