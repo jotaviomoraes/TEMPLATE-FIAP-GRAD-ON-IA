@@ -10,22 +10,18 @@
 
 <br>
 
-# Nome do projeto/atividade
-
-## Nome do grupo
+## Joao Otavio Moraes rm573227
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/in/sabrina-otoni-22525519b/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/sabrina-otoni-22525519b/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/sabrina-otoni-22525519b/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/sabrina-otoni-22525519b/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/sabrina-otoni-22525519b/">Nome do integrante 5</a>
+- <a href="www.linkedin.com/in/joao-otavio-moraes-16273a26b">Joao Otavio Moraes</a>
+
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- <a href="https://www.linkedin.com/in/sabrina-otoni-22525519b/">Nome do Tutor</a>
+- <a href="https://www.linkedin.com/in/nicollycrsouza/">Nicolly Candida</a>
 ### Coordenador(a)
-- <a href="https://www.linkedin.com/in/andregodoichiovato/">Nome do Coordenador</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Andre Godoi</a>
+
 
 
 ## 📜 Descrição
