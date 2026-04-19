@@ -56,7 +56,7 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 3. Cole o código do arquivo `sketch.ino`. localizado na pasta 'src'
 4. Inicie a simulação.
 
-   print do projeto da pasta /assets ![Circuito Wokwi](assets/Fase2.%20Um%20Mapa%20do%20Tesouro.png)
+   print do projeto da pasta /assets ![Circuito Wokwi](ESP32.png)
 
 link da aplicacao completa: https://wokwi.com/projects/461710056233454593
 
