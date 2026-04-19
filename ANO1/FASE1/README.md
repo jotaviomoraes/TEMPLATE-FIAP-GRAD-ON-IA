@@ -10,7 +10,7 @@
 
 <br>
 
-# 🚀 FASE 1Play no seu Desenvolvimento como Dev
+# 🚀 FASE 1 - Play no seu Desenvolvimento como Dev
 ## 📚 Graduação ON em Inteligência Artificial
 
 ---
