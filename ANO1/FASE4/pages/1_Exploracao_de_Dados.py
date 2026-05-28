@@ -1,5 +1,3 @@
-# Exploracao_dados.py
-
 import streamlit as st
 import seaborn as sns
 import numpy as np
@@ -15,10 +13,9 @@ st.set_page_config(page_title='Análise de Dados', layout='wide')
 # Título do aplicativo
 st.title('Exploração de Dados')
 
-# =========================================================================
+# ================================================
 # 1. Carregar os Dados
-# =========================================================================
-
+# ================================================
 st.header('1. Carregar os Dados')
 
 # Carregar os dados gerados
@@ -28,10 +25,9 @@ df = generate_data()
 st.subheader('Visualização dos Dados')
 st.dataframe(df.head())
 
-# =========================================================================
+# ================================================
 # 2. Visão Geral dos Dados
-# =========================================================================
-
+# ================================================
 st.header('2. Visão Geral dos Dados')
 
 # Informações sobre o DataFrame
@@ -47,7 +43,6 @@ df_types = pd.DataFrame({
 })
 st.write(df_types)
 
-
 # Verificar valores ausentes
 st.subheader('Valores Ausentes')
 st.write(df.isnull().sum())
@@ -56,10 +51,9 @@ st.write(df.isnull().sum())
 st.subheader('Estatísticas Descritivas')
 st.write(df.describe())
 
-# =========================================================================
+# ================================================
 # 3. Análise Univariada
-# =========================================================================
-
+# ================================================
 st.header('3. Análise Univariada')
 
 numeric_columns = ['Temperatura', 'Precipitação', 'Umidade', 'Produção']
@@ -86,14 +80,12 @@ for col in categorical_columns:
     fig = px.histogram(df, x=col, title=f'Distribuição de {col}')
     st.plotly_chart(fig, use_container_width=True)
 
-# =========================================================================
+# ================================================
 # 4. Análise Bivariada
-# =========================================================================
-
+# ================================================
 st.header('4. Análise Bivariada')
 
 # Gráficos de dispersão entre variáveis numéricas
-
 st.subheader('Gráficos de Dispersão entre Variáveis Numéricas')
 variable_pairs = [
     ('Temperatura', 'Produção'),
@@ -142,10 +134,9 @@ fig = px.violin(
 )
 st.plotly_chart(fig, use_container_width=True)
 
-# =========================================================================
+# ================================================
 # 5. Análise de Correlação
-# =========================================================================
-
+# ================================================
 st.header('5. Análise de Correlação')
 
 # Mapa de calor de correlação
@@ -158,10 +149,9 @@ fig_heatmap, ax = plt.subplots(figsize=(10, 8))
 sns.heatmap(corr, annot=True, cmap='coolwarm', ax=ax)
 st.pyplot(fig_heatmap)
 
-# =========================================================================
+# ================================================
 # 6. Análise Multivariada
-# =========================================================================
-
+# ================================================
 st.header('6. Análise Multivariada')
 
 # Pairplot das variáveis numéricas
@@ -181,10 +171,9 @@ fig = sns.pairplot(
 )
 st.pyplot(fig)
 
-# =========================================================================
+# ================================================
 # 7. Análise Interativa
-# =========================================================================
-
+# ================================================
 st.header('7. Análise Interativa')
 
 # Seleção de variáveis pelo usuário
@@ -201,6 +190,7 @@ with col3:
 
 corr_temp_prod = df[x_var].corr(df[y_var])
 st.write(f"A correlação de Pearson entre {y_var} e {x_var} é: {corr_temp_prod:.2f}")
+
 
 # Gráfico de dispersão interativo
 fig = px.scatter(
