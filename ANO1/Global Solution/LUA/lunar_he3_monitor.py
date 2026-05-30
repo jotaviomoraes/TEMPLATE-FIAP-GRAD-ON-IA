@@ -53,7 +53,7 @@ except ImportError:
 # ══════════════════════════════════════════════════════════════════
 #  CONFIGURAÇÃO GLOBAL
 # ══════════════════════════════════════════════════════════════════
-NASA_API_KEY     = os.getenv("NASA_API_KEY",    "hHGkrSf2dadRUqS4NOQcRsh7lCxoapO2uNQeIRBm")
+NASA_API_KEY     = os.getenv("NASA_API_KEY")
 EARTHDATA_TOKEN  = os.getenv("EARTHDATA_TOKEN", "")
 OUTPUT_DIR       = Path(os.getenv("OUTPUT_DIR", "./outputs"))
 DATA_WINDOW_DAYS = int(os.getenv("DATA_WINDOW_DAYS", "7"))
