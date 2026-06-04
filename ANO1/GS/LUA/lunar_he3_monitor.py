@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 ╔══════════════════════════════════════════════════════════════════╗
-║         LUNAR HE-3 & SOLAR WIND MONITOR  — v1.0                 ║
+║         LUNAR HE-3 & SOLAR WIND MONITOR  — v1.0                  ║
 ║                                                                  ║
 ║  Fontes de dados:                                                ║
 ║  • NOAA DSCOVR   → Vento solar em tempo real                     ║
 ║  • NASA DONKI    → CME, Flares, Tempestades geomagnéticas        ║
-║  • NASA CMR/PDS  → M3 Chandrayaan-1 (Ilmenita lunar)            ║
+║  • NASA CMR/PDS  → M3 Chandrayaan-1 (Ilmenita lunar)             ║
 ║  • JAXA SELENE   → Composição Ti/Fe da Lua                       ║
-║  • USGS          → Mapas TiO₂ (proxy Hélio-3)                   ║
+║  • USGS          → Mapas TiO₂ (proxy Hélio-3)                    ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 Uso:
@@ -605,7 +605,7 @@ class Dashboard:
             (f"Nível de atividade: {nivel}", cor_nivel, 11, "bold"),
             ("", "", 9, "normal"),
             ("━━━ EVENTOS ESPAÇO-CLIMÁTICOS ━━━", COR_TEXTO, 11, "bold"),
-            (f"CMEs detectadas:      {flux.get('total_cmes','—')}",       COR_LARANJA, 10, "normal"),
+            (f"CMEs detectadas (ejecao de massa coronal):      {flux.get('total_cmes','—')}",       COR_LARANJA, 10, "normal"),
             (f"Flares solares:       {flux.get('total_flares','—')}",     COR_AMARELO, 10, "normal"),
             (f"Tempestades geomag:   {flux.get('total_tempestades','—')}", COR_ROXO,   10, "normal"),
             ("", "", 9, "normal"),
