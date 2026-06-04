@@ -1,0 +1,1001 @@
+umidade_solo,declividade,chuva_24h,temperatura,velocidade,idade_maquina,horas_operacao,status_operacao,score_risco,risco,recomendacao
+36.42,14.66,9.9,38.44,13.68,11.24,10.67,Manobra,45.86,MEDIO,Pausa recomendada - risco de fadiga
+52.3,26.79,28.39,44.29,22.83,14.81,9.45,Colheita,76.42,ALTO,Atencao a inclinacao - reduzir velocidade
+33.51,25.16,17.68,42.04,15.08,12.09,11.88,Deslocamento,71.29,ALTO,Atencao a inclinacao - reduzir velocidade
+30.87,20.38,5.69,34.26,11.07,8.67,8.04,Deslocamento,37.04,MEDIO,Reduzir velocidade
+28.79,4.42,3.44,23.8,9.89,5.59,7.06,Deslocamento,6.46,BAIXO,Seguir rota atual
+9.6,9.07,6.67,26.41,9.13,3.45,7.82,Manobra,5.05,BAIXO,Seguir rota atual
+36.09,6.55,2.66,33.27,10.16,3.43,4.16,Colheita,18.89,BAIXO,Seguir rota atual
+48.59,22.97,35.81,39.99,18.93,13.9,12.47,Deslocamento,72.56,ALTO,Atencao a inclinacao - reduzir velocidade
+49.3,19.0,25.87,39.36,14.85,14.02,7.75,Manobra,72.56,ALTO,Interromper operacao
+42.29,22.5,21.94,40.87,22.37,10.09,8.94,Deslocamento,76.82,ALTO,Atencao a inclinacao - reduzir velocidade
+15.64,5.78,2.09,31.95,9.84,3.29,3.34,Colheita,4.82,BAIXO,Seguir rota atual
+52.36,25.34,51.33,43.61,15.94,18.64,14.0,Deslocamento,78.43,ALTO,Atencao a inclinacao - reduzir velocidade
+46.94,25.84,47.86,44.0,24.63,20.0,11.65,Colheita,75.71,ALTO,Atencao a inclinacao - reduzir velocidade
+14.41,2.48,1.81,25.83,10.59,3.45,5.45,Colheita,10.81,BAIXO,Seguir rota atual
+19.89,12.75,11.58,23.35,6.02,8.13,6.36,Manobra,10.03,BAIXO,Seguir rota atual
+32.93,10.34,2.92,28.95,9.22,7.46,6.01,Deslocamento,8.03,BAIXO,Seguir rota atual
+27.47,12.68,8.15,29.24,6.67,5.44,7.41,Manobra,0.0,BAIXO,Seguir rota atual
+28.46,21.47,6.03,36.11,15.84,8.57,9.09,Manobra,30.86,MEDIO,Atencao a inclinacao - reduzir velocidade
+24.12,22.99,11.23,43.0,11.08,8.66,9.5,Deslocamento,44.35,MEDIO,Reduzir velocidade
+31.04,7.62,4.84,29.04,7.37,3.66,5.39,Colheita,8.76,BAIXO,Seguir rota atual
+46.44,18.92,19.06,37.9,18.59,7.43,8.88,Colheita,68.76,ALTO,Atencao a inclinacao - reduzir velocidade
+22.64,14.26,3.8,23.22,10.76,0.66,0.6,Colheita,11.26,BAIXO,Seguir rota atual
+23.08,5.99,0.94,29.54,7.49,3.31,2.44,Manobra,3.47,BAIXO,Seguir rota atual
+41.98,22.6,7.5,43.0,8.79,3.42,7.62,Colheita,31.11,MEDIO,Reduzir velocidade
+34.64,20.97,6.79,37.41,8.25,12.33,8.84,Colheita,40.73,MEDIO,Reduzir velocidade
+46.7,23.03,21.65,41.71,16.34,13.93,12.66,Deslocamento,71.72,ALTO,Atencao a inclinacao - reduzir velocidade
+21.38,10.84,3.73,33.2,5.65,10.4,4.92,Colheita,8.6,BAIXO,Seguir rota atual
+23.55,20.51,4.59,39.36,10.04,6.66,5.22,Colheita,29.58,MEDIO,Reduzir velocidade
+31.38,10.3,0.08,39.04,14.36,9.28,7.07,Deslocamento,32.91,MEDIO,Reduzir velocidade
+19.67,7.99,0.52,33.52,8.75,4.34,5.05,Colheita,0.73,BAIXO,Seguir rota atual
+41.25,15.87,16.02,37.95,12.0,11.16,13.6,Colheita,47.87,MEDIO,Pausa recomendada - risco de fadiga
+24.49,5.72,5.72,33.0,8.85,5.18,3.71,Colheita,4.27,BAIXO,Seguir rota atual
+24.89,9.57,6.69,29.18,9.1,3.39,7.63,Deslocamento,3.81,BAIXO,Seguir rota atual
+50.99,30.0,38.11,45.0,22.79,12.05,11.03,Deslocamento,75.6,ALTO,Atencao a inclinacao - reduzir velocidade
+48.4,28.27,50.23,41.28,21.9,20.0,14.0,Deslocamento,75.13,ALTO,Atencao a inclinacao - reduzir velocidade
+42.62,22.11,18.96,41.84,11.93,11.23,6.66,Deslocamento,57.1,ALTO,Interromper operacao
+22.79,10.59,2.55,33.87,4.55,0.61,5.45,Colheita,1.86,BAIXO,Seguir rota atual
+27.33,14.74,2.62,31.39,6.92,4.48,6.77,Manobra,4.69,BAIXO,Seguir rota atual
+43.91,17.27,29.81,44.14,13.12,13.19,10.99,Colheita,54.23,ALTO,Pausa recomendada - risco de fadiga
+37.09,17.8,4.64,35.9,15.52,9.63,8.26,Deslocamento,28.48,MEDIO,Atencao a inclinacao - reduzir velocidade
+25.4,0.0,7.45,17.3,6.28,1.64,2.41,Manobra,9.17,BAIXO,Seguir rota atual
+44.29,18.13,9.73,35.81,13.43,8.23,6.43,Manobra,30.84,MEDIO,Reduzir velocidade
+26.97,6.02,0.0,23.86,10.0,7.55,4.3,Colheita,11.23,BAIXO,Seguir rota atual
+48.25,26.04,65.77,44.15,23.72,17.09,12.48,Colheita,78.28,ALTO,Atencao a inclinacao - reduzir velocidade
+18.19,7.21,3.79,25.81,8.46,5.16,6.47,Deslocamento,1.16,BAIXO,Seguir rota atual
+39.52,22.24,2.01,42.75,16.04,14.99,4.21,Colheita,47.5,MEDIO,Atencao a inclinacao - reduzir velocidade
+34.62,7.44,7.32,20.8,8.23,1.84,3.75,Manobra,4.98,BAIXO,Seguir rota atual
+50.0,19.24,9.09,39.48,13.49,8.45,9.73,Deslocamento,70.46,ALTO,Interromper operacao
+50.0,19.77,9.01,40.2,15.32,11.56,10.28,Deslocamento,73.08,ALTO,Atencao a inclinacao - reduzir velocidade
+12.0,14.53,0.56,27.51,5.49,4.81,5.66,Colheita,5.16,BAIXO,Seguir rota atual
+51.61,28.27,61.14,44.36,21.02,16.89,14.0,Manobra,76.44,ALTO,Atencao a inclinacao - reduzir velocidade
+32.63,23.79,23.61,39.11,19.13,11.55,10.25,Deslocamento,64.67,ALTO,Atencao a inclinacao - reduzir velocidade
+49.13,27.05,34.04,38.68,28.38,11.46,10.02,Manobra,75.98,ALTO,Atencao a inclinacao - reduzir velocidade
+39.23,25.08,31.77,45.0,26.04,11.94,14.0,Colheita,74.04,ALTO,Atencao a inclinacao - reduzir velocidade
+42.85,18.7,0.0,43.0,7.83,3.06,11.05,Colheita,34.01,MEDIO,Pausa recomendada - risco de fadiga
+62.2,30.0,50.64,44.78,25.41,16.28,12.56,Colheita,77.45,ALTO,Atencao a inclinacao - reduzir velocidade
+20.73,7.75,1.74,24.6,3.61,4.7,3.02,Colheita,5.39,BAIXO,Seguir rota atual
+12.27,8.72,8.18,30.59,3.86,2.03,6.88,Deslocamento,7.17,BAIXO,Seguir rota atual
+13.12,7.1,5.65,21.16,7.21,1.0,3.8,Manobra,2.42,BAIXO,Seguir rota atual
+22.24,1.63,5.32,25.9,8.1,5.67,7.73,Colheita,5.39,BAIXO,Seguir rota atual
+36.0,18.28,8.61,38.17,12.15,8.12,7.6,Manobra,36.43,MEDIO,Reduzir velocidade
+15.36,2.39,9.25,19.78,5.61,2.84,6.79,Colheita,6.38,BAIXO,Seguir rota atual
+48.53,30.0,38.27,43.84,18.66,20.0,9.62,Colheita,78.04,ALTO,Atencao a inclinacao - reduzir velocidade
+37.48,22.54,10.07,35.26,11.61,8.13,8.71,Colheita,44.42,MEDIO,Reduzir velocidade
+26.75,16.84,2.33,19.15,6.82,12.0,3.39,Colheita,9.32,BAIXO,Seguir rota atual
+48.11,26.71,5.23,38.28,16.89,6.86,8.59,Manobra,73.92,ALTO,Atencao a inclinacao - reduzir velocidade
+15.93,3.94,2.05,19.88,7.07,2.69,5.47,Colheita,5.29,BAIXO,Seguir rota atual
+30.66,22.99,24.67,34.02,16.12,15.68,7.58,Deslocamento,42.63,MEDIO,Atencao a inclinacao - reduzir velocidade
+31.71,9.68,1.88,25.72,8.12,5.23,6.08,Colheita,7.34,BAIXO,Seguir rota atual
+45.4,27.51,30.86,42.67,18.38,11.79,14.0,Manobra,75.42,ALTO,Atencao a inclinacao - reduzir velocidade
+46.55,23.83,9.26,39.05,18.64,12.43,14.0,Colheita,77.03,ALTO,Atencao a inclinacao - reduzir velocidade
+22.75,8.77,3.07,26.67,6.7,7.12,6.91,Colheita,6.29,BAIXO,Seguir rota atual
+14.5,2.68,0.0,28.54,4.79,0.0,5.78,Colheita,1.78,BAIXO,Seguir rota atual
+54.96,21.98,24.71,40.25,14.7,14.76,9.42,Colheita,73.66,ALTO,Verificar equipamento - desgaste elevado
+41.6,22.97,12.66,42.98,14.48,9.73,11.07,Colheita,57.55,ALTO,Pausa recomendada - risco de fadiga
+34.61,22.08,17.93,43.26,16.42,11.92,11.64,Manobra,62.73,ALTO,Atencao a inclinacao - reduzir velocidade
+48.34,23.67,18.08,36.06,11.8,11.08,8.78,Deslocamento,75.02,ALTO,Interromper operacao
+18.69,8.23,5.59,25.65,7.97,5.19,1.05,Deslocamento,2.77,BAIXO,Seguir rota atual
+27.49,19.42,1.95,38.4,16.59,11.66,8.57,Deslocamento,47.23,MEDIO,Atencao a inclinacao - reduzir velocidade
+30.44,8.59,2.99,22.93,6.4,3.84,5.34,Colheita,8.46,BAIXO,Seguir rota atual
+50.8,27.01,49.37,45.0,25.8,9.55,8.0,Deslocamento,74.29,ALTO,Atencao a inclinacao - reduzir velocidade
+45.61,17.9,16.2,36.49,9.59,13.62,11.52,Manobra,70.37,ALTO,Pausa recomendada - risco de fadiga
+15.96,0.0,2.36,27.96,4.04,5.55,4.97,Manobra,4.5,BAIXO,Seguir rota atual
+24.06,8.48,1.08,31.98,6.68,4.92,3.13,Manobra,0.06,BAIXO,Seguir rota atual
+16.9,4.46,3.48,34.56,4.26,0.16,7.94,Manobra,0.0,BAIXO,Seguir rota atual
+18.53,5.32,7.12,22.97,10.65,7.03,4.02,Colheita,9.56,BAIXO,Seguir rota atual
+52.94,20.18,23.94,40.9,18.91,16.68,10.06,Colheita,76.49,ALTO,Atencao a inclinacao - reduzir velocidade
+35.48,23.38,12.58,46.04,15.41,10.9,10.37,Colheita,73.75,ALTO,Atencao a inclinacao - reduzir velocidade
+43.26,24.09,57.0,41.03,17.81,15.61,14.0,Colheita,73.82,ALTO,Atencao a inclinacao - reduzir velocidade
+40.75,23.98,4.22,30.31,16.5,7.03,8.5,Colheita,38.12,MEDIO,Atencao a inclinacao - reduzir velocidade
+29.3,10.22,5.37,36.83,5.71,7.78,5.11,Colheita,5.13,BAIXO,Seguir rota atual
+41.61,26.59,22.06,41.61,18.22,10.91,8.32,Deslocamento,75.72,ALTO,Atencao a inclinacao - reduzir velocidade
+33.73,16.1,34.45,36.69,14.34,11.17,10.61,Manobra,45.56,MEDIO,Pausa recomendada - risco de fadiga
+41.53,23.44,5.08,35.33,12.85,7.25,12.21,Deslocamento,34.65,MEDIO,Pausa recomendada - risco de fadiga
+42.95,24.2,23.3,43.52,15.54,8.11,10.8,Manobra,54.29,ALTO,Atencao a inclinacao - reduzir velocidade
+29.79,17.89,10.93,40.95,12.06,8.93,12.4,Colheita,40.3,MEDIO,Pausa recomendada - risco de fadiga
+36.93,28.0,10.83,28.96,14.26,9.14,11.58,Colheita,72.14,ALTO,Interromper operacao
+40.39,19.45,1.88,35.16,9.45,6.26,10.18,Deslocamento,30.25,MEDIO,Pausa recomendada - risco de fadiga
+31.69,9.58,0.41,28.22,9.39,3.17,4.73,Colheita,14.61,BAIXO,Seguir rota atual
+20.1,4.86,5.94,25.4,7.84,2.34,4.13,Colheita,1.2,BAIXO,Seguir rota atual
+25.06,6.51,9.18,24.0,7.45,7.8,2.16,Colheita,5.59,BAIXO,Seguir rota atual
+29.44,17.42,28.1,38.34,22.67,10.31,10.37,Colheita,75.33,ALTO,Atencao a inclinacao - reduzir velocidade
+30.79,16.02,10.18,32.04,9.05,6.78,6.56,Deslocamento,17.35,BAIXO,Seguir rota atual
+30.59,16.73,7.98,35.32,10.64,10.09,10.91,Colheita,38.72,MEDIO,Pausa recomendada - risco de fadiga
+50.44,30.0,33.58,42.42,19.13,8.4,11.83,Deslocamento,72.04,ALTO,Atencao a inclinacao - reduzir velocidade
+19.15,14.05,5.89,20.88,10.71,8.66,6.16,Deslocamento,8.63,BAIXO,Seguir rota atual
+33.19,16.16,6.14,40.35,17.65,12.63,8.02,Colheita,44.77,MEDIO,Atencao a inclinacao - reduzir velocidade
+33.28,22.42,3.85,40.97,14.56,10.6,6.81,Colheita,45.6,MEDIO,Reduzir velocidade
+23.6,5.87,0.49,15.0,6.94,10.32,8.32,Colheita,20.24,BAIXO,Seguir rota atual
+16.8,5.59,5.41,21.01,7.6,7.3,7.45,Colheita,7.14,BAIXO,Seguir rota atual
+19.3,7.19,1.37,21.87,6.55,6.1,6.83,Deslocamento,3.87,BAIXO,Seguir rota atual
+14.38,13.97,3.19,25.89,5.51,0.0,6.77,Deslocamento,6.39,BAIXO,Seguir rota atual
+53.68,26.16,45.67,44.55,15.75,12.41,13.59,Manobra,75.32,ALTO,Atencao a inclinacao - reduzir velocidade
+32.47,22.88,7.15,41.4,14.89,7.15,12.33,Colheita,45.8,MEDIO,Pausa recomendada - risco de fadiga
+35.59,19.57,19.6,43.45,11.95,12.19,10.86,Deslocamento,65.41,ALTO,Pausa recomendada - risco de fadiga
+53.47,27.53,41.33,40.52,22.34,10.78,8.0,Deslocamento,74.89,ALTO,Atencao a inclinacao - reduzir velocidade
+42.62,24.71,0.0,36.97,16.86,18.17,10.04,Deslocamento,44.85,MEDIO,Atencao a inclinacao - reduzir velocidade
+14.9,7.27,8.12,22.77,5.4,3.55,3.09,Deslocamento,0.79,BAIXO,Seguir rota atual
+50.61,30.0,48.23,42.24,20.83,9.31,13.77,Deslocamento,71.75,ALTO,Atencao a inclinacao - reduzir velocidade
+34.38,19.28,23.97,37.2,9.74,6.72,11.3,Deslocamento,37.21,MEDIO,Pausa recomendada - risco de fadiga
+40.68,17.69,25.35,38.0,20.62,15.24,9.11,Manobra,68.63,ALTO,Atencao a inclinacao - reduzir velocidade
+56.41,27.2,53.53,44.45,18.61,12.07,14.0,Colheita,77.66,ALTO,Atencao a inclinacao - reduzir velocidade
+17.66,6.39,1.13,28.12,11.13,1.8,5.05,Deslocamento,11.74,BAIXO,Seguir rota atual
+29.89,7.68,5.36,20.69,7.86,4.44,6.97,Colheita,4.65,BAIXO,Seguir rota atual
+28.31,18.36,5.74,27.63,7.39,3.94,5.68,Colheita,7.76,BAIXO,Seguir rota atual
+32.64,20.67,14.59,31.97,15.42,11.95,8.76,Manobra,57.76,ALTO,Atencao a inclinacao - reduzir velocidade
+27.27,20.18,28.38,39.93,12.0,10.49,11.68,Manobra,59.07,ALTO,Pausa recomendada - risco de fadiga
+52.73,26.28,41.33,41.82,18.31,18.85,11.36,Colheita,76.29,ALTO,Atencao a inclinacao - reduzir velocidade
+28.52,14.09,6.99,23.84,7.81,4.93,3.19,Colheita,5.02,BAIXO,Seguir rota atual
+37.59,15.28,13.94,34.14,12.6,8.85,8.48,Colheita,37.4,MEDIO,Reduzir velocidade
+39.69,18.1,12.36,30.62,12.38,13.82,7.0,Deslocamento,45.06,MEDIO,Reduzir velocidade
+15.26,10.06,4.54,27.75,7.98,6.9,7.22,Manobra,3.76,BAIXO,Seguir rota atual
+22.87,7.03,6.02,35.5,6.73,2.08,7.21,Manobra,3.93,BAIXO,Seguir rota atual
+19.16,0.0,6.54,23.32,6.82,6.0,5.38,Deslocamento,5.81,BAIXO,Seguir rota atual
+53.55,25.69,50.13,42.22,24.96,15.85,10.13,Colheita,80.69,ALTO,Atencao a inclinacao - reduzir velocidade
+27.6,5.86,6.42,27.84,10.68,4.33,4.3,Deslocamento,7.2,BAIXO,Seguir rota atual
+34.84,18.79,12.0,29.53,8.84,4.8,10.9,Colheita,36.79,MEDIO,Reduzir velocidade
+50.26,21.69,16.65,40.21,18.49,9.22,10.48,Manobra,71.64,ALTO,Atencao a inclinacao - reduzir velocidade
+42.8,22.0,8.95,40.0,3.89,10.03,7.69,Manobra,40.18,MEDIO,Reduzir velocidade
+40.85,28.53,58.74,42.59,25.81,18.84,14.0,Deslocamento,74.82,ALTO,Atencao a inclinacao - reduzir velocidade
+58.2,29.23,45.75,38.19,21.02,11.47,14.0,Colheita,73.11,ALTO,Atencao a inclinacao - reduzir velocidade
+18.77,8.49,5.65,26.22,10.39,3.13,5.39,Colheita,11.28,BAIXO,Seguir rota atual
+29.06,14.72,4.94,35.85,10.71,5.92,6.19,Colheita,13.49,BAIXO,Seguir rota atual
+19.42,1.98,6.28,26.41,4.08,4.07,3.5,Manobra,5.33,BAIXO,Seguir rota atual
+22.23,13.36,0.0,26.58,6.68,7.01,5.43,Colheita,4.41,BAIXO,Seguir rota atual
+14.74,6.72,1.61,31.38,7.04,10.7,4.88,Colheita,10.82,BAIXO,Seguir rota atual
+35.75,17.46,3.57,35.25,15.8,13.53,6.84,Deslocamento,32.83,MEDIO,Atencao a inclinacao - reduzir velocidade
+42.16,18.07,8.73,42.45,14.69,7.19,7.22,Manobra,35.25,MEDIO,Reduzir velocidade
+5.0,5.12,3.37,21.06,6.74,5.23,4.55,Colheita,3.78,BAIXO,Seguir rota atual
+15.45,8.67,5.33,20.55,9.82,4.7,5.04,Manobra,3.09,BAIXO,Seguir rota atual
+53.54,27.7,54.53,43.86,19.55,15.08,9.71,Manobra,73.66,ALTO,Atencao a inclinacao - reduzir velocidade
+20.76,7.87,3.38,25.36,3.24,3.35,5.19,Manobra,3.34,BAIXO,Seguir rota atual
+21.12,3.89,7.8,21.67,8.94,6.28,3.71,Colheita,6.22,BAIXO,Seguir rota atual
+49.2,15.23,12.6,40.0,9.99,12.18,8.5,Colheita,73.13,ALTO,Interromper operacao
+51.44,27.78,43.66,45.0,25.17,8.75,14.0,Colheita,75.29,ALTO,Atencao a inclinacao - reduzir velocidade
+8.36,12.13,7.38,20.55,6.18,1.68,4.57,Colheita,4.29,BAIXO,Seguir rota atual
+38.15,24.34,28.48,44.19,13.31,11.37,6.63,Colheita,56.05,ALTO,Interromper operacao
+35.16,24.89,30.92,36.3,13.22,11.92,10.56,Deslocamento,53.4,ALTO,Pausa recomendada - risco de fadiga
+14.33,9.7,2.58,25.93,8.09,5.02,4.13,Colheita,3.38,BAIXO,Seguir rota atual
+39.34,21.73,15.04,39.22,19.8,13.68,9.41,Manobra,65.38,ALTO,Atencao a inclinacao - reduzir velocidade
+40.58,18.66,13.87,37.48,11.68,9.34,5.86,Colheita,37.56,MEDIO,Reduzir velocidade
+33.24,18.42,19.14,45.2,21.69,13.91,11.0,Deslocamento,76.64,ALTO,Atencao a inclinacao - reduzir velocidade
+29.19,20.37,11.7,38.14,14.5,10.58,6.04,Manobra,43.72,MEDIO,Reduzir velocidade
+40.98,15.71,9.2,43.0,9.24,0.41,8.43,Manobra,29.25,MEDIO,Reduzir velocidade
+27.71,15.83,0.31,28.48,6.07,4.68,9.0,Manobra,16.32,BAIXO,Seguir rota atual
+42.49,27.76,49.68,45.0,22.39,14.92,11.22,Manobra,77.81,ALTO,Atencao a inclinacao - reduzir velocidade
+21.88,6.63,5.86,24.15,7.75,4.91,7.25,Manobra,4.83,BAIXO,Seguir rota atual
+19.64,0.91,7.79,21.47,5.69,3.21,7.75,Colheita,3.53,BAIXO,Seguir rota atual
+5.05,20.0,7.17,27.12,6.89,5.86,6.04,Deslocamento,9.1,BAIXO,Seguir rota atual
+40.16,22.22,8.45,35.21,11.55,7.42,11.27,Colheita,36.74,MEDIO,Pausa recomendada - risco de fadiga
+43.56,13.18,23.25,40.58,14.94,10.83,12.25,Colheita,55.59,ALTO,Pausa recomendada - risco de fadiga
+26.63,4.91,5.22,21.14,4.24,3.12,6.72,Colheita,0.24,BAIXO,Seguir rota atual
+42.63,22.05,11.63,38.06,10.08,9.3,10.6,Colheita,51.86,ALTO,Pausa recomendada - risco de fadiga
+25.28,12.76,6.12,27.76,9.14,4.92,3.24,Colheita,2.73,BAIXO,Seguir rota atual
+39.02,19.77,12.6,39.57,12.62,11.08,6.21,Colheita,55.41,ALTO,Interromper operacao
+21.49,8.0,1.55,29.3,8.88,0.18,3.47,Colheita,3.52,BAIXO,Seguir rota atual
+35.39,19.18,24.64,39.42,14.21,5.99,11.27,Manobra,57.96,ALTO,Pausa recomendada - risco de fadiga
+25.09,20.24,9.39,41.44,8.07,0.0,9.37,Colheita,27.04,MEDIO,Reduzir velocidade
+59.0,30.0,47.1,41.53,25.23,11.08,12.95,Manobra,74.5,ALTO,Atencao a inclinacao - reduzir velocidade
+23.54,12.24,12.28,27.96,5.98,4.92,1.46,Colheita,13.04,BAIXO,Seguir rota atual
+15.14,6.36,2.43,26.76,5.36,8.36,5.0,Manobra,4.26,BAIXO,Seguir rota atual
+19.93,6.69,4.47,30.13,5.27,3.03,4.39,Manobra,5.77,BAIXO,Seguir rota atual
+43.27,24.54,40.24,45.0,23.05,14.58,13.7,Manobra,80.1,ALTO,Atencao a inclinacao - reduzir velocidade
+49.31,28.17,43.97,43.8,19.67,8.0,11.73,Manobra,72.61,ALTO,Atencao a inclinacao - reduzir velocidade
+29.96,11.7,6.9,32.18,7.18,5.59,3.76,Colheita,3.8,BAIXO,Seguir rota atual
+38.1,23.85,27.63,39.58,13.65,12.0,11.2,Manobra,64.46,ALTO,Pausa recomendada - risco de fadiga
+31.34,15.11,13.6,36.34,13.48,11.56,9.09,Manobra,40.09,MEDIO,Reduzir velocidade
+46.62,21.31,9.5,38.49,8.58,11.12,8.85,Manobra,71.38,ALTO,Interromper operacao
+40.36,15.71,0.23,39.27,13.13,5.29,7.26,Deslocamento,31.76,MEDIO,Reduzir velocidade
+27.88,3.24,8.93,21.5,8.28,4.01,6.21,Colheita,5.08,BAIXO,Seguir rota atual
+16.19,7.35,4.12,20.99,8.48,3.46,4.54,Manobra,5.24,BAIXO,Seguir rota atual
+45.03,19.31,43.09,45.0,25.14,13.94,11.47,Colheita,75.25,ALTO,Atencao a inclinacao - reduzir velocidade
+50.11,28.64,33.19,45.0,24.86,16.15,12.88,Deslocamento,74.69,ALTO,Atencao a inclinacao - reduzir velocidade
+40.12,24.02,22.73,38.94,13.28,12.31,13.1,Colheita,67.54,ALTO,Pausa recomendada - risco de fadiga
+11.33,2.13,4.49,26.25,7.35,5.73,4.55,Manobra,3.01,BAIXO,Seguir rota atual
+30.43,1.6,1.51,25.48,3.71,4.47,8.32,Colheita,18.59,BAIXO,Seguir rota atual
+40.13,22.69,7.92,38.15,13.87,11.05,12.56,Colheita,55.33,ALTO,Pausa recomendada - risco de fadiga
+52.79,23.67,47.47,44.49,26.56,18.74,9.97,Deslocamento,78.92,ALTO,Atencao a inclinacao - reduzir velocidade
+45.95,23.23,42.66,44.4,25.95,13.77,11.36,Manobra,77.94,ALTO,Atencao a inclinacao - reduzir velocidade
+40.91,19.49,34.72,35.18,15.55,18.07,10.01,Deslocamento,52.41,ALTO,Atencao a inclinacao - reduzir velocidade
+38.86,20.93,16.56,44.12,8.36,16.6,7.15,Colheita,41.62,MEDIO,Reduzir velocidade
+18.13,6.28,5.77,18.01,7.92,11.07,2.27,Colheita,11.16,BAIXO,Seguir rota atual
+21.33,5.35,5.28,26.1,5.72,6.46,8.61,Deslocamento,9.87,BAIXO,Seguir rota atual
+49.05,29.16,32.07,40.13,23.89,18.45,12.71,Manobra,75.09,ALTO,Atencao a inclinacao - reduzir velocidade
+38.12,22.0,8.0,41.81,17.65,10.64,9.06,Manobra,57.03,ALTO,Atencao a inclinacao - reduzir velocidade
+21.86,6.25,3.8,36.5,6.51,3.92,3.7,Colheita,4.37,BAIXO,Seguir rota atual
+25.21,7.28,2.05,32.61,9.84,3.2,1.27,Manobra,4.1,BAIXO,Seguir rota atual
+46.05,19.95,24.33,34.09,17.68,8.37,11.46,Colheita,73.56,ALTO,Atencao a inclinacao - reduzir velocidade
+20.1,4.18,2.78,29.43,7.21,6.75,8.95,Deslocamento,9.25,BAIXO,Seguir rota atual
+9.05,14.47,4.31,21.51,4.34,4.43,6.84,Colheita,7.14,BAIXO,Seguir rota atual
+33.98,26.04,0.74,35.95,8.24,9.09,10.77,Colheita,66.42,ALTO,Pausa recomendada - risco de fadiga
+37.48,14.19,19.59,41.31,16.21,15.71,7.86,Manobra,45.31,MEDIO,Reduzir velocidade
+44.08,25.58,3.77,40.96,13.49,11.76,10.7,Deslocamento,76.87,ALTO,Pausa recomendada - risco de fadiga
+16.59,5.3,4.1,20.56,4.83,7.04,2.7,Colheita,1.25,BAIXO,Seguir rota atual
+44.0,23.39,4.19,37.97,18.58,9.06,9.07,Colheita,36.31,MEDIO,Atencao a inclinacao - reduzir velocidade
+23.23,11.13,3.25,23.01,9.84,10.22,6.96,Colheita,12.28,BAIXO,Seguir rota atual
+20.6,4.77,1.51,28.61,7.84,9.2,6.3,Deslocamento,6.31,BAIXO,Seguir rota atual
+30.98,25.16,10.02,38.85,15.75,17.99,14.0,Colheita,75.66,ALTO,Atencao a inclinacao - reduzir velocidade
+43.64,21.45,22.28,42.66,14.04,17.39,10.46,Colheita,63.53,ALTO,Pausa recomendada - risco de fadiga
+52.49,29.0,49.22,45.0,19.53,12.33,9.8,Manobra,77.91,ALTO,Atencao a inclinacao - reduzir velocidade
+42.64,24.34,21.66,45.02,14.98,14.01,7.82,Deslocamento,76.37,ALTO,Interromper operacao
+31.9,22.78,12.25,34.82,11.79,3.45,8.29,Manobra,41.67,MEDIO,Reduzir velocidade
+26.23,10.3,5.5,26.25,7.01,3.02,6.4,Deslocamento,1.59,BAIXO,Seguir rota atual
+38.37,21.97,5.37,27.39,15.29,6.56,7.27,Manobra,30.45,MEDIO,Atencao a inclinacao - reduzir velocidade
+24.85,6.43,7.18,29.09,8.37,0.9,7.42,Manobra,5.26,BAIXO,Seguir rota atual
+21.83,6.52,4.43,17.12,7.82,1.91,2.29,Manobra,3.4,BAIXO,Seguir rota atual
+42.39,30.0,38.71,45.0,19.86,8.88,9.77,Manobra,75.36,ALTO,Atencao a inclinacao - reduzir velocidade
+44.89,19.38,5.26,36.64,13.51,11.35,11.9,Colheita,42.58,MEDIO,Pausa recomendada - risco de fadiga
+48.2,23.02,40.87,43.78,18.14,11.13,12.69,Manobra,71.77,ALTO,Atencao a inclinacao - reduzir velocidade
+39.71,22.1,11.93,39.31,12.23,14.67,12.07,Colheita,64.15,ALTO,Pausa recomendada - risco de fadiga
+28.92,19.21,6.03,38.05,14.75,7.65,8.16,Colheita,37.13,MEDIO,Reduzir velocidade
+26.97,20.83,8.35,33.11,12.53,6.36,8.46,Colheita,29.45,MEDIO,Reduzir velocidade
+48.39,25.36,1.5,39.32,14.43,4.56,10.64,Colheita,69.68,ALTO,Pausa recomendada - risco de fadiga
+47.3,15.51,3.41,40.07,12.81,9.65,9.68,Manobra,66.37,ALTO,Interromper operacao
+22.73,2.69,7.14,31.85,6.54,4.87,1.94,Deslocamento,2.97,BAIXO,Seguir rota atual
+43.09,23.72,17.5,43.37,14.0,13.69,7.96,Deslocamento,56.8,ALTO,Interromper operacao
+19.84,7.3,4.68,24.15,6.74,7.48,4.13,Deslocamento,6.51,BAIXO,Seguir rota atual
+8.75,15.0,8.14,19.54,8.38,3.49,5.53,Colheita,6.38,BAIXO,Seguir rota atual
+41.77,21.3,11.73,37.93,12.25,9.5,9.87,Colheita,42.37,MEDIO,Reduzir velocidade
+14.99,10.73,8.46,23.1,7.48,6.5,5.94,Deslocamento,1.69,BAIXO,Seguir rota atual
+50.38,29.23,49.82,39.29,25.48,16.66,10.47,Manobra,76.99,ALTO,Atencao a inclinacao - reduzir velocidade
+50.19,29.05,42.91,45.0,30.0,11.64,9.24,Deslocamento,77.27,ALTO,Atencao a inclinacao - reduzir velocidade
+51.52,29.16,42.69,45.0,16.65,16.08,10.79,Manobra,76.8,ALTO,Atencao a inclinacao - reduzir velocidade
+48.76,27.97,4.17,33.8,14.58,6.84,8.91,Colheita,65.97,ALTO,Interromper operacao
+20.18,0.32,3.96,22.55,6.01,9.33,2.49,Colheita,2.27,BAIXO,Seguir rota atual
+54.07,26.16,42.2,45.0,23.36,15.71,13.94,Colheita,75.94,ALTO,Atencao a inclinacao - reduzir velocidade
+32.35,17.55,2.57,32.7,20.85,11.73,6.3,Colheita,68.97,ALTO,Atencao a inclinacao - reduzir velocidade
+43.39,28.45,50.47,44.65,20.98,13.62,12.66,Manobra,77.53,ALTO,Atencao a inclinacao - reduzir velocidade
+50.43,20.34,42.7,40.45,22.7,20.0,12.73,Manobra,76.29,ALTO,Atencao a inclinacao - reduzir velocidade
+48.43,29.77,49.83,44.26,24.43,20.0,9.74,Colheita,76.66,ALTO,Atencao a inclinacao - reduzir velocidade
+23.32,4.29,5.67,21.41,6.17,4.11,6.95,Deslocamento,4.17,BAIXO,Seguir rota atual
+42.35,15.02,8.27,33.16,8.22,7.35,8.38,Deslocamento,19.37,BAIXO,Seguir rota atual
+62.13,28.3,31.22,41.31,26.09,20.0,8.83,Colheita,76.63,ALTO,Atencao a inclinacao - reduzir velocidade
+6.84,15.48,5.17,21.66,8.07,0.0,5.01,Colheita,4.13,BAIXO,Seguir rota atual
+22.29,11.7,0.96,26.43,5.15,5.77,3.21,Manobra,3.46,BAIXO,Seguir rota atual
+31.74,16.02,11.26,39.43,11.3,8.11,6.1,Deslocamento,37.16,MEDIO,Reduzir velocidade
+48.5,26.85,71.21,39.66,27.86,16.99,12.56,Manobra,76.97,ALTO,Atencao a inclinacao - reduzir velocidade
+50.55,23.12,21.11,39.84,18.67,15.29,8.75,Colheita,76.53,ALTO,Atencao a inclinacao - reduzir velocidade
+24.45,19.19,4.0,35.75,15.71,6.63,8.91,Deslocamento,30.76,MEDIO,Atencao a inclinacao - reduzir velocidade
+20.41,11.39,0.0,22.97,7.42,8.6,4.02,Colheita,6.69,BAIXO,Seguir rota atual
+28.74,23.86,12.92,36.43,13.13,11.45,8.79,Colheita,44.53,MEDIO,Reduzir velocidade
+38.97,29.69,57.75,44.95,17.45,13.4,11.99,Deslocamento,74.7,ALTO,Atencao a inclinacao - reduzir velocidade
+24.19,10.67,1.8,26.41,7.91,9.37,6.41,Colheita,5.77,BAIXO,Seguir rota atual
+41.31,20.34,15.05,37.64,9.42,12.21,10.4,Colheita,41.27,MEDIO,Pausa recomendada - risco de fadiga
+47.78,25.56,47.97,44.39,22.79,14.93,14.0,Colheita,73.84,ALTO,Atencao a inclinacao - reduzir velocidade
+46.43,22.57,25.53,36.9,16.19,17.43,9.56,Colheita,74.67,ALTO,Atencao a inclinacao - reduzir velocidade
+34.91,20.04,9.28,37.65,13.89,7.78,10.03,Manobra,38.03,MEDIO,Pausa recomendada - risco de fadiga
+45.41,19.28,30.15,41.53,18.09,10.03,11.71,Deslocamento,73.51,ALTO,Atencao a inclinacao - reduzir velocidade
+26.26,23.56,8.86,38.21,8.47,5.31,10.19,Colheita,29.23,MEDIO,Pausa recomendada - risco de fadiga
+13.36,9.85,0.0,30.24,4.53,6.66,6.25,Colheita,2.79,BAIXO,Seguir rota atual
+35.82,23.75,20.08,38.38,11.97,6.11,10.7,Colheita,54.03,ALTO,Pausa recomendada - risco de fadiga
+30.61,22.29,15.89,42.04,14.09,11.01,11.46,Deslocamento,66.89,ALTO,Pausa recomendada - risco de fadiga
+51.68,27.95,49.69,38.39,25.03,15.84,9.97,Colheita,77.41,ALTO,Atencao a inclinacao - reduzir velocidade
+48.78,26.88,43.66,44.0,27.73,17.25,9.38,Manobra,75.96,ALTO,Atencao a inclinacao - reduzir velocidade
+39.98,25.32,9.93,40.36,18.04,11.07,9.5,Colheita,72.91,ALTO,Atencao a inclinacao - reduzir velocidade
+43.36,20.58,8.12,34.59,16.69,5.54,12.06,Colheita,34.3,MEDIO,Atencao a inclinacao - reduzir velocidade
+43.0,17.8,20.94,33.7,16.88,14.66,8.82,Manobra,46.84,MEDIO,Atencao a inclinacao - reduzir velocidade
+40.74,27.86,13.95,36.82,19.44,17.89,10.01,Manobra,75.18,ALTO,Atencao a inclinacao - reduzir velocidade
+46.07,26.02,12.06,38.54,18.69,17.06,11.13,Colheita,74.59,ALTO,Atencao a inclinacao - reduzir velocidade
+34.72,27.96,13.75,38.99,16.03,16.66,11.71,Manobra,77.44,ALTO,Atencao a inclinacao - reduzir velocidade
+52.07,28.39,45.44,44.67,11.88,13.11,12.48,Deslocamento,75.86,ALTO,Pausa recomendada - risco de fadiga
+11.94,9.55,3.39,34.78,10.15,3.6,4.7,Manobra,9.43,BAIXO,Seguir rota atual
+34.41,18.19,8.98,32.97,8.61,9.87,10.26,Deslocamento,30.87,MEDIO,Reduzir velocidade
+14.37,11.58,2.11,27.27,8.64,4.9,5.91,Deslocamento,2.52,BAIXO,Seguir rota atual
+30.87,19.21,6.97,33.01,11.47,3.35,8.02,Manobra,36.31,MEDIO,Reduzir velocidade
+18.01,6.98,3.28,25.69,7.96,7.62,3.7,Colheita,4.24,BAIXO,Seguir rota atual
+25.37,15.83,5.56,34.59,9.69,4.11,8.09,Deslocamento,9.0,BAIXO,Seguir rota atual
+36.45,22.38,5.21,34.35,9.22,7.91,7.3,Deslocamento,19.34,BAIXO,Seguir rota atual
+24.01,0.86,2.92,27.51,7.37,12.0,5.7,Colheita,13.74,BAIXO,Seguir rota atual
+26.97,19.62,0.0,35.68,9.5,10.75,7.9,Colheita,16.49,BAIXO,Seguir rota atual
+19.18,5.46,9.22,24.39,10.67,7.44,5.96,Colheita,6.67,BAIXO,Seguir rota atual
+22.58,9.58,0.0,24.61,8.69,4.85,2.19,Deslocamento,0.0,BAIXO,Seguir rota atual
+49.74,30.0,57.47,42.81,25.81,12.9,8.59,Deslocamento,75.7,ALTO,Atencao a inclinacao - reduzir velocidade
+27.6,26.25,6.63,35.03,11.1,13.71,12.25,Deslocamento,68.67,ALTO,Pausa recomendada - risco de fadiga
+35.53,7.36,4.89,18.42,9.95,1.5,5.43,Colheita,10.42,BAIXO,Seguir rota atual
+26.22,17.64,3.81,33.57,10.38,6.36,10.67,Deslocamento,18.27,BAIXO,Seguir rota atual
+33.37,22.66,27.74,38.46,12.85,11.31,12.36,Manobra,61.79,ALTO,Pausa recomendada - risco de fadiga
+21.36,5.88,5.45,20.49,8.36,6.23,4.38,Colheita,0.37,BAIXO,Seguir rota atual
+34.97,19.34,22.28,43.69,13.09,13.38,5.83,Deslocamento,55.59,ALTO,Interromper operacao
+15.91,7.88,1.27,21.32,5.66,5.88,4.63,Deslocamento,4.27,BAIXO,Seguir rota atual
+5.0,0.0,2.18,28.29,1.5,3.5,3.95,Deslocamento,3.15,BAIXO,Seguir rota atual
+46.11,18.46,9.91,36.57,5.61,10.3,9.43,Deslocamento,66.69,ALTO,Interromper operacao
+39.07,28.0,0.0,42.9,11.14,8.86,8.91,Manobra,72.94,ALTO,Interromper operacao
+37.45,20.29,20.64,35.45,17.25,10.75,7.74,Colheita,46.54,MEDIO,Atencao a inclinacao - reduzir velocidade
+37.3,25.77,13.72,41.08,12.81,14.27,11.37,Manobra,76.56,ALTO,Pausa recomendada - risco de fadiga
+59.24,26.47,51.69,43.29,27.18,11.84,13.49,Colheita,74.31,ALTO,Atencao a inclinacao - reduzir velocidade
+33.44,19.74,8.46,37.01,11.65,8.64,12.16,Colheita,37.09,MEDIO,Pausa recomendada - risco de fadiga
+26.9,11.48,2.63,21.55,8.91,7.63,7.95,Colheita,1.27,BAIXO,Seguir rota atual
+36.38,21.31,4.88,38.82,17.99,10.6,11.28,Manobra,57.12,ALTO,Atencao a inclinacao - reduzir velocidade
+18.67,9.3,0.56,26.43,1.02,4.44,1.74,Colheita,4.16,BAIXO,Seguir rota atual
+44.65,23.11,10.33,42.08,9.15,13.24,10.86,Colheita,51.46,ALTO,Pausa recomendada - risco de fadiga
+18.34,12.54,0.68,21.88,5.78,3.41,2.89,Colheita,3.4,BAIXO,Seguir rota atual
+28.56,6.96,5.06,23.15,3.36,5.81,1.18,Manobra,4.93,BAIXO,Seguir rota atual
+49.66,22.9,64.87,45.0,22.42,17.79,10.31,Manobra,75.33,ALTO,Atencao a inclinacao - reduzir velocidade
+52.72,27.6,47.64,45.0,24.93,14.87,8.69,Deslocamento,75.45,ALTO,Atencao a inclinacao - reduzir velocidade
+34.24,21.63,18.75,36.61,22.24,16.55,11.2,Deslocamento,71.55,ALTO,Atencao a inclinacao - reduzir velocidade
+35.58,19.15,3.24,36.31,12.77,4.27,9.67,Deslocamento,38.13,MEDIO,Reduzir velocidade
+18.91,0.37,1.42,23.93,10.78,6.67,2.33,Colheita,8.7,BAIXO,Seguir rota atual
+23.4,1.81,7.25,23.64,6.81,8.98,2.43,Manobra,0.0,BAIXO,Seguir rota atual
+10.22,5.67,7.12,18.4,1.34,3.65,6.1,Colheita,3.26,BAIXO,Seguir rota atual
+44.6,18.15,5.94,40.62,6.39,6.83,9.38,Colheita,38.96,MEDIO,Reduzir velocidade
+42.7,20.47,18.28,32.54,13.03,13.36,8.04,Colheita,54.23,ALTO,Interromper operacao
+40.35,23.34,15.26,40.51,12.11,11.38,11.22,Deslocamento,68.48,ALTO,Pausa recomendada - risco de fadiga
+21.1,5.65,4.67,29.57,2.9,8.48,4.33,Colheita,4.86,BAIXO,Seguir rota atual
+52.13,30.0,31.28,40.87,20.85,11.65,14.0,Deslocamento,76.68,ALTO,Atencao a inclinacao - reduzir velocidade
+34.86,20.33,19.64,36.39,13.81,12.95,9.33,Colheita,54.74,ALTO,Verificar equipamento - desgaste elevado
+34.25,17.88,0.43,37.29,17.26,8.06,9.45,Deslocamento,29.86,MEDIO,Atencao a inclinacao - reduzir velocidade
+44.16,18.19,31.62,40.61,19.9,9.8,13.64,Colheita,54.47,ALTO,Atencao a inclinacao - reduzir velocidade
+41.2,22.21,9.17,35.01,15.6,8.42,5.07,Colheita,29.4,MEDIO,Atencao a inclinacao - reduzir velocidade
+12.18,7.26,4.93,25.72,9.44,0.0,5.29,Colheita,5.06,BAIXO,Seguir rota atual
+20.46,23.04,7.53,37.68,9.41,11.84,11.08,Manobra,28.13,MEDIO,Pausa recomendada - risco de fadiga
+43.5,21.61,22.64,37.88,17.57,16.95,12.14,Colheita,52.85,ALTO,Atencao a inclinacao - reduzir velocidade
+14.89,9.45,0.12,28.86,7.9,0.0,2.68,Deslocamento,1.75,BAIXO,Seguir rota atual
+18.02,6.8,0.37,27.94,7.5,4.42,3.49,Deslocamento,8.09,BAIXO,Seguir rota atual
+27.34,14.62,2.55,22.94,7.98,3.93,4.72,Deslocamento,5.06,BAIXO,Seguir rota atual
+25.18,0.36,7.95,26.36,6.18,4.73,4.92,Colheita,4.61,BAIXO,Seguir rota atual
+41.34,30.0,45.41,44.33,25.81,10.94,12.95,Colheita,73.88,ALTO,Atencao a inclinacao - reduzir velocidade
+38.39,24.54,0.98,39.7,13.19,13.3,10.94,Colheita,56.25,ALTO,Pausa recomendada - risco de fadiga
+29.34,17.15,7.45,32.41,14.53,6.89,3.19,Deslocamento,9.77,BAIXO,Seguir rota atual
+17.38,3.85,0.0,19.81,7.22,8.99,5.63,Colheita,4.43,BAIXO,Seguir rota atual
+30.15,21.82,5.7,33.22,8.54,2.74,8.22,Manobra,28.05,MEDIO,Reduzir velocidade
+36.26,19.61,5.92,32.22,13.82,4.05,10.55,Manobra,37.32,MEDIO,Reduzir velocidade
+12.98,4.99,0.0,23.49,8.95,6.55,6.96,Colheita,3.15,BAIXO,Seguir rota atual
+39.18,15.59,6.35,32.88,15.99,4.41,10.79,Colheita,28.47,MEDIO,Atencao a inclinacao - reduzir velocidade
+42.14,27.32,5.95,38.85,18.84,6.15,5.93,Deslocamento,71.47,ALTO,Atencao a inclinacao - reduzir velocidade
+28.72,24.14,2.93,38.88,16.31,12.56,10.85,Colheita,40.92,MEDIO,Atencao a inclinacao - reduzir velocidade
+41.33,25.84,10.38,37.97,12.68,14.49,11.8,Colheita,75.13,ALTO,Pausa recomendada - risco de fadiga
+23.16,12.73,0.47,34.34,10.05,7.21,8.56,Manobra,19.37,BAIXO,Seguir rota atual
+21.75,17.9,4.32,38.89,8.85,10.27,11.74,Colheita,28.24,MEDIO,Pausa recomendada - risco de fadiga
+44.17,22.85,10.1,37.46,18.75,14.34,9.92,Manobra,53.36,ALTO,Atencao a inclinacao - reduzir velocidade
+31.66,11.9,2.65,43.0,8.16,8.57,11.01,Deslocamento,29.55,MEDIO,Pausa recomendada - risco de fadiga
+43.73,27.55,54.38,43.04,30.0,8.99,14.0,Manobra,74.56,ALTO,Atencao a inclinacao - reduzir velocidade
+38.96,24.32,21.53,37.8,15.69,6.43,11.21,Colheita,43.69,MEDIO,Atencao a inclinacao - reduzir velocidade
+22.09,10.55,7.17,27.84,7.3,2.36,3.58,Colheita,4.87,BAIXO,Seguir rota atual
+28.31,13.75,3.29,26.23,5.19,8.52,6.33,Deslocamento,7.53,BAIXO,Seguir rota atual
+51.65,19.37,14.98,40.69,16.94,11.35,8.25,Colheita,74.98,ALTO,Atencao a inclinacao - reduzir velocidade
+26.17,10.88,1.25,32.78,9.34,5.4,5.16,Colheita,0.57,BAIXO,Seguir rota atual
+39.43,16.55,8.15,27.39,14.63,3.32,12.01,Colheita,31.65,MEDIO,Reduzir velocidade
+48.35,26.36,38.72,42.14,27.67,8.0,14.0,Colheita,77.37,ALTO,Atencao a inclinacao - reduzir velocidade
+37.7,15.17,2.62,42.71,9.16,4.54,11.27,Colheita,30.79,MEDIO,Pausa recomendada - risco de fadiga
+37.71,16.25,9.08,31.9,15.3,11.18,10.06,Manobra,34.82,MEDIO,Atencao a inclinacao - reduzir velocidade
+42.17,27.28,18.0,36.45,16.35,18.26,7.97,Colheita,71.75,ALTO,Atencao a inclinacao - reduzir velocidade
+32.11,21.67,7.73,32.07,15.37,14.96,9.39,Colheita,41.76,MEDIO,Atencao a inclinacao - reduzir velocidade
+27.77,13.8,9.29,40.42,13.43,7.99,7.82,Deslocamento,19.29,BAIXO,Seguir rota atual
+44.54,29.5,54.14,38.36,28.36,15.72,14.0,Manobra,73.3,ALTO,Atencao a inclinacao - reduzir velocidade
+24.26,14.54,7.26,38.01,17.39,10.12,8.51,Colheita,36.4,MEDIO,Reduzir velocidade
+44.87,30.0,35.35,45.0,20.86,18.77,13.36,Colheita,73.99,ALTO,Atencao a inclinacao - reduzir velocidade
+49.32,25.44,41.59,44.28,22.31,12.22,11.67,Deslocamento,76.25,ALTO,Atencao a inclinacao - reduzir velocidade
+20.55,0.0,5.37,21.1,4.69,0.0,1.41,Manobra,3.27,BAIXO,Seguir rota atual
+10.51,5.16,9.86,23.37,7.36,6.2,5.26,Deslocamento,4.35,BAIXO,Seguir rota atual
+19.46,3.22,8.35,35.04,3.63,1.93,4.44,Deslocamento,4.04,BAIXO,Seguir rota atual
+13.25,10.02,1.82,36.83,9.38,5.64,7.05,Colheita,2.03,BAIXO,Seguir rota atual
+27.74,5.74,1.55,26.39,8.72,5.42,1.85,Deslocamento,5.25,BAIXO,Seguir rota atual
+35.18,21.78,17.39,45.92,10.84,13.52,12.98,Colheita,75.9,ALTO,Pausa recomendada - risco de fadiga
+35.9,6.38,5.47,28.85,7.39,4.7,5.87,Deslocamento,8.02,BAIXO,Seguir rota atual
+5.0,10.73,4.38,24.89,11.09,2.98,4.19,Deslocamento,14.48,BAIXO,Seguir rota atual
+59.96,24.5,39.5,42.56,25.36,14.62,9.41,Manobra,76.95,ALTO,Atencao a inclinacao - reduzir velocidade
+16.27,5.57,3.77,28.13,7.84,0.0,7.13,Colheita,3.69,BAIXO,Seguir rota atual
+41.52,26.15,21.55,43.3,16.4,16.04,11.04,Colheita,78.83,ALTO,Atencao a inclinacao - reduzir velocidade
+19.31,17.09,6.67,28.87,4.45,1.14,5.59,Deslocamento,7.68,BAIXO,Seguir rota atual
+21.02,5.54,4.42,33.94,8.39,1.58,4.78,Deslocamento,3.71,BAIXO,Seguir rota atual
+35.17,20.84,14.69,38.57,11.23,11.62,8.88,Manobra,65.69,ALTO,Interromper operacao
+22.42,28.16,26.71,38.87,15.06,8.49,13.39,Colheita,70.02,ALTO,Atencao a inclinacao - reduzir velocidade
+59.49,27.47,55.24,43.53,16.65,12.76,12.26,Colheita,75.71,ALTO,Atencao a inclinacao - reduzir velocidade
+37.27,21.34,17.27,39.76,15.16,8.82,8.57,Deslocamento,54.6,ALTO,Atencao a inclinacao - reduzir velocidade
+32.29,24.93,1.15,43.46,19.16,11.09,4.79,Colheita,44.37,MEDIO,Atencao a inclinacao - reduzir velocidade
+17.47,7.74,0.97,23.42,10.06,6.99,3.15,Manobra,10.67,BAIXO,Seguir rota atual
+8.82,6.69,3.36,28.48,5.93,6.53,8.87,Colheita,11.12,BAIXO,Seguir rota atual
+44.89,21.86,16.53,38.93,18.54,10.12,10.09,Manobra,65.48,ALTO,Atencao a inclinacao - reduzir velocidade
+40.31,20.49,7.02,40.97,14.82,13.5,8.93,Deslocamento,52.58,ALTO,Interromper operacao
+56.1,24.37,62.12,37.76,23.74,15.43,10.41,Manobra,72.12,ALTO,Atencao a inclinacao - reduzir velocidade
+38.4,25.12,0.0,38.01,4.52,5.1,12.26,Colheita,68.91,ALTO,Pausa recomendada - risco de fadiga
+30.35,15.3,7.01,43.0,6.5,4.85,11.99,Manobra,29.44,MEDIO,Pausa recomendada - risco de fadiga
+51.15,21.69,8.09,46.29,19.78,14.04,8.38,Colheita,76.1,ALTO,Atencao a inclinacao - reduzir velocidade
+19.66,7.36,4.99,33.26,8.76,1.77,7.75,Deslocamento,1.67,BAIXO,Seguir rota atual
+51.57,29.06,59.67,39.67,21.86,12.41,8.86,Colheita,75.29,ALTO,Atencao a inclinacao - reduzir velocidade
+51.73,30.0,26.6,42.9,24.56,14.37,11.77,Deslocamento,77.91,ALTO,Atencao a inclinacao - reduzir velocidade
+24.61,20.93,4.22,27.24,15.58,10.88,9.1,Colheita,36.4,MEDIO,Atencao a inclinacao - reduzir velocidade
+41.37,25.22,19.79,42.71,14.11,15.94,10.64,Colheita,76.92,ALTO,Pausa recomendada - risco de fadiga
+41.16,18.19,20.3,37.5,13.09,9.55,7.87,Manobra,36.72,MEDIO,Reduzir velocidade
+34.87,13.33,9.76,19.89,7.14,1.12,3.61,Colheita,10.51,BAIXO,Seguir rota atual
+45.41,30.0,41.04,45.0,24.42,20.0,9.04,Manobra,75.54,ALTO,Atencao a inclinacao - reduzir velocidade
+45.07,24.59,3.13,40.03,13.01,7.32,7.35,Manobra,71.33,ALTO,Interromper operacao
+46.4,30.0,45.01,45.0,18.84,11.66,14.0,Colheita,72.91,ALTO,Atencao a inclinacao - reduzir velocidade
+10.55,6.34,4.1,26.56,6.64,6.19,6.39,Deslocamento,3.27,BAIXO,Seguir rota atual
+53.67,24.04,42.16,45.0,25.58,9.88,12.7,Colheita,74.59,ALTO,Atencao a inclinacao - reduzir velocidade
+19.17,20.19,17.49,32.21,9.5,10.29,5.91,Colheita,31.07,MEDIO,Reduzir velocidade
+15.57,10.39,2.1,24.82,8.49,6.26,5.53,Colheita,6.99,BAIXO,Seguir rota atual
+48.3,28.11,43.76,44.37,20.01,13.45,10.02,Manobra,75.22,ALTO,Atencao a inclinacao - reduzir velocidade
+19.75,4.76,0.66,27.29,7.43,7.35,4.14,Colheita,6.96,BAIXO,Seguir rota atual
+22.86,10.2,5.33,21.87,7.3,6.09,5.01,Deslocamento,2.68,BAIXO,Seguir rota atual
+39.57,27.48,67.13,41.92,19.09,15.12,12.62,Deslocamento,78.66,ALTO,Atencao a inclinacao - reduzir velocidade
+55.96,23.23,52.31,44.77,21.43,15.02,14.0,Manobra,77.63,ALTO,Atencao a inclinacao - reduzir velocidade
+41.98,15.43,12.1,35.74,12.22,8.22,8.7,Colheita,35.17,MEDIO,Reduzir velocidade
+47.15,21.75,9.04,38.82,15.54,15.69,11.21,Deslocamento,74.61,ALTO,Atencao a inclinacao - reduzir velocidade
+28.2,28.0,9.32,41.1,11.54,9.6,10.68,Deslocamento,69.9,ALTO,Pausa recomendada - risco de fadiga
+28.53,12.23,6.62,24.42,5.86,6.0,6.87,Deslocamento,5.25,BAIXO,Seguir rota atual
+18.44,12.26,8.36,21.42,5.33,4.58,5.62,Manobra,3.55,BAIXO,Seguir rota atual
+36.85,26.06,21.39,40.12,10.69,8.05,10.56,Manobra,73.39,ALTO,Pausa recomendada - risco de fadiga
+27.2,25.04,16.73,47.0,21.92,11.46,9.79,Colheita,76.74,ALTO,Atencao a inclinacao - reduzir velocidade
+45.97,27.11,4.9,34.64,13.13,13.75,10.99,Deslocamento,71.8,ALTO,Verificar equipamento - desgaste elevado
+46.42,18.4,0.0,42.57,12.52,5.94,10.29,Colheita,73.65,ALTO,Pausa recomendada - risco de fadiga
+25.55,7.51,2.63,25.2,6.26,0.96,3.57,Colheita,3.55,BAIXO,Seguir rota atual
+39.17,21.29,8.84,32.02,11.46,1.47,9.36,Deslocamento,40.33,MEDIO,Reduzir velocidade
+30.0,2.1,2.24,27.65,9.51,3.66,3.62,Colheita,8.64,BAIXO,Seguir rota atual
+19.25,20.41,18.21,37.11,11.93,8.97,8.98,Colheita,35.77,MEDIO,Reduzir velocidade
+28.5,23.29,9.13,36.07,9.07,11.91,10.33,Manobra,33.05,MEDIO,Pausa recomendada - risco de fadiga
+47.24,30.0,40.02,40.65,18.96,8.69,12.94,Colheita,73.11,ALTO,Atencao a inclinacao - reduzir velocidade
+20.35,15.09,0.0,35.66,11.55,7.02,6.91,Manobra,13.2,BAIXO,Seguir rota atual
+11.79,9.86,2.35,27.58,5.23,5.54,7.61,Colheita,5.78,BAIXO,Seguir rota atual
+24.1,6.35,4.77,24.8,7.02,4.02,4.67,Deslocamento,3.69,BAIXO,Seguir rota atual
+41.27,19.02,9.87,35.83,10.2,8.35,10.32,Manobra,33.37,MEDIO,Pausa recomendada - risco de fadiga
+34.64,23.54,18.28,34.09,16.96,14.43,8.01,Colheita,54.96,ALTO,Atencao a inclinacao - reduzir velocidade
+22.94,4.57,4.29,19.68,3.41,3.85,4.75,Colheita,4.2,BAIXO,Seguir rota atual
+17.22,3.26,2.8,27.35,6.91,5.55,3.66,Colheita,6.33,BAIXO,Seguir rota atual
+47.03,18.47,21.9,43.55,16.44,11.39,8.94,Colheita,79.18,ALTO,Atencao a inclinacao - reduzir velocidade
+27.25,2.31,1.09,24.01,9.48,6.14,3.06,Manobra,2.63,BAIXO,Seguir rota atual
+48.45,25.16,37.9,45.0,16.51,18.83,13.66,Manobra,77.6,ALTO,Atencao a inclinacao - reduzir velocidade
+46.55,20.61,16.8,35.7,13.43,13.48,12.59,Colheita,75.53,ALTO,Pausa recomendada - risco de fadiga
+12.25,6.54,3.55,19.02,8.18,2.83,4.61,Colheita,6.15,BAIXO,Seguir rota atual
+16.84,4.84,3.98,24.92,6.26,2.81,5.64,Colheita,5.0,BAIXO,Seguir rota atual
+58.27,27.42,54.96,38.83,22.63,10.71,9.05,Colheita,72.12,ALTO,Atencao a inclinacao - reduzir velocidade
+29.09,24.77,12.75,36.97,7.4,7.41,9.6,Deslocamento,29.69,MEDIO,Reduzir velocidade
+36.4,12.62,3.55,35.74,13.61,1.41,8.68,Colheita,27.69,MEDIO,Reduzir velocidade
+40.86,24.55,23.54,41.75,12.6,6.28,9.21,Deslocamento,54.59,ALTO,Interromper operacao
+55.01,30.0,52.11,44.29,23.52,12.33,11.74,Colheita,77.96,ALTO,Atencao a inclinacao - reduzir velocidade
+58.35,24.17,61.15,42.03,27.3,9.78,13.17,Colheita,74.61,ALTO,Atencao a inclinacao - reduzir velocidade
+35.58,17.75,19.75,43.03,12.47,7.5,9.82,Deslocamento,46.3,MEDIO,Reduzir velocidade
+34.3,22.19,12.75,35.76,17.57,8.67,8.31,Deslocamento,44.68,MEDIO,Atencao a inclinacao - reduzir velocidade
+8.72,6.95,2.99,30.8,7.92,1.46,5.34,Manobra,1.4,BAIXO,Seguir rota atual
+44.03,26.58,25.1,42.28,15.18,13.16,12.5,Manobra,70.96,ALTO,Atencao a inclinacao - reduzir velocidade
+24.34,18.6,4.14,37.52,15.69,6.21,4.22,Colheita,18.3,BAIXO,Seguir rota atual
+31.7,23.65,10.69,37.71,11.16,4.16,10.03,Colheita,43.57,MEDIO,Pausa recomendada - risco de fadiga
+45.83,30.0,50.71,41.26,19.55,13.72,11.52,Manobra,74.05,ALTO,Atencao a inclinacao - reduzir velocidade
+27.82,8.75,1.81,35.45,7.1,7.31,3.78,Manobra,0.6,BAIXO,Seguir rota atual
+37.9,21.24,0.0,43.0,15.87,6.81,6.8,Manobra,35.53,MEDIO,Atencao a inclinacao - reduzir velocidade
+22.43,8.35,5.07,26.96,8.01,9.34,6.14,Colheita,3.61,BAIXO,Seguir rota atual
+26.6,25.45,16.2,43.0,8.63,8.73,4.84,Manobra,69.33,ALTO,Interromper operacao
+23.87,5.81,9.77,22.13,3.62,3.59,1.05,Colheita,4.38,BAIXO,Seguir rota atual
+25.26,0.0,4.09,15.61,6.36,9.93,5.72,Deslocamento,7.22,BAIXO,Seguir rota atual
+13.96,7.88,4.05,28.36,4.27,6.78,0.0,Manobra,1.93,BAIXO,Seguir rota atual
+36.22,20.54,23.07,40.07,10.78,9.05,10.4,Colheita,56.76,ALTO,Pausa recomendada - risco de fadiga
+39.53,20.26,14.15,42.09,13.45,11.74,14.0,Manobra,65.09,ALTO,Pausa recomendada - risco de fadiga
+23.61,12.59,11.92,33.29,11.05,5.66,8.48,Colheita,31.39,MEDIO,Reduzir velocidade
+57.99,29.41,53.62,38.75,17.4,8.0,10.38,Manobra,73.13,ALTO,Atencao a inclinacao - reduzir velocidade
+42.65,22.07,6.89,35.91,9.93,8.61,10.53,Colheita,32.14,MEDIO,Pausa recomendada - risco de fadiga
+8.69,9.2,6.8,23.92,8.4,12.0,4.79,Manobra,10.59,BAIXO,Seguir rota atual
+51.97,24.79,46.81,44.38,22.78,10.94,12.41,Colheita,74.64,ALTO,Atencao a inclinacao - reduzir velocidade
+30.24,9.79,6.89,24.81,8.5,5.84,3.1,Deslocamento,9.98,BAIXO,Seguir rota atual
+51.59,24.02,38.67,43.57,23.19,10.43,14.0,Deslocamento,75.52,ALTO,Atencao a inclinacao - reduzir velocidade
+24.0,5.18,0.0,25.28,6.11,5.34,4.27,Colheita,4.98,BAIXO,Seguir rota atual
+39.96,25.83,41.94,44.9,19.21,19.04,8.18,Colheita,73.64,ALTO,Atencao a inclinacao - reduzir velocidade
+29.18,7.1,6.58,26.4,9.28,3.84,2.8,Deslocamento,3.94,BAIXO,Seguir rota atual
+57.1,26.66,47.22,45.0,17.87,15.79,10.82,Colheita,76.79,ALTO,Atencao a inclinacao - reduzir velocidade
+33.94,20.29,0.5,32.88,16.05,10.66,8.87,Deslocamento,44.07,MEDIO,Atencao a inclinacao - reduzir velocidade
+51.22,26.12,58.57,42.4,22.93,17.44,10.45,Colheita,78.69,ALTO,Atencao a inclinacao - reduzir velocidade
+30.91,1.88,8.89,24.14,6.51,0.0,4.09,Manobra,11.55,BAIXO,Seguir rota atual
+26.68,17.57,7.31,39.83,12.62,8.92,6.81,Colheita,17.99,BAIXO,Seguir rota atual
+45.6,30.0,37.65,45.0,21.03,14.01,14.0,Colheita,76.43,ALTO,Atencao a inclinacao - reduzir velocidade
+45.18,19.56,6.06,35.78,13.01,10.67,9.01,Colheita,72.59,ALTO,Interromper operacao
+43.71,26.92,21.05,40.93,10.44,4.11,10.78,Colheita,74.81,ALTO,Pausa recomendada - risco de fadiga
+39.43,20.46,19.95,39.82,18.38,12.26,8.51,Colheita,61.35,ALTO,Atencao a inclinacao - reduzir velocidade
+42.92,19.13,10.63,34.09,10.05,8.25,9.03,Deslocamento,43.4,MEDIO,Reduzir velocidade
+42.88,21.19,3.31,38.7,17.38,11.11,9.51,Manobra,52.03,ALTO,Atencao a inclinacao - reduzir velocidade
+42.89,17.15,0.29,35.36,10.55,5.1,8.65,Deslocamento,32.56,MEDIO,Reduzir velocidade
+52.46,26.97,48.07,45.0,20.63,14.84,10.98,Deslocamento,75.88,ALTO,Atencao a inclinacao - reduzir velocidade
+14.08,5.66,2.56,27.8,11.7,2.85,4.17,Colheita,9.61,BAIXO,Seguir rota atual
+19.56,9.58,4.79,32.42,2.15,0.0,4.01,Deslocamento,5.79,BAIXO,Seguir rota atual
+55.49,22.3,20.0,44.71,22.97,10.73,10.03,Colheita,76.84,ALTO,Atencao a inclinacao - reduzir velocidade
+45.15,27.33,38.74,44.48,10.58,11.43,9.75,Manobra,73.74,ALTO,Interromper operacao
+32.95,17.85,11.99,28.56,12.14,9.68,12.71,Colheita,36.86,MEDIO,Reduzir velocidade
+37.11,22.97,3.57,32.82,17.53,11.98,12.36,Colheita,43.33,MEDIO,Atencao a inclinacao - reduzir velocidade
+10.39,10.08,9.61,28.1,7.55,5.03,1.86,Colheita,0.51,BAIXO,Seguir rota atual
+29.49,5.56,5.51,18.18,4.64,9.31,4.31,Manobra,2.62,BAIXO,Seguir rota atual
+46.63,19.69,0.0,39.57,10.23,10.1,9.05,Colheita,73.63,ALTO,Interromper operacao
+22.66,20.66,18.98,37.97,11.83,11.23,9.42,Deslocamento,43.77,MEDIO,Reduzir velocidade
+36.68,15.63,9.17,40.14,9.49,12.27,8.82,Colheita,34.04,MEDIO,Reduzir velocidade
+13.79,11.99,3.14,29.8,6.42,4.82,5.99,Deslocamento,6.3,BAIXO,Seguir rota atual
+51.45,21.01,33.79,45.0,21.47,12.43,9.28,Manobra,75.8,ALTO,Atencao a inclinacao - reduzir velocidade
+44.6,20.93,43.99,41.2,18.13,13.8,12.73,Deslocamento,76.08,ALTO,Atencao a inclinacao - reduzir velocidade
+52.56,17.46,27.28,42.92,12.66,12.61,9.08,Deslocamento,74.8,ALTO,Verificar equipamento - desgaste elevado
+36.49,26.04,11.03,38.03,10.71,3.55,8.58,Manobra,72.42,ALTO,Interromper operacao
+28.45,1.89,0.83,26.63,5.03,2.62,4.15,Deslocamento,4.91,BAIXO,Seguir rota atual
+31.81,19.08,23.63,36.08,10.21,10.11,11.46,Deslocamento,54.27,ALTO,Pausa recomendada - risco de fadiga
+38.82,20.61,18.35,34.76,16.48,13.15,9.18,Deslocamento,53.21,ALTO,Atencao a inclinacao - reduzir velocidade
+27.04,3.49,7.38,26.77,6.33,4.94,4.79,Deslocamento,5.15,BAIXO,Seguir rota atual
+56.1,23.77,37.37,45.0,19.62,16.7,14.0,Colheita,78.98,ALTO,Atencao a inclinacao - reduzir velocidade
+47.99,29.04,33.46,45.0,22.8,15.42,10.71,Manobra,77.45,ALTO,Atencao a inclinacao - reduzir velocidade
+41.69,28.51,24.37,42.05,25.76,14.58,14.0,Deslocamento,77.85,ALTO,Atencao a inclinacao - reduzir velocidade
+46.15,20.04,18.22,39.86,10.25,9.18,8.88,Colheita,72.96,ALTO,Interromper operacao
+27.78,22.14,16.01,34.98,16.21,14.15,10.45,Manobra,40.8,MEDIO,Atencao a inclinacao - reduzir velocidade
+32.41,22.37,11.4,37.23,9.53,8.83,11.39,Colheita,39.98,MEDIO,Pausa recomendada - risco de fadiga
+47.02,30.0,39.74,43.1,19.31,14.67,8.52,Colheita,80.11,ALTO,Atencao a inclinacao - reduzir velocidade
+47.27,23.72,46.35,45.0,24.58,8.0,14.0,Manobra,77.09,ALTO,Atencao a inclinacao - reduzir velocidade
+22.07,4.89,4.47,26.88,5.67,5.59,3.79,Manobra,3.33,BAIXO,Seguir rota atual
+17.17,5.25,0.0,26.73,8.17,6.54,6.64,Manobra,1.69,BAIXO,Seguir rota atual
+37.59,17.87,12.2,30.57,9.3,5.11,11.16,Manobra,27.87,MEDIO,Reduzir velocidade
+45.66,23.46,26.58,37.36,16.05,11.62,11.69,Manobra,70.63,ALTO,Atencao a inclinacao - reduzir velocidade
+49.42,25.85,50.41,45.0,19.33,13.82,9.88,Colheita,75.79,ALTO,Atencao a inclinacao - reduzir velocidade
+5.0,8.8,5.83,27.31,3.1,3.95,0.56,Colheita,7.21,BAIXO,Seguir rota atual
+45.96,15.66,14.28,39.78,9.3,4.6,9.7,Manobra,69.72,ALTO,Interromper operacao
+28.25,20.41,5.59,28.88,5.31,8.68,7.88,Colheita,10.6,BAIXO,Seguir rota atual
+47.23,29.09,56.73,42.18,20.64,15.5,9.29,Manobra,78.75,ALTO,Atencao a inclinacao - reduzir velocidade
+51.12,28.66,51.8,37.19,18.95,11.37,12.2,Manobra,73.19,ALTO,Atencao a inclinacao - reduzir velocidade
+52.4,30.0,40.05,41.51,26.6,14.89,14.0,Colheita,80.07,ALTO,Atencao a inclinacao - reduzir velocidade
+37.31,15.37,1.33,29.79,13.99,11.57,12.7,Manobra,40.98,MEDIO,Reduzir velocidade
+41.74,24.65,5.1,31.37,14.55,9.25,9.21,Deslocamento,36.74,MEDIO,Reduzir velocidade
+22.71,9.29,7.85,32.47,8.09,7.54,6.03,Colheita,2.84,BAIXO,Seguir rota atual
+16.77,11.03,0.0,31.27,4.61,5.86,3.31,Manobra,5.39,BAIXO,Seguir rota atual
+52.77,26.9,29.05,44.26,19.69,16.64,12.0,Deslocamento,75.3,ALTO,Atencao a inclinacao - reduzir velocidade
+42.37,19.13,13.29,38.62,17.57,17.03,8.39,Colheita,62.69,ALTO,Atencao a inclinacao - reduzir velocidade
+55.38,20.49,33.06,40.12,16.59,9.25,12.83,Deslocamento,76.56,ALTO,Atencao a inclinacao - reduzir velocidade
+48.93,28.14,51.9,43.8,24.63,13.79,9.63,Manobra,78.43,ALTO,Atencao a inclinacao - reduzir velocidade
+43.46,17.64,3.32,35.29,9.26,6.75,9.69,Manobra,18.31,BAIXO,Seguir rota atual
+42.09,19.31,14.1,43.22,16.49,18.23,12.36,Manobra,62.47,ALTO,Atencao a inclinacao - reduzir velocidade
+55.72,22.84,52.64,42.84,19.8,14.5,13.89,Manobra,73.54,ALTO,Atencao a inclinacao - reduzir velocidade
+52.5,24.36,52.42,41.09,22.87,13.09,11.56,Colheita,76.21,ALTO,Atencao a inclinacao - reduzir velocidade
+25.36,3.84,9.84,16.89,5.8,6.11,6.17,Manobra,3.0,BAIXO,Seguir rota atual
+34.2,19.77,10.05,35.08,16.18,10.52,10.75,Manobra,54.32,ALTO,Atencao a inclinacao - reduzir velocidade
+13.24,7.68,3.1,20.97,7.72,3.39,6.31,Colheita,6.04,BAIXO,Seguir rota atual
+44.65,30.0,36.04,43.66,25.17,12.29,13.7,Colheita,77.47,ALTO,Atencao a inclinacao - reduzir velocidade
+32.62,26.36,18.11,38.21,14.1,14.43,8.83,Manobra,78.76,ALTO,Interromper operacao
+14.75,7.11,0.47,35.1,5.87,7.49,5.42,Manobra,2.02,BAIXO,Seguir rota atual
+34.09,21.98,24.27,39.44,18.58,15.06,11.84,Manobra,64.31,ALTO,Atencao a inclinacao - reduzir velocidade
+37.24,18.76,13.09,40.59,16.64,5.49,9.98,Manobra,56.52,ALTO,Atencao a inclinacao - reduzir velocidade
+36.26,18.89,14.46,37.69,15.93,7.35,10.87,Deslocamento,44.9,MEDIO,Atencao a inclinacao - reduzir velocidade
+31.45,13.25,0.72,24.73,6.31,6.47,6.37,Deslocamento,13.06,BAIXO,Seguir rota atual
+34.97,22.2,1.84,44.33,13.46,12.17,9.38,Deslocamento,55.84,ALTO,Verificar equipamento - desgaste elevado
+44.17,8.65,7.92,35.58,10.64,13.18,7.23,Colheita,33.7,MEDIO,Reduzir velocidade
+44.63,23.07,28.09,38.0,12.8,15.29,10.85,Manobra,56.08,ALTO,Pausa recomendada - risco de fadiga
+22.64,17.84,9.93,39.35,9.96,0.0,10.05,Deslocamento,20.12,BAIXO,Seguir rota atual
+43.9,20.95,20.0,45.0,22.51,13.32,14.0,Manobra,75.35,ALTO,Atencao a inclinacao - reduzir velocidade
+40.1,26.47,1.04,35.86,7.15,7.31,8.5,Deslocamento,68.03,ALTO,Interromper operacao
+40.01,20.18,11.12,38.81,18.46,7.05,7.12,Deslocamento,45.82,MEDIO,Atencao a inclinacao - reduzir velocidade
+51.23,24.59,59.82,42.15,19.74,12.59,13.44,Colheita,79.23,ALTO,Atencao a inclinacao - reduzir velocidade
+33.74,17.43,16.33,32.58,12.11,9.96,5.74,Colheita,31.46,MEDIO,Reduzir velocidade
+23.36,3.78,6.47,21.19,8.39,8.32,6.72,Colheita,3.83,BAIXO,Seguir rota atual
+21.76,7.07,2.27,33.36,5.6,1.89,6.33,Colheita,6.75,BAIXO,Seguir rota atual
+35.22,19.15,6.45,38.55,14.75,12.73,11.9,Manobra,50.62,ALTO,Pausa recomendada - risco de fadiga
+43.16,21.43,16.41,41.53,18.82,12.38,9.06,Colheita,62.16,ALTO,Atencao a inclinacao - reduzir velocidade
+34.04,17.66,23.33,41.73,16.73,11.61,12.81,Colheita,56.36,ALTO,Atencao a inclinacao - reduzir velocidade
+16.61,11.82,3.88,22.96,8.19,6.23,5.71,Deslocamento,4.03,BAIXO,Seguir rota atual
+20.57,7.85,11.17,31.92,8.45,5.34,7.01,Deslocamento,11.21,BAIXO,Seguir rota atual
+23.63,8.1,3.09,25.6,0.66,5.63,4.02,Colheita,4.13,BAIXO,Seguir rota atual
+47.74,20.08,2.06,35.8,8.86,9.42,9.58,Manobra,69.14,ALTO,Interromper operacao
+42.66,16.84,8.17,30.54,14.1,9.56,9.99,Manobra,28.37,MEDIO,Reduzir velocidade
+35.01,21.66,16.02,34.86,12.42,4.74,7.26,Colheita,38.14,MEDIO,Reduzir velocidade
+35.78,24.42,6.72,35.06,10.78,6.4,9.59,Colheita,38.99,MEDIO,Reduzir velocidade
+42.51,30.0,38.35,45.0,16.92,16.01,13.34,Manobra,78.44,ALTO,Atencao a inclinacao - reduzir velocidade
+22.69,4.02,4.75,20.08,6.49,8.09,6.59,Manobra,8.03,BAIXO,Seguir rota atual
+35.12,16.1,11.23,36.08,5.04,10.35,8.95,Deslocamento,37.49,MEDIO,Reduzir velocidade
+47.21,18.71,0.0,40.84,15.87,6.93,8.04,Colheita,72.55,ALTO,Atencao a inclinacao - reduzir velocidade
+50.0,18.78,11.65,33.4,5.73,7.49,8.47,Colheita,66.95,ALTO,Interromper operacao
+37.6,21.66,20.11,39.55,11.21,13.46,6.1,Deslocamento,53.94,ALTO,Interromper operacao
+39.75,29.22,50.07,42.83,16.42,11.88,11.47,Colheita,75.61,ALTO,Atencao a inclinacao - reduzir velocidade
+42.02,24.78,51.52,45.0,20.32,16.27,8.17,Deslocamento,78.1,ALTO,Atencao a inclinacao - reduzir velocidade
+24.62,4.78,4.92,24.76,9.64,2.38,6.26,Deslocamento,2.78,BAIXO,Seguir rota atual
+48.6,26.53,43.16,40.46,21.94,13.81,12.48,Colheita,77.59,ALTO,Atencao a inclinacao - reduzir velocidade
+35.68,23.19,12.62,31.8,14.61,4.44,10.18,Manobra,44.0,MEDIO,Reduzir velocidade
+24.34,0.35,4.28,23.66,5.48,9.05,3.69,Manobra,3.65,BAIXO,Seguir rota atual
+28.55,20.3,11.43,35.43,15.5,9.59,4.64,Colheita,30.5,MEDIO,Atencao a inclinacao - reduzir velocidade
+47.35,25.31,49.79,35.13,30.0,15.59,12.3,Manobra,73.22,ALTO,Atencao a inclinacao - reduzir velocidade
+44.45,28.0,12.35,39.8,12.39,7.58,8.05,Colheita,73.14,ALTO,Interromper operacao
+14.22,5.25,0.0,25.62,3.63,5.57,4.93,Manobra,0.59,BAIXO,Seguir rota atual
+40.88,20.43,42.61,44.08,11.27,12.7,8.78,Colheita,75.5,ALTO,Interromper operacao
+12.9,2.64,5.3,22.59,8.94,7.98,7.75,Colheita,3.04,BAIXO,Seguir rota atual
+14.03,9.9,5.9,23.63,5.46,9.83,5.45,Deslocamento,2.97,BAIXO,Seguir rota atual
+24.45,4.71,0.34,23.15,6.75,1.81,4.98,Colheita,4.83,BAIXO,Seguir rota atual
+8.18,3.52,6.01,29.02,6.22,1.95,2.95,Manobra,5.32,BAIXO,Seguir rota atual
+17.39,10.58,6.78,23.52,4.69,5.8,3.35,Colheita,4.46,BAIXO,Seguir rota atual
+16.37,13.3,6.48,26.79,4.46,5.63,7.13,Colheita,5.99,BAIXO,Seguir rota atual
+37.75,26.05,28.34,44.99,15.92,13.76,12.83,Deslocamento,77.15,ALTO,Atencao a inclinacao - reduzir velocidade
+23.13,6.0,2.65,27.19,4.42,4.57,7.19,Colheita,3.41,BAIXO,Seguir rota atual
+5.0,14.14,7.37,23.7,8.09,5.01,7.46,Colheita,3.07,BAIXO,Seguir rota atual
+54.91,22.8,50.87,42.38,22.33,11.82,14.0,Manobra,76.63,ALTO,Atencao a inclinacao - reduzir velocidade
+43.32,17.04,1.33,34.46,13.3,8.72,11.51,Manobra,31.15,MEDIO,Reduzir velocidade
+44.74,24.91,20.61,35.83,14.41,15.18,9.9,Manobra,57.8,ALTO,Verificar equipamento - desgaste elevado
+23.52,6.73,0.91,25.38,7.62,3.03,4.53,Manobra,6.38,BAIXO,Seguir rota atual
+13.42,12.48,3.12,33.26,10.06,4.76,2.98,Colheita,8.92,BAIXO,Seguir rota atual
+5.4,2.11,0.0,32.89,7.23,6.17,0.56,Deslocamento,3.8,BAIXO,Seguir rota atual
+11.61,11.55,4.86,25.26,8.13,9.91,4.56,Colheita,5.34,BAIXO,Seguir rota atual
+20.49,8.77,11.18,15.5,8.37,4.66,6.13,Deslocamento,12.14,BAIXO,Seguir rota atual
+15.4,7.8,6.13,38.0,8.62,2.46,4.15,Colheita,5.88,BAIXO,Seguir rota atual
+16.83,0.82,3.01,29.66,4.45,8.15,5.98,Manobra,3.87,BAIXO,Seguir rota atual
+14.86,7.43,8.79,29.67,7.02,4.29,5.15,Deslocamento,1.49,BAIXO,Seguir rota atual
+30.91,11.58,18.21,36.62,13.19,7.83,7.53,Manobra,28.0,MEDIO,Reduzir velocidade
+18.7,1.6,10.83,19.83,4.94,3.68,7.58,Manobra,10.55,BAIXO,Seguir rota atual
+35.12,15.06,14.27,38.92,13.62,10.15,13.0,Manobra,55.68,ALTO,Pausa recomendada - risco de fadiga
+50.0,17.25,16.12,37.53,13.5,2.92,8.66,Manobra,67.8,ALTO,Interromper operacao
+35.12,24.48,26.57,33.78,14.93,15.37,9.63,Deslocamento,55.09,ALTO,Verificar equipamento - desgaste elevado
+25.1,9.4,5.02,24.64,4.57,1.64,6.42,Colheita,5.26,BAIXO,Seguir rota atual
+40.12,21.58,14.61,39.08,18.14,10.99,7.32,Colheita,52.7,ALTO,Atencao a inclinacao - reduzir velocidade
+44.46,21.39,18.25,44.82,14.94,12.87,7.64,Colheita,57.21,ALTO,Interromper operacao
+18.46,10.44,0.0,27.0,7.2,5.12,7.07,Deslocamento,3.24,BAIXO,Seguir rota atual
+51.67,30.0,35.06,43.41,22.34,10.79,13.91,Deslocamento,78.52,ALTO,Atencao a inclinacao - reduzir velocidade
+61.62,26.95,50.05,43.25,19.15,8.54,10.59,Deslocamento,72.93,ALTO,Atencao a inclinacao - reduzir velocidade
+10.26,14.82,3.65,24.27,8.78,1.63,3.47,Manobra,1.95,BAIXO,Seguir rota atual
+20.48,12.12,5.51,27.24,7.16,6.2,5.4,Manobra,3.08,BAIXO,Seguir rota atual
+33.82,22.14,9.41,40.24,13.56,19.62,9.92,Colheita,54.81,ALTO,Verificar equipamento - desgaste elevado
+31.57,21.6,22.15,45.02,13.23,7.25,11.63,Colheita,73.22,ALTO,Pausa recomendada - risco de fadiga
+10.34,6.26,3.23,25.65,8.38,2.95,4.45,Colheita,3.57,BAIXO,Seguir rota atual
+19.9,8.6,4.29,28.18,8.69,6.18,5.91,Colheita,4.67,BAIXO,Seguir rota atual
+22.34,20.2,10.4,38.92,9.92,6.02,7.85,Manobra,29.66,MEDIO,Reduzir velocidade
+39.29,24.14,5.96,39.63,12.37,7.63,8.58,Deslocamento,43.87,MEDIO,Reduzir velocidade
+44.48,22.98,36.21,37.44,16.55,10.41,8.26,Deslocamento,51.58,ALTO,Atencao a inclinacao - reduzir velocidade
+34.91,20.55,22.59,35.26,8.61,8.82,4.85,Manobra,30.78,MEDIO,Reduzir velocidade
+34.26,20.06,11.97,39.89,10.49,7.55,7.47,Manobra,43.82,MEDIO,Reduzir velocidade
+33.23,22.93,7.81,38.76,12.01,13.65,13.6,Colheita,58.22,ALTO,Pausa recomendada - risco de fadiga
+10.89,0.59,3.63,26.08,7.44,3.66,4.6,Deslocamento,2.12,BAIXO,Seguir rota atual
+22.57,12.16,0.0,24.16,7.43,2.25,8.46,Colheita,6.38,BAIXO,Seguir rota atual
+36.19,21.88,22.45,38.23,9.46,10.71,12.06,Colheita,56.24,ALTO,Pausa recomendada - risco de fadiga
+48.32,24.46,54.26,42.01,19.96,14.45,13.54,Colheita,76.69,ALTO,Atencao a inclinacao - reduzir velocidade
+50.0,23.31,13.8,33.98,8.92,8.19,9.21,Deslocamento,67.98,ALTO,Interromper operacao
+26.37,19.3,10.0,37.44,13.51,8.87,7.99,Colheita,14.94,BAIXO,Seguir rota atual
+16.4,3.2,9.35,26.07,6.55,2.21,9.0,Colheita,13.07,BAIXO,Seguir rota atual
+26.41,18.28,10.08,38.4,14.87,13.42,10.01,Deslocamento,57.83,ALTO,Pausa recomendada - risco de fadiga
+26.55,18.97,9.54,43.0,7.81,11.61,9.36,Manobra,32.03,MEDIO,Reduzir velocidade
+25.86,7.59,1.47,29.75,8.31,7.92,4.97,Colheita,3.08,BAIXO,Seguir rota atual
+15.8,1.76,6.46,28.12,5.07,3.38,4.07,Colheita,7.33,BAIXO,Seguir rota atual
+23.14,16.73,2.33,34.35,9.78,3.12,13.0,Manobra,9.05,BAIXO,Seguir rota atual
+28.77,4.88,4.82,28.09,9.38,2.54,7.18,Colheita,3.02,BAIXO,Seguir rota atual
+16.16,2.66,6.17,32.45,12.0,1.4,6.4,Manobra,9.43,BAIXO,Seguir rota atual
+17.13,11.13,0.0,19.69,5.45,5.24,3.72,Deslocamento,1.76,BAIXO,Seguir rota atual
+24.61,12.11,5.8,34.09,7.83,1.35,7.73,Colheita,0.59,BAIXO,Seguir rota atual
+15.76,11.64,8.72,28.28,4.01,2.25,7.65,Colheita,6.11,BAIXO,Seguir rota atual
+49.15,27.24,52.59,45.0,23.12,13.37,11.37,Colheita,72.31,ALTO,Atencao a inclinacao - reduzir velocidade
+41.86,22.21,6.71,40.33,11.61,5.45,7.48,Colheita,37.49,MEDIO,Reduzir velocidade
+34.13,21.18,27.87,37.58,15.57,10.03,9.48,Colheita,56.77,ALTO,Atencao a inclinacao - reduzir velocidade
+30.94,21.34,16.45,41.62,15.67,8.4,12.17,Deslocamento,52.1,ALTO,Atencao a inclinacao - reduzir velocidade
+36.68,20.79,7.95,33.93,12.65,9.43,5.51,Colheita,28.15,MEDIO,Reduzir velocidade
+16.23,6.98,4.77,31.97,5.46,3.51,3.97,Deslocamento,6.43,BAIXO,Seguir rota atual
+28.59,18.61,11.85,31.78,13.28,2.89,7.88,Deslocamento,31.07,MEDIO,Reduzir velocidade
+32.36,26.7,6.63,27.2,6.0,8.1,10.23,Colheita,66.77,ALTO,Interromper operacao
+42.25,22.5,27.3,38.38,17.68,7.1,8.19,Colheita,57.4,ALTO,Atencao a inclinacao - reduzir velocidade
+20.54,18.9,7.77,36.46,12.19,5.22,8.62,Colheita,32.41,MEDIO,Reduzir velocidade
+9.52,13.45,3.09,23.56,10.18,1.27,2.75,Colheita,10.54,BAIXO,Seguir rota atual
+12.33,7.73,5.29,29.7,12.0,0.0,6.22,Deslocamento,8.2,BAIXO,Seguir rota atual
+30.54,17.65,4.9,32.36,17.05,10.53,9.05,Colheita,36.17,MEDIO,Atencao a inclinacao - reduzir velocidade
+48.11,17.46,7.35,33.47,12.9,12.49,10.21,Manobra,70.57,ALTO,Verificar equipamento - desgaste elevado
+36.19,14.36,12.02,36.96,14.2,2.32,9.62,Colheita,36.62,MEDIO,Reduzir velocidade
+25.5,18.41,10.67,36.36,9.45,8.02,5.94,Deslocamento,19.88,BAIXO,Seguir rota atual
+55.75,26.38,56.19,41.42,19.91,11.71,13.75,Deslocamento,72.94,ALTO,Atencao a inclinacao - reduzir velocidade
+35.74,23.93,14.94,34.07,13.29,8.46,10.07,Manobra,41.01,MEDIO,Reduzir velocidade
+11.67,11.7,3.73,25.11,8.31,7.89,4.96,Colheita,4.36,BAIXO,Seguir rota atual
+14.6,0.9,1.94,22.91,7.21,3.96,6.38,Colheita,3.02,BAIXO,Seguir rota atual
+15.71,7.77,7.55,27.71,6.88,3.19,3.73,Deslocamento,2.75,BAIXO,Seguir rota atual
+14.05,5.84,6.27,24.89,4.3,10.3,5.64,Colheita,6.46,BAIXO,Seguir rota atual
+10.15,6.23,4.33,34.52,4.78,7.93,7.8,Colheita,4.04,BAIXO,Seguir rota atual
+15.6,6.89,0.89,24.98,6.93,6.98,7.18,Deslocamento,3.89,BAIXO,Seguir rota atual
+14.76,0.13,3.94,27.47,7.5,4.02,5.25,Colheita,5.31,BAIXO,Seguir rota atual
+30.61,9.53,2.88,23.5,6.66,9.91,4.63,Deslocamento,10.14,BAIXO,Seguir rota atual
+49.9,25.55,55.99,45.0,23.8,14.25,12.07,Deslocamento,75.73,ALTO,Atencao a inclinacao - reduzir velocidade
+5.0,10.98,4.4,28.14,5.58,3.85,4.18,Deslocamento,6.35,BAIXO,Seguir rota atual
+43.17,18.48,18.41,37.72,8.17,7.61,7.7,Deslocamento,27.38,MEDIO,Reduzir velocidade
+17.44,26.4,11.52,38.13,12.5,3.85,8.03,Deslocamento,73.07,ALTO,Interromper operacao
+54.21,23.85,20.0,42.32,21.43,14.41,13.46,Manobra,72.66,ALTO,Atencao a inclinacao - reduzir velocidade
+24.46,9.04,7.59,18.41,8.01,6.88,2.52,Manobra,2.32,BAIXO,Seguir rota atual
+22.98,17.02,4.69,39.01,10.16,5.43,7.78,Colheita,15.57,BAIXO,Seguir rota atual
+55.59,27.04,43.21,42.67,27.17,11.75,14.0,Deslocamento,77.56,ALTO,Atencao a inclinacao - reduzir velocidade
+51.05,26.52,70.01,39.83,20.59,10.3,13.9,Manobra,75.87,ALTO,Atencao a inclinacao - reduzir velocidade
+50.14,27.01,27.79,39.41,13.9,6.99,14.0,Deslocamento,73.97,ALTO,Pausa recomendada - risco de fadiga
+23.28,6.03,7.98,21.14,7.81,4.48,6.28,Colheita,1.79,BAIXO,Seguir rota atual
+19.55,2.2,4.23,31.24,6.94,7.33,2.91,Manobra,3.4,BAIXO,Seguir rota atual
+39.84,20.13,23.98,40.09,17.07,15.26,11.38,Colheita,63.47,ALTO,Atencao a inclinacao - reduzir velocidade
+51.37,24.01,44.97,41.4,20.62,12.88,10.04,Manobra,76.77,ALTO,Atencao a inclinacao - reduzir velocidade
+19.34,17.33,8.97,30.61,12.05,13.7,11.05,Manobra,28.02,MEDIO,Verificar equipamento - desgaste elevado
+48.15,21.56,13.84,33.1,10.07,0.0,11.37,Manobra,74.66,ALTO,Interromper operacao
+30.78,5.79,3.24,22.23,7.77,8.37,1.51,Colheita,6.65,BAIXO,Seguir rota atual
+42.46,21.17,18.91,41.38,14.44,11.69,9.57,Deslocamento,63.39,ALTO,Interromper operacao
+26.79,9.68,4.66,19.65,6.24,7.7,5.08,Colheita,7.35,BAIXO,Seguir rota atual
+24.62,15.07,7.12,26.47,5.98,0.0,4.66,Colheita,3.13,BAIXO,Seguir rota atual
+32.39,21.56,7.23,34.72,6.66,5.18,9.95,Colheita,27.37,MEDIO,Reduzir velocidade
+48.73,19.61,9.64,39.81,9.57,9.1,7.52,Deslocamento,68.44,ALTO,Interromper operacao
+26.05,8.61,4.9,22.09,8.41,11.25,2.98,Colheita,9.05,BAIXO,Seguir rota atual
+17.62,8.93,6.36,23.2,1.33,9.08,6.52,Colheita,2.33,BAIXO,Seguir rota atual
+29.54,20.18,30.55,44.34,17.82,11.47,10.17,Deslocamento,52.81,ALTO,Atencao a inclinacao - reduzir velocidade
+19.08,12.51,1.37,21.97,9.02,4.87,7.76,Deslocamento,9.54,BAIXO,Seguir rota atual
+29.63,19.78,3.39,36.03,7.56,6.54,6.13,Manobra,9.5,BAIXO,Seguir rota atual
+24.86,10.87,0.0,32.67,11.99,5.14,3.72,Manobra,6.15,BAIXO,Seguir rota atual
+50.0,14.72,8.1,36.72,16.04,9.08,8.0,Colheita,70.99,ALTO,Interromper operacao
+27.39,18.63,2.97,36.19,10.31,3.52,11.51,Manobra,31.22,MEDIO,Pausa recomendada - risco de fadiga
+16.52,2.93,3.5,26.34,3.51,5.99,2.91,Manobra,2.47,BAIXO,Seguir rota atual
+31.98,10.1,2.8,22.27,6.79,6.84,4.95,Colheita,8.13,BAIXO,Seguir rota atual
+18.48,8.23,2.19,24.28,2.83,7.92,5.6,Colheita,5.35,BAIXO,Seguir rota atual
+14.59,15.59,4.26,20.82,8.71,6.19,5.79,Colheita,3.51,BAIXO,Seguir rota atual
+47.87,28.35,42.38,44.67,14.38,12.7,14.0,Deslocamento,72.15,ALTO,Pausa recomendada - risco de fadiga
+14.63,5.58,2.66,19.93,2.58,4.31,5.27,Deslocamento,7.57,BAIXO,Seguir rota atual
+39.68,21.57,18.34,43.07,14.43,10.28,9.44,Deslocamento,64.13,ALTO,Interromper operacao
+24.06,13.65,2.12,26.49,7.68,2.02,5.04,Deslocamento,6.99,BAIXO,Seguir rota atual
+31.21,16.69,20.93,38.85,15.61,11.95,8.05,Deslocamento,57.56,ALTO,Atencao a inclinacao - reduzir velocidade
+39.73,18.3,29.13,35.93,14.41,8.87,11.14,Colheita,42.0,MEDIO,Pausa recomendada - risco de fadiga
+32.35,17.93,12.27,36.12,13.55,5.06,6.19,Manobra,32.07,MEDIO,Reduzir velocidade
+35.86,18.72,11.13,35.68,12.62,3.13,12.78,Colheita,42.7,MEDIO,Pausa recomendada - risco de fadiga
+33.69,22.79,3.82,37.23,8.09,9.36,8.29,Manobra,26.27,MEDIO,Reduzir velocidade
+20.2,10.79,0.3,22.58,7.91,11.29,4.72,Colheita,9.15,BAIXO,Seguir rota atual
+52.96,26.68,64.42,37.76,22.38,9.12,8.0,Manobra,70.8,ALTO,Atencao a inclinacao - reduzir velocidade
+51.49,27.42,42.15,42.68,30.0,13.23,13.02,Colheita,75.07,ALTO,Atencao a inclinacao - reduzir velocidade
+46.75,27.89,42.62,41.77,29.28,17.53,12.27,Colheita,75.39,ALTO,Atencao a inclinacao - reduzir velocidade
+5.0,6.56,12.11,24.85,9.21,9.33,5.44,Colheita,12.29,BAIXO,Seguir rota atual
+34.95,14.69,23.47,37.56,15.53,8.25,9.47,Manobra,37.21,MEDIO,Reduzir velocidade
+50.17,27.81,33.85,45.0,19.61,8.98,11.78,Manobra,72.31,ALTO,Atencao a inclinacao - reduzir velocidade
+20.24,8.64,8.09,24.82,6.76,1.69,6.64,Colheita,5.4,BAIXO,Seguir rota atual
+21.29,6.32,0.0,33.22,4.54,3.23,5.72,Manobra,4.4,BAIXO,Seguir rota atual
+32.82,17.52,1.01,42.16,13.36,20.0,8.01,Deslocamento,38.96,MEDIO,Reduzir velocidade
+27.63,17.74,9.22,34.12,13.84,5.06,6.24,Deslocamento,10.86,BAIXO,Seguir rota atual
+41.01,20.33,39.82,42.1,19.47,17.73,14.0,Manobra,65.78,ALTO,Atencao a inclinacao - reduzir velocidade
+17.66,0.82,2.3,23.0,5.69,2.91,3.69,Colheita,4.04,BAIXO,Seguir rota atual
+37.68,20.09,19.67,41.08,12.27,15.81,8.04,Colheita,66.78,ALTO,Interromper operacao
+8.68,9.52,1.55,27.61,2.19,9.18,6.34,Manobra,2.66,BAIXO,Seguir rota atual
+9.5,2.08,9.02,22.31,5.33,0.0,4.3,Manobra,4.67,BAIXO,Seguir rota atual
+18.41,10.86,0.0,18.4,7.9,8.02,1.86,Manobra,0.87,BAIXO,Seguir rota atual
+46.49,22.11,26.73,39.79,7.43,11.54,12.12,Manobra,74.81,ALTO,Pausa recomendada - risco de fadiga
+34.64,20.84,16.59,31.3,20.01,9.3,11.01,Colheita,75.91,ALTO,Atencao a inclinacao - reduzir velocidade
+34.31,25.03,10.03,35.06,9.32,10.39,5.25,Manobra,68.01,ALTO,Interromper operacao
+40.17,15.6,14.26,36.65,13.93,8.25,5.5,Colheita,28.48,MEDIO,Reduzir velocidade
+45.7,29.02,46.67,45.0,23.61,11.1,10.41,Manobra,74.58,ALTO,Atencao a inclinacao - reduzir velocidade
+35.82,10.74,16.37,37.77,15.68,3.26,11.49,Deslocamento,37.26,MEDIO,Pausa recomendada - risco de fadiga
+53.39,18.04,24.17,40.0,10.37,13.48,11.67,Deslocamento,73.87,ALTO,Pausa recomendada - risco de fadiga
+30.19,24.66,0.0,30.02,12.41,8.08,7.57,Deslocamento,30.84,MEDIO,Reduzir velocidade
+41.48,22.12,12.29,35.51,13.81,6.66,13.0,Colheita,45.69,MEDIO,Pausa recomendada - risco de fadiga
+28.5,28.0,8.17,30.5,16.1,8.38,10.7,Colheita,69.07,ALTO,Atencao a inclinacao - reduzir velocidade
+28.57,9.35,2.22,30.88,7.0,7.06,0.69,Manobra,0.46,BAIXO,Seguir rota atual
+42.68,20.08,31.23,41.87,15.72,13.46,8.0,Manobra,66.99,ALTO,Atencao a inclinacao - reduzir velocidade
+47.99,27.97,9.96,42.36,10.29,5.61,9.08,Colheita,73.87,ALTO,Interromper operacao
+23.04,6.42,5.61,27.53,5.0,6.56,6.73,Deslocamento,5.66,BAIXO,Seguir rota atual
+50.86,30.0,32.83,44.4,17.32,10.66,10.74,Manobra,76.75,ALTO,Atencao a inclinacao - reduzir velocidade
+27.46,17.81,6.93,39.35,11.04,3.24,11.28,Colheita,30.44,MEDIO,Pausa recomendada - risco de fadiga
+28.3,19.77,10.23,36.8,15.28,9.44,7.28,Colheita,32.06,MEDIO,Atencao a inclinacao - reduzir velocidade
+60.89,27.58,43.53,45.0,23.0,15.2,14.0,Manobra,79.85,ALTO,Atencao a inclinacao - reduzir velocidade
+38.35,21.05,18.93,43.21,10.48,6.1,8.83,Manobra,53.09,ALTO,Interromper operacao
+8.56,6.3,5.51,21.55,4.15,5.21,6.73,Deslocamento,6.16,BAIXO,Seguir rota atual
+41.53,29.46,53.17,45.0,26.87,20.0,11.29,Manobra,75.83,ALTO,Atencao a inclinacao - reduzir velocidade
+40.66,20.75,18.02,44.6,10.96,9.42,12.75,Colheita,54.74,ALTO,Pausa recomendada - risco de fadiga
+27.14,6.55,6.56,27.71,10.0,5.22,7.05,Colheita,6.93,BAIXO,Seguir rota atual
+38.49,10.39,4.15,29.61,6.27,12.0,5.36,Colheita,17.43,BAIXO,Seguir rota atual
+38.36,19.49,26.78,42.6,13.51,13.73,6.98,Colheita,53.01,ALTO,Interromper operacao
+41.11,23.36,31.66,37.69,11.16,9.31,7.33,Deslocamento,36.07,MEDIO,Reduzir velocidade
+45.69,26.19,9.6,40.89,12.4,7.71,8.33,Manobra,69.8,ALTO,Interromper operacao
+48.45,22.36,47.64,42.88,24.98,14.28,11.67,Deslocamento,75.1,ALTO,Atencao a inclinacao - reduzir velocidade
+34.77,22.22,23.91,36.57,15.26,12.7,8.56,Colheita,54.19,ALTO,Atencao a inclinacao - reduzir velocidade
+15.89,8.92,0.6,27.75,5.21,8.19,9.0,Deslocamento,10.19,BAIXO,Seguir rota atual
+13.97,10.14,1.82,31.2,4.47,6.44,3.25,Manobra,0.77,BAIXO,Seguir rota atual
+18.55,3.88,6.47,21.82,8.1,3.97,4.77,Deslocamento,1.11,BAIXO,Seguir rota atual
+40.89,19.71,19.68,44.59,12.67,15.52,13.0,Manobra,65.72,ALTO,Pausa recomendada - risco de fadiga
+14.29,2.18,4.91,23.26,10.74,5.1,3.4,Deslocamento,8.41,BAIXO,Seguir rota atual
+25.82,24.36,5.14,36.18,14.87,6.55,8.91,Manobra,32.15,MEDIO,Reduzir velocidade
+39.9,24.05,22.73,39.34,15.19,10.88,7.04,Colheita,55.45,ALTO,Atencao a inclinacao - reduzir velocidade
+51.29,30.0,36.16,40.68,18.52,16.17,12.9,Colheita,77.21,ALTO,Atencao a inclinacao - reduzir velocidade
+18.89,4.33,4.28,18.18,7.29,7.61,2.5,Colheita,6.82,BAIXO,Seguir rota atual
+42.34,30.0,38.88,45.0,21.38,13.51,12.88,Deslocamento,75.38,ALTO,Atencao a inclinacao - reduzir velocidade
+13.81,8.53,2.86,19.4,7.67,4.21,4.69,Manobra,2.85,BAIXO,Seguir rota atual
+43.95,30.0,53.77,45.0,20.78,8.81,14.0,Manobra,75.74,ALTO,Atencao a inclinacao - reduzir velocidade
+19.57,5.0,5.25,31.84,6.95,8.84,7.17,Colheita,5.02,BAIXO,Seguir rota atual
+26.39,17.3,12.79,25.15,11.55,3.71,8.05,Colheita,29.63,MEDIO,Reduzir velocidade
+38.21,20.93,13.58,36.71,21.88,17.6,7.68,Colheita,74.78,ALTO,Atencao a inclinacao - reduzir velocidade
+31.07,6.4,4.39,25.68,5.68,7.95,5.25,Colheita,9.58,BAIXO,Seguir rota atual
+16.66,2.78,1.32,17.79,7.02,1.41,4.47,Deslocamento,4.07,BAIXO,Seguir rota atual
+48.22,25.6,17.74,39.74,20.64,13.56,9.34,Manobra,76.04,ALTO,Atencao a inclinacao - reduzir velocidade
+31.44,23.18,24.63,38.11,15.87,10.91,9.63,Manobra,63.13,ALTO,Atencao a inclinacao - reduzir velocidade
+25.07,21.33,25.75,38.11,15.16,9.73,10.72,Deslocamento,44.16,MEDIO,Atencao a inclinacao - reduzir velocidade
+38.7,19.18,28.66,42.79,13.19,13.49,11.07,Manobra,67.79,ALTO,Pausa recomendada - risco de fadiga
+40.14,13.22,13.03,33.72,10.93,15.0,9.6,Deslocamento,44.89,MEDIO,Verificar equipamento - desgaste elevado
+17.3,0.0,8.17,19.27,4.99,4.01,7.83,Colheita,4.06,BAIXO,Seguir rota atual
+25.41,7.37,4.92,23.0,7.28,5.22,6.94,Deslocamento,3.68,BAIXO,Seguir rota atual
+26.77,9.98,2.91,29.71,6.82,1.75,4.19,Deslocamento,4.66,BAIXO,Seguir rota atual
+50.42,29.73,43.16,39.37,22.23,14.34,12.37,Manobra,77.5,ALTO,Atencao a inclinacao - reduzir velocidade
+42.36,24.08,5.03,33.54,8.88,10.1,11.9,Colheita,38.22,MEDIO,Reduzir velocidade
+32.48,19.03,15.33,38.02,13.31,4.43,10.36,Colheita,54.34,ALTO,Pausa recomendada - risco de fadiga
+27.57,15.46,6.27,33.66,11.34,3.68,10.92,Colheita,18.65,BAIXO,Seguir rota atual
+55.64,21.16,54.78,40.57,25.43,13.79,12.06,Manobra,76.96,ALTO,Atencao a inclinacao - reduzir velocidade
+18.7,12.85,0.28,29.04,9.2,7.15,9.0,Colheita,7.99,BAIXO,Seguir rota atual
+30.77,23.83,7.47,40.93,11.98,6.84,11.61,Manobra,44.34,MEDIO,Pausa recomendada - risco de fadiga
+31.07,14.35,5.42,38.48,16.18,8.33,11.64,Manobra,32.68,MEDIO,Pausa recomendada - risco de fadiga
+31.85,20.67,15.69,39.66,15.25,14.07,9.11,Colheita,65.97,ALTO,Atencao a inclinacao - reduzir velocidade
+20.97,7.82,1.22,25.43,6.71,4.5,5.06,Deslocamento,5.32,BAIXO,Seguir rota atual
+50.38,25.7,57.73,39.49,19.12,20.0,9.92,Manobra,77.5,ALTO,Atencao a inclinacao - reduzir velocidade
+43.23,29.2,24.23,42.29,30.0,9.37,8.04,Deslocamento,73.21,ALTO,Atencao a inclinacao - reduzir velocidade
+23.01,23.59,13.62,33.95,14.05,12.17,12.57,Manobra,44.62,MEDIO,Verificar equipamento - desgaste elevado
+38.52,15.1,11.43,38.72,14.22,11.44,12.24,Colheita,57.85,ALTO,Pausa recomendada - risco de fadiga
+56.37,26.48,55.98,44.07,22.26,16.72,12.14,Colheita,78.83,ALTO,Atencao a inclinacao - reduzir velocidade
+52.35,17.68,13.88,39.62,16.32,15.8,9.95,Manobra,73.94,ALTO,Atencao a inclinacao - reduzir velocidade
+10.04,11.37,6.26,16.29,6.99,0.23,3.67,Manobra,4.28,BAIXO,Seguir rota atual
+27.78,23.24,8.58,30.86,14.64,3.7,9.66,Manobra,32.22,MEDIO,Reduzir velocidade
+35.12,20.9,22.03,41.56,19.01,11.75,10.61,Deslocamento,62.0,ALTO,Atencao a inclinacao - reduzir velocidade
+31.5,20.73,10.2,35.61,6.59,8.99,9.73,Manobra,36.35,MEDIO,Reduzir velocidade
+35.92,18.15,29.81,41.47,14.31,8.59,8.36,Manobra,57.67,ALTO,Interromper operacao
+56.51,27.41,39.49,44.53,18.74,18.5,14.0,Manobra,77.95,ALTO,Atencao a inclinacao - reduzir velocidade
+47.67,25.11,20.0,38.56,16.64,14.41,11.35,Deslocamento,76.74,ALTO,Atencao a inclinacao - reduzir velocidade
+24.24,18.88,10.53,38.11,6.3,7.62,6.23,Colheita,26.99,MEDIO,Reduzir velocidade
+26.31,11.14,1.31,22.17,6.08,0.0,5.67,Manobra,3.9,BAIXO,Seguir rota atual
+48.64,29.91,34.02,41.14,15.97,10.99,9.64,Deslocamento,74.82,ALTO,Atencao a inclinacao - reduzir velocidade
+54.98,24.91,46.24,41.86,16.92,13.5,13.2,Deslocamento,76.66,ALTO,Atencao a inclinacao - reduzir velocidade
+11.55,11.24,1.45,23.59,8.06,3.01,5.08,Colheita,2.38,BAIXO,Seguir rota atual
+48.43,27.39,21.19,37.51,24.46,17.11,10.18,Deslocamento,71.95,ALTO,Atencao a inclinacao - reduzir velocidade
+48.78,27.88,51.93,36.92,18.46,13.0,13.41,Deslocamento,69.87,ALTO,Atencao a inclinacao - reduzir velocidade
+50.0,19.09,0.97,37.61,15.96,8.32,7.19,Colheita,70.44,ALTO,Atencao a inclinacao - reduzir velocidade
+42.66,22.65,2.87,37.53,14.99,11.55,8.87,Manobra,43.2,MEDIO,Reduzir velocidade
+32.14,24.91,1.95,37.75,7.89,11.2,8.48,Colheita,37.31,MEDIO,Reduzir velocidade
+28.88,9.97,0.33,33.12,10.1,7.65,3.48,Deslocamento,10.0,BAIXO,Seguir rota atual
+17.86,8.58,1.89,34.46,7.29,0.0,5.68,Colheita,1.87,BAIXO,Seguir rota atual
+37.91,21.78,15.05,42.42,18.36,12.85,9.32,Colheita,62.48,ALTO,Atencao a inclinacao - reduzir velocidade
+19.71,8.08,1.59,28.89,7.92,9.62,7.51,Colheita,1.99,BAIXO,Seguir rota atual
+15.2,11.28,1.15,29.48,5.97,1.93,5.56,Deslocamento,2.55,BAIXO,Seguir rota atual
+13.6,13.0,7.11,36.33,10.89,3.26,7.36,Colheita,10.73,BAIXO,Seguir rota atual
+38.13,22.33,7.92,40.63,13.19,5.76,8.44,Manobra,42.41,MEDIO,Reduzir velocidade
+42.99,26.68,56.12,45.0,27.61,13.09,14.0,Colheita,79.49,ALTO,Atencao a inclinacao - reduzir velocidade
+18.65,13.89,3.93,29.54,9.95,4.42,5.44,Colheita,6.05,BAIXO,Seguir rota atual
+29.02,7.47,0.04,36.72,6.06,5.48,7.31,Colheita,5.62,BAIXO,Seguir rota atual
+36.35,18.98,20.03,34.62,14.14,12.74,9.46,Colheita,54.76,ALTO,Verificar equipamento - desgaste elevado
+22.65,26.38,8.52,41.72,11.22,5.36,9.54,Manobra,73.03,ALTO,Interromper operacao
+18.49,3.29,8.41,22.89,3.32,8.98,3.99,Manobra,3.56,BAIXO,Seguir rota atual
+30.14,12.94,16.7,30.84,12.18,10.74,9.84,Deslocamento,43.94,MEDIO,Reduzir velocidade
+19.58,1.19,1.57,26.94,5.43,5.61,6.36,Colheita,4.34,BAIXO,Seguir rota atual
+26.74,3.1,10.59,29.84,7.0,8.27,9.0,Colheita,19.4,BAIXO,Seguir rota atual
+23.49,19.1,0.0,36.77,13.1,7.88,7.69,Deslocamento,19.27,BAIXO,Seguir rota atual
+18.6,21.49,15.28,33.64,13.32,3.3,9.91,Manobra,36.05,MEDIO,Reduzir velocidade
+48.03,24.71,37.4,41.82,23.53,10.06,11.21,Colheita,74.93,ALTO,Atencao a inclinacao - reduzir velocidade
+34.67,15.6,16.98,32.59,9.99,5.07,12.6,Deslocamento,31.28,MEDIO,Reduzir velocidade
+39.42,16.25,13.53,36.8,12.77,6.97,7.5,Colheita,31.43,MEDIO,Reduzir velocidade
+42.03,20.36,32.53,36.19,19.61,11.67,10.6,Colheita,54.21,ALTO,Atencao a inclinacao - reduzir velocidade
+25.83,5.48,6.59,15.0,5.56,2.23,2.49,Colheita,0.83,BAIXO,Seguir rota atual
+38.71,23.16,23.62,40.72,13.0,13.11,10.25,Colheita,64.59,ALTO,Pausa recomendada - risco de fadiga
+26.55,11.11,4.09,21.51,5.69,3.35,4.37,Deslocamento,5.25,BAIXO,Seguir rota atual
+51.34,29.15,44.49,43.05,22.57,12.45,10.15,Colheita,79.61,ALTO,Atencao a inclinacao - reduzir velocidade
+7.71,5.22,5.42,22.49,6.52,6.4,6.04,Deslocamento,1.6,BAIXO,Seguir rota atual
+26.36,23.99,13.64,31.48,9.53,11.57,8.71,Colheita,36.15,MEDIO,Reduzir velocidade
+5.0,2.4,3.25,20.18,6.17,5.1,7.92,Manobra,3.22,BAIXO,Seguir rota atual
+48.55,30.0,59.29,45.0,23.14,8.11,12.92,Colheita,76.71,ALTO,Atencao a inclinacao - reduzir velocidade
+43.39,19.68,16.72,39.44,13.7,11.26,9.67,Manobra,64.93,ALTO,Interromper operacao
+15.06,18.0,13.99,32.77,11.33,4.87,12.57,Manobra,35.19,MEDIO,Reduzir velocidade
+31.77,4.46,4.44,22.6,8.23,6.53,6.62,Manobra,11.12,BAIXO,Seguir rota atual
+41.99,30.0,9.78,34.87,13.82,7.3,7.02,Deslocamento,67.19,ALTO,Interromper operacao
+12.99,4.31,1.14,28.59,5.99,4.46,6.79,Deslocamento,1.55,BAIXO,Seguir rota atual
+46.17,26.21,48.66,37.18,12.46,15.04,12.98,Colheita,72.21,ALTO,Pausa recomendada - risco de fadiga
+34.45,8.63,6.46,25.02,7.59,10.0,0.75,Colheita,21.47,BAIXO,Seguir rota atual
+22.9,16.54,4.85,34.25,5.74,4.9,5.07,Colheita,4.77,BAIXO,Seguir rota atual
+5.0,3.33,0.71,30.11,8.74,5.97,6.65,Colheita,4.22,BAIXO,Seguir rota atual
+33.69,24.81,8.04,36.23,11.2,10.05,8.16,Manobra,43.5,MEDIO,Reduzir velocidade
+42.81,15.47,2.51,38.75,11.73,6.64,10.78,Colheita,37.58,MEDIO,Pausa recomendada - risco de fadiga
+15.75,7.2,8.2,33.7,10.14,4.15,7.46,Deslocamento,10.56,BAIXO,Seguir rota atual
+34.31,19.28,0.0,45.02,12.41,11.62,8.18,Deslocamento,74.58,ALTO,Interromper operacao
+40.56,18.5,1.48,37.77,7.7,5.49,4.79,Deslocamento,18.23,BAIXO,Seguir rota atual
+23.61,20.71,0.0,30.08,11.99,6.37,12.98,Deslocamento,31.74,MEDIO,Reduzir velocidade
+49.67,16.53,10.79,39.0,10.21,3.51,8.98,Colheita,72.05,ALTO,Interromper operacao
+33.62,18.26,10.21,33.0,8.54,8.33,9.77,Deslocamento,35.04,MEDIO,Reduzir velocidade
+25.59,23.71,0.0,33.69,11.23,6.09,7.87,Colheita,16.78,BAIXO,Seguir rota atual
+33.1,4.6,11.32,28.19,7.18,6.43,9.0,Manobra,26.04,MEDIO,Reduzir velocidade
+13.04,3.52,1.74,26.16,3.55,5.07,8.39,Deslocamento,14.05,BAIXO,Seguir rota atual
+50.76,26.12,38.82,45.0,18.7,19.54,14.0,Manobra,77.73,ALTO,Atencao a inclinacao - reduzir velocidade
+51.28,26.97,55.31,45.0,18.78,12.42,9.36,Colheita,74.34,ALTO,Atencao a inclinacao - reduzir velocidade
+38.27,22.67,1.25,34.18,7.96,5.3,10.1,Colheita,29.44,MEDIO,Reduzir velocidade
+14.87,6.8,0.0,26.93,6.91,2.81,4.62,Colheita,2.73,BAIXO,Seguir rota atual
+41.08,19.56,6.19,45.42,13.1,11.71,12.02,Colheita,77.09,ALTO,Pausa recomendada - risco de fadiga
+50.0,15.02,10.25,33.17,10.38,5.84,6.75,Colheita,65.16,ALTO,Interromper operacao
+19.71,2.1,6.84,26.28,7.84,3.6,4.27,Deslocamento,4.23,BAIXO,Seguir rota atual
+22.01,3.34,2.93,21.7,5.22,0.0,7.68,Colheita,3.78,BAIXO,Seguir rota atual
+35.88,25.49,26.55,36.14,11.73,19.68,13.5,Deslocamento,75.65,ALTO,Pausa recomendada - risco de fadiga
+39.81,22.77,12.95,41.3,12.85,5.9,7.36,Manobra,43.79,MEDIO,Reduzir velocidade
+20.15,3.48,3.8,20.63,5.44,7.56,5.49,Deslocamento,0.48,BAIXO,Seguir rota atual
+19.93,11.52,5.44,33.23,6.08,3.71,2.4,Colheita,3.5,BAIXO,Seguir rota atual
+17.0,11.86,7.9,30.8,3.41,8.25,1.32,Colheita,2.06,BAIXO,Seguir rota atual
+45.39,20.9,23.62,36.0,18.51,7.61,8.66,Deslocamento,72.16,ALTO,Atencao a inclinacao - reduzir velocidade
+13.01,0.98,4.28,35.03,12.0,5.29,7.23,Colheita,12.87,BAIXO,Seguir rota atual
+21.62,10.0,2.97,26.98,8.07,3.26,4.85,Deslocamento,0.52,BAIXO,Seguir rota atual
+39.65,24.48,9.47,39.85,20.74,15.49,12.7,Colheita,72.4,ALTO,Atencao a inclinacao - reduzir velocidade
+20.17,9.28,7.01,33.8,3.1,1.05,7.62,Manobra,2.89,BAIXO,Seguir rota atual
+38.34,19.98,7.97,38.33,10.79,18.27,9.96,Manobra,54.24,ALTO,Verificar equipamento - desgaste elevado
+19.59,10.35,6.89,30.73,9.15,3.11,4.4,Deslocamento,5.48,BAIXO,Seguir rota atual
+25.38,5.89,3.98,27.99,8.57,0.0,6.43,Colheita,3.65,BAIXO,Seguir rota atual
+18.36,10.83,6.33,34.04,9.71,9.04,7.89,Colheita,4.83,BAIXO,Seguir rota atual
+41.75,22.1,24.98,42.2,14.07,13.21,9.93,Manobra,63.75,ALTO,Verificar equipamento - desgaste elevado
+45.73,30.0,45.55,45.0,15.5,12.33,12.07,Deslocamento,76.46,ALTO,Atencao a inclinacao - reduzir velocidade
+55.69,28.2,48.1,39.62,17.37,14.97,9.27,Colheita,77.56,ALTO,Atencao a inclinacao - reduzir velocidade
+30.74,22.0,3.09,42.42,15.67,3.29,7.14,Colheita,35.54,MEDIO,Atencao a inclinacao - reduzir velocidade
+26.29,19.65,24.13,38.76,16.38,7.43,11.6,Colheita,45.56,MEDIO,Atencao a inclinacao - reduzir velocidade
+16.11,8.05,3.72,19.64,4.69,7.9,5.8,Deslocamento,4.1,BAIXO,Seguir rota atual
+27.35,9.3,4.43,17.37,6.46,4.92,8.91,Colheita,12.09,BAIXO,Seguir rota atual
+53.43,30.0,50.98,40.87,22.47,14.71,10.12,Deslocamento,75.6,ALTO,Atencao a inclinacao - reduzir velocidade
+17.31,7.18,8.82,15.6,9.41,2.19,2.26,Colheita,4.76,BAIXO,Seguir rota atual
+28.26,10.93,7.76,30.0,11.12,6.68,4.69,Deslocamento,9.92,BAIXO,Seguir rota atual
+22.4,12.97,1.66,22.74,6.38,0.0,5.28,Manobra,3.81,BAIXO,Seguir rota atual
+6.8,8.21,6.6,23.62,10.35,0.62,7.38,Manobra,10.52,BAIXO,Seguir rota atual
+24.73,1.14,12.13,25.68,5.25,0.78,4.56,Colheita,11.07,BAIXO,Seguir rota atual
+33.98,20.41,6.51,38.53,10.84,2.2,8.7,Colheita,41.5,MEDIO,Reduzir velocidade
+16.06,21.42,3.1,36.65,15.94,5.15,11.12,Colheita,32.87,MEDIO,Atencao a inclinacao - reduzir velocidade
+47.83,30.0,41.35,40.48,24.75,12.69,10.32,Manobra,72.28,ALTO,Atencao a inclinacao - reduzir velocidade
+37.13,21.87,28.74,34.2,15.07,13.87,10.39,Deslocamento,53.63,ALTO,Atencao a inclinacao - reduzir velocidade
+29.17,7.7,3.45,28.96,7.2,3.83,6.03,Deslocamento,3.81,BAIXO,Seguir rota atual
+15.43,5.56,2.42,32.77,0.56,6.19,5.07,Colheita,4.82,BAIXO,Seguir rota atual
+21.55,21.24,10.38,38.36,4.04,12.1,7.52,Deslocamento,40.15,MEDIO,Reduzir velocidade
+40.49,22.96,3.62,38.64,10.84,1.79,11.34,Colheita,40.28,MEDIO,Pausa recomendada - risco de fadiga
+14.57,4.58,2.79,27.36,6.89,6.64,2.32,Deslocamento,2.98,BAIXO,Seguir rota atual
+35.55,21.65,33.18,39.66,18.26,12.12,9.03,Colheita,60.75,ALTO,Atencao a inclinacao - reduzir velocidade
+33.03,19.33,11.02,41.5,13.08,11.56,7.07,Deslocamento,55.06,ALTO,Interromper operacao
+31.68,17.1,9.57,34.56,14.19,5.21,9.09,Colheita,30.54,MEDIO,Reduzir velocidade
+40.49,11.74,18.61,34.87,5.92,8.47,9.07,Colheita,33.18,MEDIO,Reduzir velocidade
+19.43,11.96,6.24,27.49,7.9,4.69,8.55,Deslocamento,10.24,BAIXO,Seguir rota atual
+42.6,27.42,45.65,45.0,18.62,8.77,12.31,Colheita,76.09,ALTO,Atencao a inclinacao - reduzir velocidade
+41.69,26.47,7.84,43.46,22.1,10.87,7.42,Manobra,73.17,ALTO,Atencao a inclinacao - reduzir velocidade
+17.15,8.06,5.69,23.04,10.11,1.66,1.52,Deslocamento,9.13,BAIXO,Seguir rota atual
+55.53,20.18,42.96,45.0,21.95,10.64,11.89,Deslocamento,73.18,ALTO,Atencao a inclinacao - reduzir velocidade
+34.59,20.64,11.31,31.84,17.06,8.74,10.45,Colheita,44.55,MEDIO,Atencao a inclinacao - reduzir velocidade
+46.86,30.0,42.43,43.83,18.27,11.01,13.38,Deslocamento,73.02,ALTO,Atencao a inclinacao - reduzir velocidade
+37.34,19.44,12.85,42.1,13.11,11.65,10.03,Deslocamento,67.59,ALTO,Pausa recomendada - risco de fadiga
+19.66,14.12,9.68,33.05,15.17,10.9,10.44,Deslocamento,29.68,MEDIO,Reduzir velocidade
+32.74,7.67,5.95,23.08,11.9,10.95,5.02,Deslocamento,32.39,MEDIO,Reduzir velocidade
+22.71,13.44,3.56,22.72,8.75,5.24,5.37,Colheita,3.04,BAIXO,Seguir rota atual
+28.33,13.13,9.18,39.62,11.32,12.31,7.59,Colheita,30.54,MEDIO,Reduzir velocidade
+33.67,21.8,17.34,42.31,12.68,16.1,13.93,Colheita,65.42,ALTO,Pausa recomendada - risco de fadiga
+19.73,13.0,0.83,31.38,9.09,7.59,4.97,Colheita,3.91,BAIXO,Seguir rota atual
+5.0,5.43,2.12,21.11,7.24,3.74,3.35,Colheita,3.13,BAIXO,Seguir rota atual
+44.71,24.85,56.21,41.02,19.94,12.63,12.68,Manobra,76.78,ALTO,Atencao a inclinacao - reduzir velocidade
+52.28,17.87,55.22,45.0,17.8,11.08,11.1,Manobra,72.15,ALTO,Atencao a inclinacao - reduzir velocidade
+28.95,20.9,0.0,31.53,16.62,5.22,11.49,Colheita,27.58,MEDIO,Atencao a inclinacao - reduzir velocidade
+22.49,0.76,5.91,25.41,6.09,5.73,5.95,Manobra,6.49,BAIXO,Seguir rota atual
+24.95,12.71,5.22,19.12,6.05,12.0,6.45,Deslocamento,11.45,BAIXO,Seguir rota atual
+36.59,13.58,4.73,27.51,6.93,0.0,5.04,Manobra,10.13,BAIXO,Seguir rota atual
+56.05,25.2,49.12,45.0,18.36,12.65,9.96,Manobra,79.33,ALTO,Atencao a inclinacao - reduzir velocidade
+14.24,2.85,1.3,33.1,5.17,5.38,3.99,Deslocamento,3.46,BAIXO,Seguir rota atual
+44.43,25.24,12.32,37.22,11.31,4.42,12.89,Colheita,74.65,ALTO,Pausa recomendada - risco de fadiga
+14.68,10.65,7.18,23.22,9.08,7.29,8.46,Colheita,10.35,BAIXO,Seguir rota atual
+31.25,14.86,5.47,36.84,12.17,6.82,5.18,Colheita,15.95,BAIXO,Seguir rota atual
+42.82,27.92,21.71,41.83,16.72,13.19,11.86,Manobra,79.7,ALTO,Atencao a inclinacao - reduzir velocidade
+51.98,26.06,37.04,42.25,23.26,13.05,12.63,Colheita,77.98,ALTO,Atencao a inclinacao - reduzir velocidade
+23.07,11.33,7.85,26.39,4.38,3.96,5.09,Deslocamento,3.76,BAIXO,Seguir rota atual
+7.15,13.55,4.43,27.91,9.73,3.11,6.15,Colheita,5.45,BAIXO,Seguir rota atual
+19.23,7.26,1.68,34.33,6.25,7.1,1.25,Manobra,3.19,BAIXO,Seguir rota atual
+55.9,30.0,45.97,42.32,23.6,20.0,8.47,Colheita,77.66,ALTO,Atencao a inclinacao - reduzir velocidade
+53.91,24.27,44.8,42.26,20.29,13.97,9.73,Colheita,71.22,ALTO,Atencao a inclinacao - reduzir velocidade
+43.23,12.82,10.7,34.69,8.49,8.61,5.89,Colheita,15.96,BAIXO,Seguir rota atual
+40.24,17.73,21.69,37.23,13.65,12.88,8.45,Colheita,45.96,MEDIO,Reduzir velocidade
+39.65,17.46,23.05,45.29,23.38,12.27,11.58,Colheita,73.5,ALTO,Atencao a inclinacao - reduzir velocidade
+7.54,14.01,6.33,23.58,9.47,4.24,4.08,Deslocamento,4.42,BAIXO,Seguir rota atual
+52.38,23.81,55.22,39.83,17.8,11.27,13.52,Colheita,73.31,ALTO,Atencao a inclinacao - reduzir velocidade
+30.07,14.61,4.97,35.87,8.46,4.54,13.0,Colheita,21.7,BAIXO,Seguir rota atual
+28.12,18.71,6.16,34.31,13.86,10.84,8.39,Manobra,39.38,MEDIO,Reduzir velocidade
+25.11,25.1,7.52,42.92,5.26,8.59,12.84,Colheita,67.6,ALTO,Pausa recomendada - risco de fadiga
+17.53,7.1,4.89,23.21,6.38,3.99,3.75,Manobra,3.19,BAIXO,Seguir rota atual
+28.6,9.84,4.75,30.04,6.47,2.68,3.79,Manobra,6.06,BAIXO,Seguir rota atual
+40.01,18.82,14.0,38.45,21.37,3.68,9.64,Colheita,77.96,ALTO,Atencao a inclinacao - reduzir velocidade
+32.08,8.49,6.26,26.5,5.67,0.0,5.41,Colheita,11.91,BAIXO,Seguir rota atual
+35.35,19.6,14.01,45.23,22.21,12.65,9.07,Colheita,80.34,ALTO,Atencao a inclinacao - reduzir velocidade
+11.76,9.87,9.35,24.76,2.24,7.01,6.97,Deslocamento,2.16,BAIXO,Seguir rota atual
+22.31,20.71,10.26,35.71,9.63,11.05,8.19,Deslocamento,35.36,MEDIO,Reduzir velocidade
+9.6,0.0,7.78,29.08,7.18,3.68,3.94,Deslocamento,1.62,BAIXO,Seguir rota atual
+26.39,18.27,0.0,33.06,11.07,9.83,8.92,Manobra,30.88,MEDIO,Reduzir velocidade
+44.77,26.05,26.47,41.41,15.04,9.06,11.48,Colheita,74.35,ALTO,Atencao a inclinacao - reduzir velocidade
+31.76,9.37,9.75,18.37,4.69,7.57,5.53,Manobra,9.7,BAIXO,Seguir rota atual
+45.51,19.94,3.66,35.15,7.4,4.61,10.94,Deslocamento,69.62,ALTO,Pausa recomendada - risco de fadiga
+41.98,21.45,0.0,34.57,8.33,11.53,7.83,Deslocamento,32.46,MEDIO,Reduzir velocidade
+33.49,22.09,12.88,44.45,12.8,7.8,5.69,Manobra,40.95,MEDIO,Reduzir velocidade
+49.85,25.31,30.71,45.0,24.67,13.92,14.0,Manobra,74.81,ALTO,Atencao a inclinacao - reduzir velocidade
+43.98,19.53,9.69,42.45,16.19,12.51,8.31,Colheita,56.64,ALTO,Atencao a inclinacao - reduzir velocidade
+24.26,4.98,3.69,33.23,5.68,0.28,2.89,Colheita,3.06,BAIXO,Seguir rota atual
+26.96,9.02,3.61,23.45,7.97,2.45,5.61,Colheita,2.4,BAIXO,Seguir rota atual
+14.88,4.41,2.09,24.12,6.9,5.71,0.0,Colheita,6.04,BAIXO,Seguir rota atual
+28.54,18.43,15.53,31.68,12.49,12.49,6.37,Manobra,34.42,MEDIO,Reduzir velocidade
+22.76,4.79,2.49,21.98,5.54,12.0,6.69,Colheita,9.4,BAIXO,Seguir rota atual
+43.81,21.97,0.0,37.58,15.22,5.44,10.93,Deslocamento,37.66,MEDIO,Atencao a inclinacao - reduzir velocidade
+40.63,27.41,5.91,31.61,10.92,12.31,5.34,Deslocamento,68.85,ALTO,Interromper operacao
+5.52,8.36,2.67,26.04,8.89,3.34,1.25,Colheita,5.57,BAIXO,Seguir rota atual
+52.27,19.01,9.53,43.31,13.85,11.81,10.97,Manobra,72.86,ALTO,Pausa recomendada - risco de fadiga
+27.59,6.67,8.56,15.32,8.52,2.48,7.74,Manobra,6.82,BAIXO,Seguir rota atual
+20.99,5.31,5.99,30.47,8.28,1.91,4.03,Deslocamento,3.75,BAIXO,Seguir rota atual
+39.98,21.88,24.0,33.96,16.0,11.13,8.32,Colheita,56.34,ALTO,Atencao a inclinacao - reduzir velocidade
+29.06,19.14,0.0,33.19,9.37,9.6,7.39,Colheita,11.49,BAIXO,Seguir rota atual
+38.71,26.63,25.95,42.71,13.5,13.63,9.53,Colheita,74.74,ALTO,Verificar equipamento - desgaste elevado
+33.43,21.64,5.02,41.97,11.52,9.86,11.91,Colheita,39.89,MEDIO,Pausa recomendada - risco de fadiga
+27.22,2.36,5.33,30.25,8.78,1.66,3.69,Deslocamento,4.72,BAIXO,Seguir rota atual
+45.97,19.71,15.6,44.73,14.86,9.82,8.24,Manobra,74.14,ALTO,Interromper operacao
+42.0,18.0,16.02,41.0,18.9,14.0,8.57,Deslocamento,66.11,ALTO,Atencao a inclinacao - reduzir velocidade
+47.07,21.1,8.11,39.48,19.31,12.5,10.03,Manobra,73.55,ALTO,Atencao a inclinacao - reduzir velocidade
+31.46,2.27,0.14,17.92,7.75,5.5,8.09,Deslocamento,17.14,BAIXO,Seguir rota atual
+36.95,18.38,8.01,36.47,6.98,15.0,10.04,Deslocamento,41.02,MEDIO,Pausa recomendada - risco de fadiga
+36.68,22.46,11.55,35.44,10.11,9.8,9.77,Manobra,41.06,MEDIO,Reduzir velocidade
+14.33,13.68,4.88,29.65,9.78,5.07,5.63,Colheita,5.47,BAIXO,Seguir rota atual
+54.05,24.83,45.54,43.38,18.18,20.0,9.19,Manobra,74.85,ALTO,Atencao a inclinacao - reduzir velocidade
+10.91,13.26,6.14,20.87,8.21,9.4,4.94,Colheita,3.33,BAIXO,Seguir rota atual
+62.99,21.83,51.94,45.0,25.57,13.39,11.42,Colheita,75.37,ALTO,Atencao a inclinacao - reduzir velocidade
+38.55,23.26,11.01,40.16,8.94,7.32,7.12,Manobra,35.39,MEDIO,Reduzir velocidade
