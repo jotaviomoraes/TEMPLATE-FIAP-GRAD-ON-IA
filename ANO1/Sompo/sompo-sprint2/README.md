@@ -45,7 +45,7 @@ Esta é a **Sprint 2** do Challenge Sompo, na qual a proposta documental da Spri
 
 1. [Estrutura do Repositório](#1-estrutura-do-repositório)
 2. [Como Executar](#2-como-executar)
-2.1 [video](#https://www.youtube.com/watch?v=FTL-k7kCKbQ)
+2.1[video](https://www.youtube.com/watch?v=FTL-k7kCKbQ)
 3. [Dataset v2](#3-dataset-v2)
 4. [Modelo Preditivo](#4-modelo-preditivo)
 5. [Camada SQL (Oracle XE)](#5-camada-sql-oracle-xe)
@@ -145,16 +145,11 @@ cd dashboard/
 streamlit run app.py
 # Acessar: http://localhost:8501
 ```
-```bash
-Video do youtube demonstrando passo a passo como conectar e como usar a ferramenta :
-https://www.youtube.com/watch?v=FTL-k7kCKbQ
-```
-
-
 
 
 > O dashboard **funciona com ou sem Oracle**. Sem banco, ele usa histórico em sessão.
 
+[link para o video](https://www.youtube.com/watch?v=FTL-k7kCKbQ)
 ---
 
 ## 3. Dataset v2
