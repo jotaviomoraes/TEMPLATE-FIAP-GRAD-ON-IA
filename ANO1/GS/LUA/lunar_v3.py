@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 ╔══════════════════════════════════════════════════════════════════════╗
-║        LUNAR HE-3 & SOLAR WIND MONITOR  — v3.0  (FUSION EDITION)    ║
+║        LUNAR HE-3 & SOLAR WIND MONITOR  — v3.0  (FUSION EDITION)     ║
 ║                                                                      ║
-║  Fusão de Lunar_v2.py  +  lunar_he3_monitor.py                       ║
+║                                                                      ║
 ║                                                                      ║
 ║  Dados em tempo real:                                                ║
 ║  • NOAA DSCOVR   → Vento solar (plasma + IMF)                        ║
 ║  • NASA DONKI    → CME, Flares, Tempestades geomagnéticas            ║
-║  • NASA CMR/PDS  → M3 Chandrayaan-1, Lunar Prospector GRS           ║
+║  • NASA CMR/PDS  → M3 Chandrayaan-1, Lunar Prospector GRS            ║
 ║  • JAXA SELENE   → Composição Ti/Fe da Lua                           ║
 ║                                                                      ║
 ║  Machine Learning (Scikit-Learn):                                    ║
@@ -48,7 +48,6 @@ from pathlib import Path
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.model_selection import KFold, cross_val_score
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
@@ -61,9 +60,15 @@ matplotlib.rcParams["font.family"] = "DejaVu Sans"
 # ─────────────────────────────────────────────────────────────────────────────
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    # Procura o .env na mesma pasta do script, não no diretório de execução
+    _ENV_PATH = Path(__file__).parent / ".env"
+    loaded = load_dotenv(dotenv_path=_ENV_PATH)
+    if not loaded:
+        loaded = load_dotenv()  # fallback: diretório atual
+    if not loaded:
+        print(f"  ⚠ Aviso: .env não encontrado. Esperado em: {_ENV_PATH.resolve()}")
 except ImportError:
-    pass
+    print("  ⚠ Aviso: python-dotenv não instalado. Execute: pip install python-dotenv")
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  CONFIGURAÇÃO GLOBAL
@@ -78,7 +83,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 NOAA_BASE  = "https://services.swpc.noaa.gov"
 DONKI_BASE = "https://api.nasa.gov/DONKI"
 CMR_BASE   = "https://cmr.earthdata.nasa.gov/search"
-PDS_BASE   = "https://pds.nasa.gov/api/search/1"
+PDS_BASE   = "https://pds.mcp.nasa.gov/api/search/1"
 TIMEOUT    = 30
 
 EARTHDATA_HEADERS = {
@@ -194,7 +199,6 @@ class SolarWindMonitor:
         })
         print(f"  [DONKI] {len(self.flare_events)} flare(s).")
         return self.flare_events
-
     def fetch_donki_geostorm(self) -> list:
         end, start = datetime.now(timezone.utc), datetime.now(timezone.utc) - timedelta(days=DATA_WINDOW_DAYS)
         print("  [DONKI] Buscando Tempestades Geomagnéticas...")
@@ -439,63 +443,128 @@ class LunarMineralogyData:
         self.lon_grid     = None
         self.lat_grid     = None
 
+    @staticmethod
+    def _safe_get(url: str, params: dict = None, headers: dict = None) -> requests.Response | None:
+        """
+        Faz GET com tratamento robusto de erros de rede.
+        Retorna None se o host for inacessível, bloqueado por proxy ou der timeout.
+        """
+        try:
+            resp = requests.get(url, params=params, headers=headers or {}, timeout=TIMEOUT)
+            # Detecta resposta de proxy/firewall (corpo é texto plano curto)
+            if resp.status_code in (403, 407) and len(resp.text) < 200:
+                return None
+            return resp
+        except (requests.exceptions.ConnectionError,
+                requests.exceptions.Timeout,
+                requests.exceptions.ProxyError):
+            return None
+        except Exception:
+            return None
+
     def search_cmr_m3(self) -> list:
         print("  [CMR] Buscando granules M3 (Chandrayaan-1)...")
-        params  = {"short_name": "M3T20110921_RFL", "page_size": 10, "page_num": 1}
+        short_names = [
+            "M3G20111020_RFL_V03",
+            "M3T20110921_RFL_V01",
+            "M3T20110921_RFL",
+            "CH1-ORB-L-M3-4-L2-REFLECTANCE-V1.0",
+        ]
         headers = {"Authorization": f"Bearer {EARTHDATA_TOKEN}"} if EARTHDATA_TOKEN else {}
-        try:
-            resp = requests.get(f"{CMR_BASE}/granules.json", params=params,
-                                headers=headers, timeout=TIMEOUT)
-            resp.raise_for_status()
-            granules = resp.json().get("feed", {}).get("entry", [])
-            self.m3_granules = granules
-            print(f"  [CMR] {len(granules)} granule(s) M3.")
-            return granules
-        except Exception as e:
-            print(f"  [CMR] Aviso M3: {e}")
-            return []
+        for sn in short_names:
+            resp = self._safe_get(f"{CMR_BASE}/granules.json",
+                                  params={"short_name": sn, "page_size": 10, "page_num": 1},
+                                  headers=headers)
+            if resp is None:
+                print("  [CMR] Host inacessível — usando dados de referência compilados.")
+                return []
+            if resp.status_code == 200:
+                try:
+                    granules = resp.json().get("feed", {}).get("entry", [])
+                    if granules:
+                        self.m3_granules = granules
+                        print(f"  [CMR] {len(granules)} granule(s) M3 encontrados.")
+                        return granules
+                except Exception:
+                    pass
+        print("  [CMR] Nenhum granule M3 — usando dados de referência compilados.")
+        return []
 
     def search_cmr_lunar_prospector(self) -> list:
         print("  [CMR] Buscando Lunar Prospector GRS...")
-        params  = {"short_name": "LP_GRS", "page_size": 5}
+        short_names = [
+            "LP_GRS",
+            "LPGRS_L1",
+            "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0",
+            "LP_ELEMENT_ABUNDANCE",
+        ]
         headers = {"Authorization": f"Bearer {EARTHDATA_TOKEN}"} if EARTHDATA_TOKEN else {}
-        try:
-            resp = requests.get(f"{CMR_BASE}/granules.json", params=params,
-                                headers=headers, timeout=TIMEOUT)
-            resp.raise_for_status()
-            entries = resp.json().get("feed", {}).get("entry", [])
-            print(f"  [CMR] {len(entries)} dataset(s) Lunar Prospector.")
-            return entries
-        except Exception as e:
-            print(f"  [CMR] Aviso LP: {e}")
-            return []
+        for sn in short_names:
+            resp = self._safe_get(f"{CMR_BASE}/granules.json",
+                                  params={"short_name": sn, "page_size": 5},
+                                  headers=headers)
+            if resp is None:
+                print("  [CMR] Host inacessível — usando dados de referência compilados.")
+                return []
+            if resp.status_code == 200:
+                try:
+                    entries = resp.json().get("feed", {}).get("entry", [])
+                    if entries:
+                        print(f"  [CMR] {len(entries)} dataset(s) Lunar Prospector encontrados.")
+                        return entries
+                except Exception:
+                    pass
+        print("  [CMR] Nenhum dataset Lunar Prospector — usando dados de referência compilados.")
+        return []
 
     def search_pds_datasets(self) -> list:
         print("  [PDS] Buscando datasets de TiO₂ / ilmenita...")
-        params = {"q": "titanium moon ilmenite", "limit": 5, "fields": "lidvid,title,description"}
-        try:
-            resp = requests.get(f"{PDS_BASE}/products", params=params, timeout=TIMEOUT)
-            resp.raise_for_status()
-            items = resp.json().get("data", [])
-            self.pds_datasets = items
-            print(f"  [PDS] {len(items)} produto(s).")
-            return items
-        except Exception as e:
-            print(f"  [PDS] Aviso: {e}")
-            return []
+        endpoints = [
+            "https://pds.mcp.nasa.gov/api/search/1/products",
+            "https://pds.nasa.gov/api/search/1/products",
+        ]
+        for url in endpoints:
+            # Tenta query completa primeiro, depois simplificada
+            for q in [{"q": "titanium moon ilmenite", "limit": 5},
+                      {"q": "moon titanium", "limit": 5}]:
+                resp = self._safe_get(url, params=q)
+                if resp is None:
+                    break  # host inacessível, não adianta tentar o outro parâmetro
+                if resp.status_code == 200:
+                    try:
+                        items = resp.json().get("data", [])
+                        self.pds_datasets = items
+                        print(f"  [PDS] {len(items)} produto(s) encontrados.")
+                        return items
+                    except Exception:
+                        pass
+        print("  [PDS] API indisponível — usando dados de referência compilados.")
+        return []
 
     def search_jaxa_selene(self) -> dict:
         print("  [JAXA] Consultando SELENE/Kaguya DARTS...")
-        url = "https://darts.isas.jaxa.jp/planet/pdap/selene/api/dataset_list.json"
-        try:
-            resp = requests.get(url, timeout=TIMEOUT)
-            resp.raise_for_status()
-            data = resp.json()
-            print(f"  [JAXA] {len(data.get('datasets', []))} datasets SELENE.")
-            return data
-        except Exception as e:
-            print(f"  [JAXA] Aviso: {e} — usando dados de referência compilados.")
-            return {}
+        urls = [
+            "https://darts.isas.jaxa.jp/api/selene/dataset_list.json",
+            "https://darts.isas.jaxa.jp/planet/pdap/selene/api/dataset_list.json",
+            "https://darts.isas.jaxa.jp/planet/selene/dataset_list.json",
+        ]
+        for url in urls:
+            resp = self._safe_get(url)
+            if resp is None:
+                print("  [JAXA] Host inacessível — usando dados de referência compilados.")
+                return {}
+            if resp.status_code == 200:
+                ct = resp.headers.get("Content-Type", "")
+                if "json" not in ct and not resp.text.strip().startswith("{"):
+                    continue  # resposta não é JSON, tenta próxima URL
+                try:
+                    data = resp.json()
+                    print(f"  [JAXA] {len(data.get('datasets', []))} datasets SELENE.")
+                    return data
+                except Exception:
+                    continue
+        print("  [JAXA] Todas as URLs DARTS indisponíveis — usando dados de referência compilados.")
+        return {}
 
     def generate_tio2_map(self) -> np.ndarray:
         """Gera mapa global de TiO₂ baseado nas regiões catalogadas (gaussianas)."""
@@ -832,7 +901,7 @@ def main():
     args = parse_args()
 
     print("╔══════════════════════════════════════════════════════════════╗")
-    print("║   LUNAR HE-3 & SOLAR WIND MONITOR v3.0 — Iniciando...       ║")
+    print("║   LUNAR HE-3 & SOLAR WIND MONITOR v3.0 — Iniciando...        ║")
     print("╚══════════════════════════════════════════════════════════════╝")
     print(f"  Saída: {OUTPUT_DIR.resolve()}")
     print(f"  NASA API: {'✓ configurada' if NASA_API_KEY != 'DEMO_KEY' else '⚠ usando DEMO_KEY'}")

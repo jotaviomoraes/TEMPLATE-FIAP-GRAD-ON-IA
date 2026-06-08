@@ -1,7 +1,7 @@
-# 🌑 Lunar He-3 & Solar Wind Monitor
+# 🌑 Lunar He-3 & Solar Wind Monitor v3.0 — Fusion Edition
 
-Monitor de **vento solar** e **mineralogia lunar** com foco em
-detecção de Ilmenita (FeTiO₃) e estimativa de Hélio-3 (He-3).
+Monitor de **vento solar** e **mineralogia lunar** com Machine Learning multi-modelo para
+estimativa de Hélio-3 (He-3) e detecção de Ilmenita (FeTiO₃).
 
 ---
 
@@ -14,7 +14,7 @@ detecção de Ilmenita (FeTiO₃) e estimativa de Hélio-3 (He-3).
 | CME / Flares / Tempestades | ACE, WIND, DSCOVR | `api.nasa.gov/DONKI` | NASA API Key |
 | Ilmenita / TiO₂ | Chandrayaan-1 M3 | `cmr.earthdata.nasa.gov` | Earthdata Token |
 | Ti, Fe, He-3 | JAXA SELENE/Kaguya | `darts.isas.jaxa.jp` | Nenhuma |
-| Datasets gerais | LRO, Lunar Prospector | `pds.nasa.gov/api` | Nenhuma |
+| Datasets gerais | LRO, Lunar Prospector | `pds.mcp.nasa.gov/api` | Nenhuma |
 
 ---
 
@@ -37,6 +37,8 @@ Antes de instalar, você precisa criar conta em dois serviços **gratuitos** da 
 3. Após login, vá em **Profile → Generate Token**
 4. Copie o token gerado
 
+> ⚠️ O token Earthdata expira após **90 dias**. Quando isso ocorrer, gere um novo e atualize o `.env`.
+
 ---
 
 ## ⚙️ Instalação
@@ -51,14 +53,14 @@ source venv/bin/activate          # Linux/Mac
 venv\Scripts\activate             # Windows
 
 # 3. Instale as dependências
-pip install -r requirements.txt
+pip install requests numpy pandas matplotlib scikit-learn python-dotenv
 
 # 4. Crie o arquivo .env (veja abaixo)
 ```
 
 ### Criando o arquivo `.env`
 
-Crie um arquivo chamado exatamente `.env` (sem nome antes do ponto) **na mesma pasta** que o `lunar_he3_monitor.py` e cole o conteúdo abaixo substituindo com suas chaves:
+Crie um arquivo chamado exatamente `.env` (sem nome antes do ponto) **na mesma pasta** que o `lunar_v3.py` e cole o conteúdo abaixo substituindo com suas chaves:
 
 ```dotenv
 NASA_API_KEY=SUA_CHAVE_NASA_AQUI
@@ -76,22 +78,25 @@ DATA_WINDOW_DAYS=7
 
 ```bash
 # Dashboard completo (padrão)
-python lunar_he3_monitor.py
+python lunar_v3.py
 
 # Apenas vento solar
-python lunar_he3_monitor.py --solar
+python lunar_v3.py --solar
 
 # Apenas mapa lunar
-python lunar_he3_monitor.py --lunar
+python lunar_v3.py --lunar
+
+# Apenas benchmark de Machine Learning
+python lunar_v3.py --ml
 
 # Exportar todos os dados (CSV + JSON)
-python lunar_he3_monitor.py --export
+python lunar_v3.py --export
 
 # Sem exibir janela gráfica (salva apenas arquivo)
-python lunar_he3_monitor.py --no-plot
+python lunar_v3.py --no-plot
 
 # Combinações
-python lunar_he3_monitor.py --export --no-plot
+python lunar_v3.py --export --no-plot
 ```
 
 ---
@@ -104,35 +109,46 @@ python lunar_he3_monitor.py --export --no-plot
 - Lista CMEs, flares e tempestades geomagnéticas recentes
 - Calcula fluxo de partículas que atinge a Lua (sem escudo magnético)
 
-### Módulo 2 — Mineralogia Lunar
-- Consulta o CMR por granules do **Moon Mineralogy Mapper (M3)**
-  do Chandrayaan-1 — o melhor espectrógrafo de ilmenita lunar
+### Módulo 2 — Machine Learning
+Treina e avalia **4 modelos** com validação cruzada KFold (k=5) usando amostras reais das missões Apollo 11, 12, 14, 15, 17 e SELENE/Kaguya:
+
+| Modelo | Característica |
+|--------|---------------|
+| Linear Regression | Baseline interpretável |
+| Ridge Regression | Linear com regularização L2 |
+| Random Forest | Ensemble de árvores, captura não-linearidades |
+| Gradient Boosting | Boosting sequencial, maior acurácia preditiva |
+
+Features de entrada: `TiO₂ (%)`, `fluxo solar normalizado`, `latitude absoluta`, `é mare?`  
+Target: concentração de **He-3 em ppb**  
+Métricas reportadas: R², MAE e RMSE (via cross-validation)
+
+### Módulo 3 — Mineralogia Lunar
+- Consulta o CMR por granules do **Moon Mineralogy Mapper (M3)** do Chandrayaan-1
 - Consulta dados GRS do **Lunar Prospector** (Ti, Fe, Th medidos in situ)
 - Consulta o PDS por datasets de TiO₂ lunar
 - Consulta metadados do **SELENE/Kaguya** (JAXA)
-- Gera mapa global de He-3 potencial (ppb) usando modelo:
-  ```
-  [He-3] ≈ (2.4 × TiO₂% + 0.5) × fator_fluxo_solar
-  ```
+- Estima He-3 por região usando o melhor modelo de ML treinado no Módulo 2
 
-### Módulo 3 — Dashboard Visual
-Painel com:
+### Módulo 4 — Dashboard Visual
+Painel com 6 painéis integrados:
 - Gráfico de velocidade do vento solar (7 dias)
 - Gráfico do campo Bz (norte = azul, sul = laranja)
 - Painel de status com alertas de CME/flares
+- Gráfico comparativo dos modelos de ML
 - Mapa lunar colorido por concentração de He-3
-- Tabela ranqueada das regiões com maior Ilmenita
+- Tabela ranqueada das regiões com maior potencial de prospecção
 
-### Módulo 4 — Exportação
+### Módulo 5 — Exportação
 Salva em `./outputs/`:
 - `solar_wind_plasma.csv`
 - `solar_wind_mag.csv`
 - `cme_events.json`
 - `flare_events.json`
 - `lunar_ilmenite_regions.csv`
-- `he3_map_sample.csv`
-- `m3_granules.json`
-- `dashboard_YYYYMMDD_HHMMSS.png`
+- `ml_metrics.json`
+- `apollo_calibration_data.csv`
+- `dashboard_v3_YYYYMMDD_HHMMSS.png`
 
 ---
 
