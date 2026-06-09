@@ -57,8 +57,23 @@ from sklearn.pipeline import Pipeline
 
 warnings.filterwarnings("ignore")
 
-matplotlib.rcParams["figure.dpi"] = 120        # Resolução dos gráficos
-matplotlib.rcParams["font.family"] = "DejaVu Sans"  # Fonte padrão
+matplotlib.rcParams["font.family"] = "DejaVu Sans"
+
+def _get_screen_dpi():
+    try:
+        import tkinter as tk
+        root = tk.Tk()
+        root.withdraw()
+        screen_w = root.winfo_screenwidth()
+        screen_h = root.winfo_screenheight()
+        root.destroy()
+        dpi = min(120, int(screen_w / 22), int(screen_h / 15))
+        return max(72, dpi)
+    except Exception:
+        return 96
+
+_SCREEN_DPI = _get_screen_dpi()
+matplotlib.rcParams["figure.dpi"] = _SCREEN_DPI
 
 
 # =============================================================================
@@ -1351,8 +1366,19 @@ class Dashboard:
         """
         print("\n━━━ MÓDULO 4: RENDERIZANDO DASHBOARD ━━━━━━━━━━━━━━━━━━━━━━")
 
-        # Cria a figura principal (22x15 polegadas)
-        fig = plt.figure(figsize=(22, 15), facecolor=COR_FUNDO)
+        # Cria a figura principal
+
+        try:
+            import tkinter as tk
+            root = tk.Tk();
+            root.withdraw()
+            sw, sh = root.winfo_screenwidth(), root.winfo_screenheight()
+            root.destroy()
+            fig_w = min(22, (sw * 0.92) / _SCREEN_DPI)
+            fig_h = min(15, (sh * 0.88) / _SCREEN_DPI)
+        except Exception:
+            fig_w, fig_h = 22, 15
+        fig = plt.figure(figsize=(fig_w, fig_h), facecolor=COR_FUNDO)
 
         # Título geral no topo da figura
         fig.suptitle(
@@ -1398,6 +1424,20 @@ class Dashboard:
             fig.savefig(caminho, dpi=120, facecolor=COR_FUNDO, bbox_inches="tight")
             print(f"  [OK] Dashboard salvo → {caminho}")
 
+        try:
+            mgr = plt.get_current_fig_manager()
+            try:
+                mgr.window.state("zoomed")  # TkAgg (Windows)
+            except Exception:
+                try:
+                    mgr.window.showMaximized()  # Qt
+                except Exception:
+                    try:
+                        mgr.frame.Maximize(True)  # wxAgg
+                    except Exception:
+                        pass
+        except Exception:
+            pass
         plt.show()
         plt.close(fig)  # Libera memória fechando a figura
         return caminho
