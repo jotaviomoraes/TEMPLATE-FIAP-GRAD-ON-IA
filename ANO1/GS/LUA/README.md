@@ -53,7 +53,7 @@ source venv/bin/activate          # Linux/Mac
 venv\Scripts\activate             # Windows
 
 # 3. Instale as dependências
-pip install requests numpy pandas matplotlib scikit-learn python-dotenv
+pip install -r requirements.txt
 
 # 4. Crie o arquivo .env (veja abaixo)
 ```
@@ -110,7 +110,7 @@ python lunar_v3.py --export --no-plot
 - Calcula fluxo de partículas que atinge a Lua (sem escudo magnético)
 
 ### Módulo 2 — Machine Learning
-Treina e avalia **4 modelos** com validação cruzada KFold (k=5) usando amostras reais das missões Apollo 11, 12, 14, 15, 17 e SELENE/Kaguya:
+Treina e avalia **4 modelos** com validação cruzada KFold (k=5) usando um dataset de calibração que combina valores de referência das missões Apollo 11, 12, 14, 15, 17 e SELENE/Kaguya com amostras sintéticas para demonstração:
 
 | Modelo | Característica |
 |--------|---------------|
@@ -124,11 +124,13 @@ Target: concentração de **He-3 em ppb**
 Métricas reportadas: R², MAE e RMSE (via cross-validation)
 
 ### Módulo 3 — Mineralogia Lunar
-- Consulta o CMR por granules do **Moon Mineralogy Mapper (M3)** do Chandrayaan-1
-- Consulta dados GRS do **Lunar Prospector** (Ti, Fe, Th medidos in situ)
-- Consulta o PDS por datasets de TiO₂ lunar
+- Consulta o CMR por granules do **Moon Mineralogy Mapper (M3)** do Chandrayaan-1 (metadados)
+- Consulta dados GRS do **Lunar Prospector** (catálogo)
+- Consulta o PDS por datasets de TiO₂ lunar (catálogo)
 - Consulta metadados do **SELENE/Kaguya** (JAXA)
-- Estima He-3 por região usando o melhor modelo de ML treinado no Módulo 2
+- Gera mapa **simulado** de TiO₂/He-3 por região (gaussianas calibradas com literatura) e aplica o melhor modelo de ML do Módulo 2
+
+> O mapa não processa os arquivos brutos das APIs — usa regiões catalogadas e estimativas demonstrativas.
 
 ### Módulo 4 — Dashboard Visual
 Painel com 6 painéis integrados:

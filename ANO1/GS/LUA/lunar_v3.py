@@ -6,26 +6,29 @@
 ║                                                                      ║
 ║                                                                      ║
 ║                                                                      ║
-║  Dados em tempo real:                                                ║
+║  Dados em tempo real (APIs):                                         ║
 ║  • NOAA DSCOVR   → Vento solar (plasma + IMF)                        ║
 ║  • NASA DONKI    → CME, Flares, Tempestades geomagnéticas            ║
-║  • NASA CMR/PDS  → M3 Chandrayaan-1, Lunar Prospector GRS            ║
-║  • JAXA SELENE   → Composição Ti/Fe da Lua                           ║
+║                                                                      ║
+║  Consulta de metadados (APIs):                                       ║
+║  • NASA CMR/PDS  → M3, Lunar Prospector (catálogo)                   ║
+║  • JAXA SELENE   → datasets Kaguya (catálogo)                        ║
+║                                                                      ║
+║  Mapa lunar: simulação regional (TiO₂/He-3) calibrada com literatura ║
 ║                                                                      ║
 ║  Machine Learning (Scikit-Learn):                                    ║
-║  • Regressão Linear   — baseline rápido                              ║
-║  • Random Forest      — captura não-linearidades                     ║
-║  • Gradient Boosting  — maior precisão preditiva                     ║
+║  • Regressão Linear / Ridge / Random Forest / Gradient Boosting      ║
 ║  • Validação cruzada (KFold k=5), R², MAE, RMSE                      ║
-║  • Dados de calibração baseados em amostras REAIS Apollo + SELENE    ║
+║  • Dataset misto: valores de referência Apollo/SELENE + amostras       ║
+║    sintéticas para demonstração (não substitui medições laboratoriais) ║
 ╚══════════════════════════════════════════════════════════════════════╝
 
 Uso:
-    python lunar_monitor_v3.py              # Dashboard completo
-    python lunar_monitor_v3.py --solar      # Apenas vento solar
-    python lunar_monitor_v3.py --lunar      # Apenas mapa lunar
-    python lunar_monitor_v3.py --ml         # Apenas benchmark de ML
-    python lunar_monitor_v3.py --export     # Exporta dados CSV/JSON
+    python lunar_v3.py              # Dashboard completo
+    python lunar_v3.py --solar      # Apenas vento solar
+    python lunar_v3.py --lunar      # Apenas mapa lunar + ML
+    python lunar_v3.py --ml         # Apenas benchmark de ML
+    python lunar_v3.py --export     # Exporta dados CSV/JSON
 """
 
 import os
@@ -103,10 +106,23 @@ CMR_BASE   = "https://cmr.earthdata.nasa.gov/search"
 PDS_BASE   = "https://pds.mcp.nasa.gov/api/search/1"
 TIMEOUT    = 30
 
-EARTHDATA_HEADERS = {
-    "Authorization": f"Bearer {EARTHDATA_TOKEN}",
-    "Accept": "application/json",
-}
+
+def _earthdata_headers() -> dict:
+    headers = {"Accept": "application/json"}
+    if EARTHDATA_TOKEN:
+        headers["Authorization"] = f"Bearer {EARTHDATA_TOKEN}"
+    return headers
+
+
+def _angular_distance_deg(lon_grid: np.ndarray, lat_grid: np.ndarray,
+                          lon0: float, lat0: float) -> np.ndarray:
+    """Distância angular em graus (haversine) entre cada ponto do grid e (lon0, lat0)."""
+    lat1 = np.radians(lat_grid)
+    lat2 = np.radians(lat0)
+    dlon = np.radians(lon_grid - lon0)
+    dlat = lat1 - lat2
+    a = np.sin(dlat / 2) ** 2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon / 2) ** 2
+    return np.degrees(2 * np.arcsin(np.sqrt(np.clip(a, 0, 1))))
 
 # Cores do dashboard
 COR_FUNDO   = "#0a0a1a"
@@ -226,12 +242,14 @@ class SolarWindMonitor:
         print(f"  [DONKI] {len(self.storm_events)} tempestade(s).")
         return self.storm_events
 
-    def calculate_lunar_flux(self) -> dict:
+    def calculate_solar_wind_flux(self) -> dict:
+        """Fluxo de prótons no ponto L1 (DSCOVR), em partículas/(cm²·s)."""
         if self.plasma_data is None or self.plasma_data.empty:
             return {}
         df = self.plasma_data.dropna(subset=["speed", "density"]).copy()
         if df.empty:
             return {}
+        # densidade (p/cm³) × velocidade (km/s → cm/s)
         df["flux"] = df["density"] * df["speed"] * 1e5
         atual  = df.iloc[-1]
         media  = df.mean(numeric_only=True)
@@ -258,7 +276,7 @@ class SolarWindMonitor:
         self.fetch_donki_cme()
         self.fetch_donki_flares()
         self.fetch_donki_geostorm()
-        return self.calculate_lunar_flux()
+        return self.calculate_solar_wind_flux()
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -267,7 +285,11 @@ class SolarWindMonitor:
 # ══════════════════════════════════════════════════════════════════════════════
 class LunarMLPipeline:
     """
-    Pipeline de ML multi-modelo para predição de He-3 a partir de TiO₂.
+    Pipeline de ML multi-modelo para estimativa demonstrativa de He-3 a partir de TiO₂.
+
+    O dataset combina valores de referência da literatura (Apollo/SELENE) com
+    amostras sintéticas. O fator de vento solar atual é apenas um ajuste
+    ilustrativo — He-3 na regolito acumula ao longo de eras geológicas.
 
     Modelos treinados:
       - LinearRegression  : baseline interpretável
@@ -347,7 +369,6 @@ class LunarMLPipeline:
         self.metrics    = {}
         self.best_model = None
         self.best_name  = None
-        self.scaler     = StandardScaler()
 
     def load_calibration_data(self) -> pd.DataFrame:
         """Carrega dataset de calibração Apollo + SELENE."""
@@ -421,6 +442,7 @@ class LunarMLPipeline:
         h, w = tio2_map.shape
         tio2_flat   = tio2_map.ravel()
         lat_flat    = np.abs(lat_grid.ravel()) if lat_grid is not None else np.zeros(h * w)
+        # Heurística mare vs highlands (TiO₂ típico); não substitui classificação morfológica
         is_mare_est = (tio2_flat > 1.5).astype(float)
         flux_arr    = np.full(h * w, fluxo_solar)
 
@@ -487,11 +509,10 @@ class LunarMineralogyData:
             "M3T20110921_RFL",
             "CH1-ORB-L-M3-4-L2-REFLECTANCE-V1.0",
         ]
-        headers = {"Authorization": f"Bearer {EARTHDATA_TOKEN}"} if EARTHDATA_TOKEN else {}
         for sn in short_names:
             resp = self._safe_get(f"{CMR_BASE}/granules.json",
                                   params={"short_name": sn, "page_size": 10, "page_num": 1},
-                                  headers=headers)
+                                  headers=_earthdata_headers())
             if resp is None:
                 print("  [CMR] Host inacessível — usando dados de referência compilados.")
                 return []
@@ -515,11 +536,10 @@ class LunarMineralogyData:
             "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0",
             "LP_ELEMENT_ABUNDANCE",
         ]
-        headers = {"Authorization": f"Bearer {EARTHDATA_TOKEN}"} if EARTHDATA_TOKEN else {}
         for sn in short_names:
             resp = self._safe_get(f"{CMR_BASE}/granules.json",
                                   params={"short_name": sn, "page_size": 5},
-                                  headers=headers)
+                                  headers=_earthdata_headers())
             if resp is None:
                 print("  [CMR] Host inacessível — usando dados de referência compilados.")
                 return []
@@ -537,7 +557,7 @@ class LunarMineralogyData:
     def search_pds_datasets(self) -> list:
         print("  [PDS] Buscando datasets de TiO₂ / ilmenita...")
         endpoints = [
-            "https://pds.mcp.nasa.gov/api/search/1/products",
+            f"{PDS_BASE}/products",
             "https://pds.nasa.gov/api/search/1/products",
         ]
         for url in endpoints:
@@ -584,15 +604,15 @@ class LunarMineralogyData:
         return {}
 
     def generate_tio2_map(self) -> np.ndarray:
-        """Gera mapa global de TiO₂ baseado nas regiões catalogadas (gaussianas)."""
+        """Mapa regional simulado de TiO₂ (gaussianas por região, distância haversine)."""
         lons = np.linspace(-180, 180, 360)
         lats = np.linspace(-90,   90, 180)
         self.lon_grid, self.lat_grid = np.meshgrid(lons, lats)
-        tio2_map = np.zeros_like(self.lon_grid)
+        tio2_map = np.zeros_like(self.lon_grid, dtype=float)
         for reg in LUNAR_REGIONS:
-            dist2    = (self.lon_grid - reg["lon"]) ** 2 + (self.lat_grid - reg["lat"]) ** 2
+            dist_deg = _angular_distance_deg(self.lon_grid, self.lat_grid, reg["lon"], reg["lat"])
             sigma    = reg["raio"] / 2.5
-            tio2_map += reg["tio2"] * np.exp(-dist2 / (2 * sigma ** 2))
+            tio2_map += reg["tio2"] * np.exp(-dist_deg ** 2 / (2 * sigma ** 2))
         self.tio2_map = np.clip(tio2_map, 0, 13)
         return self.tio2_map
 
@@ -691,13 +711,18 @@ class Dashboard:
         self._style_ax(ax)
 
     def plot_ml_calibration(self, ax):
-        """Scatter das amostras Apollo + curvas de todos os modelos."""
+        """Scatter das amostras de calibração + curvas de todos os modelos."""
+        if not self.ml.models or self.ml.df_apollo is None:
+            ax.text(0.5, 0.5, "ML não treinado", ha="center", va="center",
+                    color=COR_TEXTO, transform=ax.transAxes)
+            self._style_ax(ax)
+            return
         df  = self.ml.df_apollo
         X_l = np.linspace(0, 14, 100)
 
         ax.scatter(df["TiO2_pct"], df["He3_ppb"],
                    color=COR_AMARELO, alpha=0.75, edgecolors="white",
-                   s=40, zorder=5, label="Amostras Apollo/SELENE")
+                   s=40, zorder=5, label="Calibração Apollo/SELENE + sintéticas")
 
         cores_modelos = [COR_AZUL, COR_VERDE, COR_LARANJA, COR_ROXO]
         for (nome, pipe), cor in zip(self.ml.models.items(), cores_modelos):
@@ -717,38 +742,48 @@ class Dashboard:
                   facecolor=COR_FUNDO, loc="upper left")
         self._style_ax(ax)
 
-    def plot_status_panel(self, ax):
-        flux   = self.solar.calculate_lunar_flux()
+    def plot_status_panel(self, ax, mode: str = "full"):
+        flux   = self.solar.calculate_solar_wind_flux()
         nivel  = flux.get("nivel_atividade", "N/D")
         cor_nv = {"EXTREMO": "#ff2222", "ALTO": COR_LARANJA,
                   "MODERADO": COR_AMARELO, "BAIXO": COR_VERDE}.get(nivel, COR_TEXTO)
         ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-        best_m  = self.ml.best_name
-        best_r2 = self.ml.metrics.get(best_m, {}).get("R2_cv", 0)
-        best_mae= self.ml.metrics.get(best_m, {}).get("MAE_cv", 0)
+        best_m  = self.ml.best_name or "—"
+        best_r2 = self.ml.metrics.get(best_m, {}).get("R2_cv", 0) if self.ml.metrics else 0
+        best_mae= self.ml.metrics.get(best_m, {}).get("MAE_cv", 0) if self.ml.metrics else 0
 
-        linhas = [
-            ("━━━ STATUS VENTO SOLAR ━━━",      COR_TEXTO,   11, "bold"),
-            (f"Velocidade:  {flux.get('velocidade_atual_kms','—')} km/s", COR_AZUL, 9, "normal"),
-            (f"Densidade:   {flux.get('densidade_atual_pcm3','—')} p/cm³", COR_AZUL, 9, "normal"),
-            (f"Temperatura: {flux.get('temperatura_atual_K','—')} K",      COR_AZUL, 9, "normal"),
-            (f"Vel. média:  {flux.get('velocidade_media_kms','—')} km/s",  COR_TEXTO, 8, "normal"),
-            (f"Nível: {nivel}",                                             cor_nv,   10, "bold"),
-            ("",                                COR_TEXTO,    8, "normal"),
-            ("━━━ EVENTOS ESPAÇO-CLIMÁTICOS ━━", COR_TEXTO,   11, "bold"),
-            (f"CMEs:         {flux.get('total_cmes','—')}",       COR_LARANJA, 9, "normal"),
-            (f"Flares:       {flux.get('total_flares','—')}",     COR_AMARELO, 9, "normal"),
-            (f"Tempestades:  {flux.get('total_tempestades','—')}", COR_ROXO,   9, "normal"),
-            ("",                                COR_TEXTO,    8, "normal"),
-            ("━━━ MODELO ML ATIVO ━━━━━━━━━━━━", COR_TEXTO,   11, "bold"),
-            (f"{best_m}",                        COR_VERDE,   9, "bold"),
-            (f"R² (CV k=5): {best_r2:.4f}",      COR_TEXTO,   8, "normal"),
-            (f"MAE (CV):    {best_mae:.3f} ppb",  COR_TEXTO,   8, "normal"),
-            ("",                                COR_TEXTO,    8, "normal"),
+        linhas = []
+        if mode in ("full", "solar"):
+            linhas.extend([
+                ("━━━ STATUS VENTO SOLAR ━━━",      COR_TEXTO,   11, "bold"),
+                (f"Velocidade:  {flux.get('velocidade_atual_kms','—')} km/s", COR_AZUL, 9, "normal"),
+                (f"Densidade:   {flux.get('densidade_atual_pcm3','—')} p/cm³", COR_AZUL, 9, "normal"),
+                (f"Temperatura: {flux.get('temperatura_atual_K','—')} K",      COR_AZUL, 9, "normal"),
+                (f"Vel. média:  {flux.get('velocidade_media_kms','—')} km/s",  COR_TEXTO, 8, "normal"),
+                (f"Nível: {nivel}",                                             cor_nv,   10, "bold"),
+                ("",                                COR_TEXTO,    8, "normal"),
+                ("━━━ EVENTOS ESPAÇO-CLIMÁTICOS ━━", COR_TEXTO,   11, "bold"),
+                (f"CMEs:         {flux.get('total_cmes','—')}",       COR_LARANJA, 9, "normal"),
+                (f"Flares:       {flux.get('total_flares','—')}",     COR_AMARELO, 9, "normal"),
+                (f"Tempestades:  {flux.get('total_tempestades','—')}", COR_ROXO,   9, "normal"),
+                ("",                                COR_TEXTO,    8, "normal"),
+            ])
+        if mode in ("full", "lunar"):
+            linhas.extend([
+                ("━━━ MODELO ML ATIVO ━━━━━━━━━━━━", COR_TEXTO,   11, "bold"),
+                (f"{best_m}",                        COR_VERDE,   9, "bold"),
+                (f"R² (CV k=5): {best_r2:.4f}",      COR_TEXTO,   8, "normal"),
+                (f"MAE (CV):    {best_mae:.3f} ppb",  COR_TEXTO,   8, "normal"),
+                ("",                                COR_TEXTO,    8, "normal"),
+                (f"Catálogo M3: {len(self.lunar.m3_granules)} granule(s)", COR_CINZA, 7, "normal"),
+                (f"Catálogo PDS: {len(self.lunar.pds_datasets)} produto(s)", COR_CINZA, 7, "normal"),
+                ("",                                COR_TEXTO,    8, "normal"),
+            ])
+        linhas.append(
             (f"Janela: {DATA_WINDOW_DAYS} dias | {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}",
-             COR_CINZA, 7, "normal"),
-        ]
+             COR_CINZA, 7, "normal")
+        )
 
         y = 0.97
         for row in linhas:
@@ -760,14 +795,16 @@ class Dashboard:
                     transform=ax.transAxes, va="top")
             y -= 0.058
 
-    def plot_lunar_map(self, ax):
+    def plot_lunar_map(self, ax, fluxo_solar: float = 1.0):
         he3_map = self.lunar.ilmenite_map
         cmap    = self._he3_cmap()
         if he3_map is not None:
             im = ax.imshow(he3_map, extent=[-180, 180, -90, 90],
                            origin="lower", cmap=cmap, vmin=0, vmax=40, aspect="auto")
             for reg in LUNAR_REGIONS:
-                cor = "#ff4444" if reg["he3_ppb"] > 20 else ("#ffaa00" if reg["he3_ppb"] > 10 else "#44ff88")
+                preds = self.ml.predict_he3(reg["tio2"], fluxo_solar, abs(reg["lat"]), 1)
+                he3   = preds.get(self.ml.best_name, reg["he3_ppb"])
+                cor = "#ff4444" if he3 > 20 else ("#ffaa00" if he3 > 10 else "#44ff88")
                 ax.scatter(reg["lon"], reg["lat"], s=55, color=cor,
                            edgecolors="white", linewidths=0.5, zorder=5)
                 ax.annotate(reg["nome"].replace("Mare ", "M. "),
@@ -778,8 +815,8 @@ class Dashboard:
             ax.set_xlabel("Longitude (°)")
             ax.set_ylabel("Latitude (°)")
             ax.set_title(
-                f"Mapa de He-3 Potencial — Lua (ppb) · Modelo: {self.ml.best_name}\n"
-                "Fontes: M3 (Chandrayaan-1) · SELENE/Kaguya · Lunar Prospector GRS"
+                f"Mapa simulado de He-3 (ppb) · Modelo: {self.ml.best_name}\n"
+                "TiO₂ regional + ML · APIs consultadas para metadados (M3/PDS/SELENE)"
             )
             cbar = plt.colorbar(im, ax=ax, orientation="horizontal", fraction=0.03, pad=0.12)
             cbar.set_label("He-3 Estimado (ppb)", color=COR_TEXTO, fontsize=8)
@@ -814,9 +851,8 @@ class Dashboard:
                 cell.set_text_props(color=COR_TEXTO)
         ax.set_title("Top Alvos de He-3 para Prospecção", color=COR_TEXTO, pad=8)
 
-    def render(self, fluxo_solar: float = 1.0, save: bool = True) -> Path:
-        print("\n━━━ MÓDULO 4: RENDERIZANDO DASHBOARD ━━━━━━━━━━━━━━━━━━━━━━")
-        # Ajusta tamanho ao ecrã disponível
+    def render(self, fluxo_solar: float = 1.0, save: bool = True, mode: str = "full") -> Path | None:
+        print(f"\n━━━ MÓDULO 4: RENDERIZANDO DASHBOARD ({mode}) ━━━━━━━━━━━━━━━")
         try:
             import tkinter as tk
             root = tk.Tk(); root.withdraw()
@@ -826,32 +862,65 @@ class Dashboard:
             fig_h = min(15, (sh * 0.88) / _SCREEN_DPI)
         except Exception:
             fig_w, fig_h = 22, 15
+
+        titulos = {
+            "full":  "🌑  LUNAR HE-3 & SOLAR WIND MONITOR v3.0  ☀️",
+            "solar": "☀️  LUNAR MONITOR — Vento Solar (NOAA/DONKI)",
+            "lunar": "🌑  LUNAR MONITOR — Mapa He-3 & ML",
+        }
         fig = plt.figure(figsize=(fig_w, fig_h), facecolor=COR_FUNDO)
         fig.suptitle(
-            "🌑  LUNAR HE-3 & SOLAR WIND MONITOR v3.0  ☀️\n"
-            f"ML Multi-Modelo · {DATA_WINDOW_DAYS} dias · {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}",
+            f"{titulos.get(mode, titulos['full'])}\n"
+            f"{DATA_WINDOW_DAYS} dias · {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}",
             color=COR_AMARELO, fontsize=13, fontweight="bold", y=0.98,
         )
-        gs = gridspec.GridSpec(3, 3, figure=fig,
-                               left=0.06, right=0.97, top=0.93, bottom=0.06,
-                               hspace=0.45, wspace=0.30)
 
-        ax_speed  = fig.add_subplot(gs[0, :2])
-        ax_mag    = fig.add_subplot(gs[1, :2])
-        ax_status = fig.add_subplot(gs[0:2, 2])
-        ax_ml     = fig.add_subplot(gs[2, 0])
-        ax_map    = fig.add_subplot(gs[2, 1])
-        ax_table  = fig.add_subplot(gs[2, 2])
+        if mode == "solar":
+            gs = gridspec.GridSpec(2, 2, figure=fig,
+                                   left=0.08, right=0.96, top=0.90, bottom=0.08,
+                                   hspace=0.40, wspace=0.30)
+            ax_speed  = fig.add_subplot(gs[0, 0])
+            ax_mag    = fig.add_subplot(gs[1, 0])
+            ax_status = fig.add_subplot(gs[:, 1])
+            for ax in [ax_speed, ax_mag, ax_status]:
+                ax.set_facecolor(COR_FUNDO)
+            self.plot_solar_speed(ax_speed)
+            self.plot_imf_bz(ax_mag)
+            self.plot_status_panel(ax_status, mode="solar")
 
-        for ax in [ax_speed, ax_mag, ax_status, ax_ml, ax_map, ax_table]:
-            ax.set_facecolor(COR_FUNDO)
+        elif mode == "lunar":
+            gs = gridspec.GridSpec(2, 2, figure=fig,
+                                   left=0.06, right=0.97, top=0.90, bottom=0.08,
+                                   hspace=0.45, wspace=0.30)
+            ax_ml     = fig.add_subplot(gs[0, 0])
+            ax_map    = fig.add_subplot(gs[0, 1])
+            ax_table  = fig.add_subplot(gs[1, 0])
+            ax_status = fig.add_subplot(gs[1, 1])
+            for ax in [ax_ml, ax_map, ax_table, ax_status]:
+                ax.set_facecolor(COR_FUNDO)
+            self.plot_ml_calibration(ax_ml)
+            self.plot_lunar_map(ax_map, fluxo_solar)
+            self.plot_regions_table(ax_table, fluxo_solar)
+            self.plot_status_panel(ax_status, mode="lunar")
 
-        self.plot_solar_speed(ax_speed)
-        self.plot_imf_bz(ax_mag)
-        self.plot_status_panel(ax_status)
-        self.plot_ml_calibration(ax_ml)
-        self.plot_lunar_map(ax_map)
-        self.plot_regions_table(ax_table, fluxo_solar)
+        else:
+            gs = gridspec.GridSpec(3, 3, figure=fig,
+                                   left=0.06, right=0.97, top=0.93, bottom=0.06,
+                                   hspace=0.45, wspace=0.30)
+            ax_speed  = fig.add_subplot(gs[0, :2])
+            ax_mag    = fig.add_subplot(gs[1, :2])
+            ax_status = fig.add_subplot(gs[0:2, 2])
+            ax_ml     = fig.add_subplot(gs[2, 0])
+            ax_map    = fig.add_subplot(gs[2, 1])
+            ax_table  = fig.add_subplot(gs[2, 2])
+            for ax in [ax_speed, ax_mag, ax_status, ax_ml, ax_map, ax_table]:
+                ax.set_facecolor(COR_FUNDO)
+            self.plot_solar_speed(ax_speed)
+            self.plot_imf_bz(ax_mag)
+            self.plot_status_panel(ax_status, mode="full")
+            self.plot_ml_calibration(ax_ml)
+            self.plot_lunar_map(ax_map, fluxo_solar)
+            self.plot_regions_table(ax_table, fluxo_solar)
 
         path = OUTPUT_DIR / f"dashboard_v3_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
         if save:
@@ -882,8 +951,7 @@ class DataExporter:
         self.lunar = lunar
         self.ml    = ml
 
-    def export_all(self, fluxo_solar: float = 1.0):
-        print("\n━━━ MÓDULO 5: EXPORTANDO DADOS ━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    def _export_solar_data(self):
         if self.solar.plasma_data is not None:
             p = OUTPUT_DIR / "solar_wind_plasma.csv"
             self.solar.plasma_data.to_csv(p, index=False)
@@ -894,31 +962,54 @@ class DataExporter:
             print(f"  [EXPORT] {p}")
         if self.solar.cme_events:
             p = OUTPUT_DIR / "cme_events.json"
-            with open(p, "w") as f:
+            with open(p, "w", encoding="utf-8") as f:
                 json.dump(self.solar.cme_events, f, indent=2, default=str)
             print(f"  [EXPORT] {p}")
         if self.solar.flare_events:
             p = OUTPUT_DIR / "flare_events.json"
-            with open(p, "w") as f:
+            with open(p, "w", encoding="utf-8") as f:
                 json.dump(self.solar.flare_events, f, indent=2, default=str)
             print(f"  [EXPORT] {p}")
 
+    def _export_ml_data(self):
+        p = OUTPUT_DIR / "ml_metrics.json"
+        with open(p, "w", encoding="utf-8") as f:
+            json.dump({"best_model": self.ml.best_name, "metrics": self.ml.metrics}, f, indent=2)
+        print(f"  [EXPORT] {p}")
+        if self.ml.df_apollo is not None:
+            p = OUTPUT_DIR / "apollo_calibration_data.csv"
+            self.ml.df_apollo.to_csv(p, index=False)
+            print(f"  [EXPORT] {p}")
+
+    def _export_lunar_data(self, fluxo_solar: float = 1.0):
+        if self.ml.best_model is None:
+            return
         df_regions = self.lunar.get_top_regions(self.ml, fluxo_solar)
         p = OUTPUT_DIR / "lunar_ilmenite_regions.csv"
         df_regions.to_csv(p, index=False, encoding="utf-8-sig")
         print(f"  [EXPORT] {p}")
 
-        # Métricas de ML
-        p = OUTPUT_DIR / "ml_metrics.json"
-        with open(p, "w") as f:
-            json.dump({"best_model": self.ml.best_name, "metrics": self.ml.metrics}, f, indent=2)
-        print(f"  [EXPORT] {p}")
+    def export_solar(self):
+        print("\n━━━ MÓDULO 5: EXPORTANDO DADOS (solar) ━━━━━━━━━━━━━━━━━━━━")
+        self._export_solar_data()
+        print(f"  [OK] Arquivos salvos em: {OUTPUT_DIR.resolve()}")
 
-        # Dataset de calibração
-        p = OUTPUT_DIR / "apollo_calibration_data.csv"
-        self.ml.df_apollo.to_csv(p, index=False)
-        print(f"  [EXPORT] {p}")
+    def export_ml(self):
+        print("\n━━━ MÓDULO 5: EXPORTANDO DADOS (ML) ━━━━━━━━━━━━━━━━━━━━━━━")
+        self._export_ml_data()
+        print(f"  [OK] Arquivos salvos em: {OUTPUT_DIR.resolve()}")
 
+    def export_lunar(self, fluxo_solar: float = 1.0):
+        print("\n━━━ MÓDULO 5: EXPORTANDO DADOS (lunar) ━━━━━━━━━━━━━━━━━━━━━")
+        self._export_lunar_data(fluxo_solar)
+        self._export_ml_data()
+        print(f"  [OK] Arquivos salvos em: {OUTPUT_DIR.resolve()}")
+
+    def export_all(self, fluxo_solar: float = 1.0):
+        print("\n━━━ MÓDULO 5: EXPORTANDO DADOS ━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        self._export_solar_data()
+        self._export_lunar_data(fluxo_solar)
+        self._export_ml_data()
         print(f"  [OK] Todos os arquivos salvos em: {OUTPUT_DIR.resolve()}")
 
 
@@ -927,20 +1018,33 @@ class DataExporter:
 # ══════════════════════════════════════════════════════════════════════════════
 def parse_args():
     p = argparse.ArgumentParser(description="Lunar He-3 & Solar Wind Monitor v3.0")
-    p.add_argument("--solar",   action="store_true", help="Apenas dados de vento solar")
-    p.add_argument("--lunar",   action="store_true", help="Apenas dados lunares")
+    p.add_argument("--solar",   action="store_true", help="Apenas vento solar (NOAA + DONKI)")
+    p.add_argument("--lunar",   action="store_true", help="Apenas mapa lunar + ML")
     p.add_argument("--ml",      action="store_true", help="Apenas benchmark de ML")
     p.add_argument("--export",  action="store_true", help="Exportar CSVs/JSONs")
     p.add_argument("--no-plot", action="store_true", help="Não exibir gráfico")
     return p.parse_args()
 
 
+def resolve_run_mode(args) -> str:
+    """Retorna 'full', 'solar', 'lunar' ou 'ml'."""
+    selected = [name for name, flag in (("solar", args.solar), ("lunar", args.lunar), ("ml", args.ml)) if flag]
+    if len(selected) > 1:
+        print(f"  ⚠ Aviso: flags conflitantes ({', '.join(selected)}). Executando modo completo.")
+        return "full"
+    if selected:
+        return selected[0]
+    return "full"
+
+
 def main():
     args = parse_args()
+    mode = resolve_run_mode(args)
 
     print("╔══════════════════════════════════════════════════════════════╗")
     print("║   LUNAR HE-3 & SOLAR WIND MONITOR v3.0 — Iniciando...        ║")
     print("╚══════════════════════════════════════════════════════════════╝")
+    print(f"  Modo: {mode}")
     print(f"  Saída: {OUTPUT_DIR.resolve()}")
     print(f"  NASA API: {'✓ configurada' if NASA_API_KEY != 'DEMO_KEY' else '⚠ usando DEMO_KEY'}")
     print(f"  Earthdata: {'✓ token presente' if EARTHDATA_TOKEN else '⚠ token ausente'}")
@@ -948,33 +1052,44 @@ def main():
     solar = SolarWindMonitor()
     ml    = LunarMLPipeline()
     lunar = LunarMineralogyData()
+    exporter = DataExporter(solar, lunar, ml)
 
-    # ── ML sempre treina (é rápido e local) ──────────────────────────────────
-    ml.train_all_models()
-
-    # ── Vento solar ──────────────────────────────────────────────────────────
     flux = {}
-    if not args.lunar:
+    fluxo_solar = 1.0
+
+    if mode == "ml":
+        ml.train_all_models()
+        ml.print_accuracy_report(fluxo_solar)
+        if args.export:
+            exporter.export_ml()
+        _print_ml_summary(ml)
+        print("\n  ✅ Concluído. Arquivos salvos em:", OUTPUT_DIR.resolve())
+        return
+
+    if mode in ("full", "lunar"):
+        ml.train_all_models()
+
+    if mode in ("full", "solar"):
         flux = solar.fetch_all()
+        fluxo_solar = flux.get("velocidade_atual_kms", 450) / 450
 
-    fluxo_solar = flux.get("velocidade_atual_kms", 450) / 450
-
-    # ── Mineralogia lunar ─────────────────────────────────────────────────────
-    if not args.solar:
+    if mode in ("full", "lunar"):
         lunar.fetch_all(ml, fluxo_solar)
 
-    # ── Relatório de acurácia ─────────────────────────────────────────────────
-    ml.print_accuracy_report(fluxo_solar)
+    if mode in ("full", "lunar"):
+        ml.print_accuracy_report(fluxo_solar)
 
-    # ── Exportação ────────────────────────────────────────────────────────────
     if args.export:
-        DataExporter(solar, lunar, ml).export_all(fluxo_solar)
+        if mode == "solar":
+            exporter.export_solar()
+        elif mode == "lunar":
+            exporter.export_lunar(fluxo_solar)
+        else:
+            exporter.export_all(fluxo_solar)
 
-    # ── Dashboard ─────────────────────────────────────────────────────────────
-    if not args.no_plot:
-        Dashboard(solar, lunar, ml).render(fluxo_solar, save=True)
+    if not args.no_plot and mode != "ml":
+        Dashboard(solar, lunar, ml).render(fluxo_solar, save=True, mode=mode)
 
-    # ── Resumo final ──────────────────────────────────────────────────────────
     print("\n━━━ RESUMO FINAL ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     if flux:
         print(f"  🌬️  Vento solar: {flux.get('velocidade_atual_kms')} km/s "
@@ -983,19 +1098,25 @@ def main():
               f"Flares: {flux.get('total_flares')}  |  "
               f"Tempestades: {flux.get('total_tempestades')}")
 
+    if mode in ("full", "lunar"):
+        _print_ml_summary(ml)
+        print("\n  🌑 Top 3 regiões com maior potencial de He-3:")
+        df = lunar.get_top_regions(ml, fluxo_solar)
+        for _, row in df.head(3).iterrows():
+            print(f"     • {row['Região']:<26}  "
+                  f"TiO₂={row['TiO₂ (% peso)']:.1f}%  "
+                  f"He-3≈{row['He-3 est. (ppb)']:.1f} ppb  "
+                  f"{row['Classificação']}")
+
+    print("\n  ✅ Concluído. Arquivos salvos em:", OUTPUT_DIR.resolve())
+
+
+def _print_ml_summary(ml: LunarMLPipeline):
+    if not ml.best_name:
+        return
     print(f"\n  🤖 Melhor modelo: {ml.best_name}  "
           f"R²={ml.metrics[ml.best_name]['R2_cv']:.4f}  "
           f"MAE={ml.metrics[ml.best_name]['MAE_cv']:.3f} ppb")
-
-    print("\n  🌑 Top 3 regiões com maior potencial de He-3:")
-    df = lunar.get_top_regions(ml, fluxo_solar)
-    for _, row in df.head(3).iterrows():
-        print(f"     • {row['Região']:<26}  "
-              f"TiO₂={row['TiO₂ (% peso)']:.1f}%  "
-              f"He-3≈{row['He-3 est. (ppb)']:.1f} ppb  "
-              f"{row['Classificação']}")
-
-    print("\n  ✅ Concluído. Arquivos salvos em:", OUTPUT_DIR.resolve())
 
 
 if __name__ == "__main__":
