@@ -74,7 +74,7 @@ def get_data():
 
 @st.cache_resource
 def get_all_models():
-    df = load_data("dataset_agricola.csv")
+    df = load_data("ANO1/FASE4/dataset_agricola.csv")
     return train_and_evaluate(df)
 
 df = get_data()
