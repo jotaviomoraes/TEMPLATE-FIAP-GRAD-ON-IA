@@ -66,7 +66,7 @@ hr { border-color: #3a5c3a; }
 # ─────────────────────────────────────────────
 @st.cache_data
 def get_data():
-    df = load_data("dataset_agricola.csv")
+    df = load_data("ANO1/FASE4/dataset_agricola.csv")
     for col in ["temperatura", "umidade", "ph", "chuva", "rendimento"]:
         df = treat_outliers_iqr(df, col)
     df["indice_fertilizacao"] = df["N"] + df["P"] + df["K"]
