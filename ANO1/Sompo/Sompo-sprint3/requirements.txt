@@ -18,7 +18,7 @@ ipykernel>=6.0
 
 # Dashboard
 streamlit>=1.30
-streamlit-autorefresh
+
 
 # Banco de dados
 oracledb>=2.0
