@@ -1,0 +1,28 @@
+# Sompo AgroPredict - Sprint 2
+# Versoes minimas testadas
+
+# Core ML
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+joblib>=1.3
+
+# Visualizacao
+matplotlib>=3.7
+seaborn>=0.12
+
+# Notebook
+jupyter>=1.0
+nbformat>=5.0
+ipykernel>=6.0
+
+# Dashboard
+streamlit>=1.30
+
+# Banco de dados
+oracledb>=2.0
+
+# Telemetria em tempo real (GPS + clima)
+streamlit-js-eval>=0.1.7
+streamlit-autorefresh>=1.0.1
+requests>=2.31
