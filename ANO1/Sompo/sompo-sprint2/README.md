@@ -125,15 +125,19 @@ jupyter notebook random_forest.ipynb
 ### Passo 3 — (Opcional) Setup do Oracle XE
 
 ```bash
-# 1. Conectar no Oracle (Seu usario e senha)
-sqlplus system/admin@XE
+# 1. Conectar no Oracle (Seu usario e senha, que foi escolhido ao instalar o programa)
+bash  : sqlplus "usuario"/"senha"@XE
+(Deverá mostrar "SQL>")
 
-# 2. Executar schema (cria 4 tabelas, 1 view, 2 sequences, 6 registros seed)
-@schema.sql
+# 2. Executar schema dentro do SQL (cria 4 tabelas, 1 view, 2 sequences, 6 registros seed)
+bash: @sql\schema.sql
+bash: exit
+bash : cd sql
+(Para Voltar ao terminal)
 
 # 3. Inserir predições no banco (seu usario e senha)
-$env:ORACLE_USER="system"
-$env:ORACLE_PASSWORD="admin"
+$env:ORACLE_USER=" SEU USUARIO"
+$env:ORACLE_PASSWORD=" SUA SENHA"
 $env:ORACLE_DSN="localhost:1521/XE"
 python inserir_predicoes.py --n 100
 ```
