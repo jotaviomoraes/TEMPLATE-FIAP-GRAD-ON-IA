@@ -164,7 +164,7 @@ modo_real = st.sidebar.toggle(
     help="Desative para digitar tudo manualmente (modo demo/offline)."
 )
 
-ciclo = st_autorefresh(interval=10_000, key="_refresh_telemetria") if modo_real else 0
+ciclo = st_autorefresh(interval=30_000, key="_refresh_telemetria") if modo_real else 0
 # ↑ 10s. O `ciclo` (contador do autorefresh) é passado pro GPS abaixo pra
 # forçar uma NOVA leitura a cada rerun — sem isso, get_geolocation() usa
 # sempre a mesma key e trava na 1ª posição, e a velocidade nunca é calculada.
